@@ -1,6 +1,6 @@
 # spreadjs-resources
 
-This folder contains translated resource files for the GrapeCity SpreadJS JavaScript spreadsheet, https://www.grapecity.com/spreadjs
+This folder contains translated resource files for the GrapeCity SpreadJS JavaScript spreadsheet, https://www.grapecity.com/spreadjs as well as the associated Designer Component
 
 The community is encouraged to review, make any necessary edits, use, and update the files. New translated files can also be created and added to this list.
 
