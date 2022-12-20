@@ -1,0 +1,8316 @@
+var custom_resource = {
+	"Common": {
+		"Exp_InvalidDateFormat": "Modello di formato della data non valido",
+		"Exp_InvalidExponentFormat": "formato esponente non valido",
+		"Exp_InvalidSemicolons": "formato non valido: troppi punti e virgola",
+		"Exp_InvalidNumberGroupSize": "NumberGroupSize deve essere compreso tra 1 e 9, ad eccezione dell'ultimo elemento, che può essere zero.",
+		"Exp_BadFormatSpecifier": "Identificatore di formato errato",
+		"Exp_InvalidNumberFormat": "Modello di formato numerico non valido",
+		"Exp_InvalidCast": "Eccezione Cast non valida",
+		"Exp_Separator": "numberDecimalSeparator, listSeparator e arrayListSeparator devono essere diversi nelle informazioni sulla cultura.",
+		"Exp_TokenIsNull": "token è nullo",
+		"Exp_InvalidBackslash": "il '\\' non può essere valutato",
+		"Exp_FormatIllegal": "il formato è illegale.",
+		"Exp_ValueIsNull": "il valore è nullo",
+		"Exp_DuplicatedDescriptor": "Il tipo di descrittore è stato aggiunto.",
+		"Exp_TokenIllegal": "token è illegale.",
+		"Exp_ValueIllegal": "il valore è illegale."
+	},
+	"CalcEngine": {
+		"Exp_InvalidCast": "Eccezione cast non valida",
+		"Exp_FormulaInvalidChar": "La formula contiene un carattere non valido: '{0}' all'indice su {1}",
+		"Exp_FormulaInvalid": "Formula non valida",
+		"Exp_InvalidFunctionName": "Nome funzione non valido",
+		"Exp_InvalidOverrideFunction": "Impossibile eseguire l'override della funzione integrata",
+		"Exp_InvalidArray": "Matrice non valida",
+		"Exp_OverrideNotAllowed": "Tentativo di eseguire l'override della funzione mentre l'override non è consentito",
+		"Exp_NoSyntax": "Nessuna sintassi '{0}' corrispondente alla sintassi '{1}'.",
+		"Exp_IsValid": "'{0}' non è valido.",
+		"Exp_InvalidParameters": "Parametro funzione non valido in {0}.",
+		"Exp_InvalidArrayColumns": "La lunghezza delle colonne dell'array non è uguale a {0}.",
+		"Exp_ExprIsNull": "L'argomento 'expr' è nullo",
+		"Exp_InvalidOperation": "Eccezione operazione non valida",
+		"Exp_ArgumentNull": "Argomento Null Exception",
+		"Exp_CriteriaIsNull": "Il criterio è nullo",
+		"Exp_Format": "Formato",
+		"Exp_ArrayFormulaPart": "Impossibile modificare parte di un array.",
+		"Exp_NotSupported": "Eccezione non supportata",
+		"Exp_DuplicatedChar": "Carattere duplicato",
+		"Exp_ArgumentOutOfRangeException": "Eccezione argomento fuori intervallo",
+		"Exp_ArgumentException": "Eccezione argomento",
+		"Fbx_Summary": "Riepilogo",
+		"Fbx_TableName_Description": "Nome della tabella per",
+		"Fbx_TableSheetName_Description": "Nome tabella per",
+		"Fbx_CustomName_Description": "Nome personalizzato per"
+	},
+	"Sheets": {
+		"Exp_NotSupported": "Eccezione non supportata",
+		"Exp_PasteExtentIsNull": "pasteExtent è nullo",
+		"Exp_InvalidPastedArea": "L'area incollata deve avere le stesse dimensioni dell'area copiata o tagliata.",
+		"Exp_MultipleSelections": "Questa azione non funzionerà su selezioni multiple.",
+		"Exp_ChangePartOfArray": "Impossibile modificare parte di un array.",
+		"Exp_InvalidAndSpace": "{0} non valido: {1} (deve essere compreso tra {2} e {3}).",
+		"Exp_SrcIsNull": "L'argomento 'src' è nullo",
+		"Exp_DestIsNull": "L'argomento 'dest' è nullo",
+		"Exp_InvalidCustomFunction": "funzione personalizzata non valida",
+		"Exp_InvalidCustomName": "nome personalizzato non valido",
+		"Exp_IndexOutOfRange": "L'indice è fuori portata!",
+		"Exp_InvalidRange": "Intervallo non valido",
+		"Exp_NotAFunction": "Non una funzione",
+		"Exp_ArgumentOutOfRange": "Argomento fuori intervallo",
+		"Exp_PasteSourceCellsLocked": "Le celle del foglio di origine sono bloccate.",
+		"Exp_InvalidCopyPasteSize": "Le aree di copia e incolla non hanno le stesse dimensioni.",
+		"Exp_PasteDestinationCellsLocked": "La cella che stai tentando di modificare è protetta e quindi di sola lettura.",
+		"Exp_PasteChangeMergeCell": "Impossibile modificare parte di una cella unita.",
+		"Tip_Row": "Riga:",
+		"Tip_Column": "Colonna:",
+		"Tip_Column_Offset": "Compensare:",
+		"Tip_Height": "Altezza: {0} pixel",
+		"Tip_Width": "Larghezza: {0} pixel",
+		"NewTab": "Nuovo...",
+		"Exp_EmptyNamedStyle": "Il nome dello stile con nome non può essere vuoto o nullo",
+		"Exp_SheetNameInvalid": "Il nome del foglio non può essere vuoto o contenere questi caratteri: *, :, [, ], ?, \\, /",
+		"Exp_SheetNameConflict": "Il nome è già stato preso. Provane uno diverso.",
+		"Exp_ArrayFormulaSpan": "Le formule in forma di matrice non sono valide nelle celle unite.",
+		"Exp_DestSheetIsNull": "destSheet è nullo",
+		"Exp_SheetIsNull": "foglio è nullo.",
+		"Exp_OverlappingSpans": "Questa operazione causerà intervalli sovrapposti.",
+		"NeedCanvasSupport": "È necessario un browser che supporti completamente HTML5 Canvas per eseguire SpreadJS",
+		"ARIA_Resize": "ridimensiona",
+		"ARIA_First": "primo",
+		"ARIA_PreviousArrow": "freccia precedente",
+		"ARIA_NextArrow": "freccia successiva",
+		"ARIA_Last": "ultimo",
+		"ARIA_PreviousButton": "pulsante precedente",
+		"ARIA_NextButton": "pulsante successivo",
+		"ARIA_SheetTab": "scheda foglio",
+		"ARIA_NewSheet": "foglio nuovo",
+		"ARIA_Blank": "vuoto",
+		"ARIA_Scrollbar_Left_Button": "pulsante sinistro della barra di scorrimento",
+		"ARIA_Scrollbar_Top_Button": "pulsante superiore della barra di scorrimento",
+		"ARIA_Scrollbar_Thumb_Button": "pulsante del pollice della barra di scorrimento",
+		"ARIA_Scrollbar_Right_Button": "pulsante destro della barra di scorrimento",
+		"ARIA_Scrollbar_Bottom_Button": "pulsante inferiore della barra di scorrimento",
+		"ARIA_Scrollbar_TRACK_Button": "pulsante della traccia della barra di scorrimento",
+		"ARIA_Cell": "cellula",
+		"ARIA_HasValue": "ha valore {0}",
+		"ARIA_HasFormula": "ha formula {0}",
+		"ARIA_HasComment": "ha il commento {0}",
+		"ARIA_RowHeader": "intestazione di riga",
+		"ARIA_ColumnHeader": "intestazione di colonna",
+		"SHEET_NAME": "Foglio",
+		"Exp_InsertCopiedCutCells": "Questa selezione non è valida. L'area di copia/incolla deve avere le stesse dimensioni",
+		"Exp_InsertCopiedCutCellsOnSpanTable": "Questo non funzionerà perché sposterebbe le celle in una tabella sul tuo foglio di lavoro o causerebbe la separazione di alcune celle unite.",
+		"Exp_InsertCopiedCutCellsNoRange": "Non è possibile inserire nuove celle in quanto vi sono celle non vuote che si estenderebbero oltre il foglio di lavoro.",
+		"Exp_InvalidSortArrayFormulaInRange": "Impossibile ordinare l'intervallo corrente in quanto esiste una formula di matrice.",
+		"Exp_InvalidSortSpanInRange": "Impossibile ordinare l'intervallo corrente in quanto l'intervallo esiste.",
+		"Exp_InvalidSortPartTableOrMultiTableInRange": "Impossibile ordinare l'intervallo corrente come tabella parte o esiste più di una tabella.",
+		"Exp_InvalidOperationInProtect": "La cella o il grafico che stai tentando di modificare si trova su un foglio protetto. Per apportare una modifica, rimuovere la protezione del foglio.",
+		"EXP_IO": "Eccezione di lettura e scrittura del file.",
+		"EXP_FILE_FORMAT": "Formato file errato.",
+		"EXP_NO_PASSWORD": "Il file Excel non può essere aperto perché la cartella di lavoro/il foglio di lavoro è protetto da password.",
+		"EXP_INVALID_PASSWORD": "La password specificata non è corretta.",
+		"NORMAL": "Normale",
+		"STEP": "[oggetto Oggetto]"
+	},
+	"Bindings": {
+		"Exp_NotSupportedDataSource": "L'origine dati non è supportata!"
+	},
+	"Outlines": {
+		"Exp_InvalidIndex": "Indice non valido",
+		"Exp_InvalidCount": "Conteggio non valido",
+		"Exp_InvalidLevel": "Livello non valido",
+		"Exp_GroupInfoIsNull": "groupInfo è nullo",
+		"Exp_GROUP_PROTECTED": "Non puoi usare questo comando su un foglio protetto. Per utilizzare questo comando, devi prima rimuovere la protezione del foglio."
+	},
+	"ConditionalFormatting": {
+		"Exp_RuleIsNull": "L'argomento 'regola' è nullo",
+		"Exp_NotSupported": "Eccezione non supportata"
+	},
+	"Touch": {
+		"ToolStrip_PasteText": "Impasto",
+		"ToolStrip_CutText": "Tagliare",
+		"ToolStrip_CopyText": "copia",
+		"ToolStrip_AutoFillText": "Compilazione automatica"
+	},
+	"FloatingObjects": {
+		"Exp_FloatingObjectHasSameNameError": "Il foglio di lavoro corrente ha già un oggetto mobile con lo stesso nome.",
+		"Exp_FloatingObjectNameEmptyError": "L'oggetto mobile deve avere un nome"
+	},
+	"CellTypes": {
+		"OK": "OK",
+		"Cancel": "Annulla",
+		"Calendar_ShortWeeks_1": "LUN",
+		"Calendar_ShortWeeks_2": "MAR",
+		"Calendar_ShortWeeks_3": "MERCOLEDÌ",
+		"Calendar_ShortWeeks_4": "GIO",
+		"Calendar_ShortWeeks_5": "VEN",
+		"Calendar_ShortWeeks_6": "SAB",
+		"Calendar_ShortWeeks_7": "SOLE",
+		"Calendar_Weeks_1": "Lunedi",
+		"Calendar_Weeks_2": "Martedì",
+		"Calendar_Weeks_3": "Mercoledì",
+		"Calendar_Weeks_4": "Giovedì",
+		"Calendar_Weeks_5": "Venerdì",
+		"Calendar_Weeks_6": "Sabato",
+		"Calendar_Weeks_7": "Domenica",
+		"Calendar_ShortMonths_1": "GEN",
+		"Calendar_ShortMonths_2": "FEBBRAIO",
+		"Calendar_ShortMonths_3": "MAR",
+		"Calendar_ShortMonths_4": "aprile",
+		"Calendar_ShortMonths_5": "MAGGIO",
+		"Calendar_ShortMonths_6": "GIUGNO",
+		"Calendar_ShortMonths_7": "LUG",
+		"Calendar_ShortMonths_8": "AGOSTO",
+		"Calendar_ShortMonths_9": "SETTEMBRE",
+		"Calendar_ShortMonths_10": "OTT",
+		"Calendar_ShortMonths_11": "NOV",
+		"Calendar_ShortMonths_12": "DIC",
+		"Calendar_Months_1": "GENNAIO",
+		"Calendar_Months_2": "FEBBRAIO",
+		"Calendar_Months_3": "MARZO",
+		"Calendar_Months_4": "APRILE",
+		"Calendar_Months_5": "MAGGIO",
+		"Calendar_Months_6": "GIUGNO",
+		"Calendar_Months_7": "LUGLIO",
+		"Calendar_Months_8": "AGOSTO",
+		"Calendar_Months_9": "SETTEMBRE",
+		"Calendar_Months_10": "OTTOBRE",
+		"Calendar_Months_11": "NOVEMBRE",
+		"Calendar_Months_12": "DICEMBRE",
+		"Calendar_Time_AM": "SONO",
+		"Calendar_Time_PM": "PM",
+		"Calendar_EraName_1": "M",
+		"Calendar_EraName_2": "T",
+		"Calendar_EraName_3": "S",
+		"Calendar_EraName_4": "H",
+		"Calendar_FirstYear": "1",
+		"Calendar_Today": "In data odierna",
+		"Calendar_LastMonth": "Vai al mese precedente",
+		"Calendar_NextMonth": "Vai al mese prossimo",
+		"Calendar_LastYear": "Vai all'anno precedente",
+		"Calendar_NextYear": "Vai al prossimo anno",
+		"Calendar_LastTenYear": "Vai ai dieci anni precedenti",
+		"Calendar_NextTenYear": "Vai ai prossimi dieci anni",
+		"Quarter_Format_1": "Q1",
+		"Quarter_Format_2": "D2",
+		"Quarter_Format_3": "D3",
+		"Quarter_Format_4": "D4",
+		"ThemeColor": "Colori del tema",
+		"StandardColor": "Colori Standard",
+		"Calculator_DivideByZeroInfo": "Impossibile dividere per zero.",
+		"Calculator_InvalidInputInfo": "Inserimento non valido.",
+		"Calculator_SqrtParameterException": "Input non valido per la funzione.",
+		"Calculator_OverFlowInfo": "Operazioni matematiche risultano in abbondanza.",
+		"MultiColumn_InvalidDataSource": "Origine dati non valida. La formula dovrebbe restituire un array.",
+		"DataObject_MeetLock": "Impossibile inserire i dati perché è presente una cella bloccata.",
+		"DataObject_MeetSpan": "Impossibile inserire i dati perché c'è una cella unita nel modo.",
+		"DataObject_MeetTable": "Impossibile inserire dati a causa di una tabella di intralcio."
+	},
+	"Filter": {
+		"Exp_InvalidColumnIndex": "Indice di colonna non valido.",
+		"SortAscending": "Ordine crescente",
+		"SortDescending": "Ordine decrescente",
+		"OK": "OK",
+		"Cancel": "Annulla",
+		"Search": "Ricerca",
+		"CheckAll": "Seleziona tutto",
+		"UncheckAll": "Deseleziona tutto",
+		"Blanks": "(vuoti)",
+		"Exp_FilterItemIsNull": "FilterItem è nullo.",
+		"Show": "Spettacolo",
+		"ShowRows": "Mostra righe dove:",
+		"And": "E",
+		"Or": "O",
+		"SortColor": "Ordina per colore",
+		"FilterColor": "Filtra per colore",
+		"FilterCellTitle": "Filtra per colore cella",
+		"FilterFontTitle": "Filtra per colore del carattere",
+		"SortCellTitle": "Ordina per colore cella",
+		"SortFontTitle": "Ordina per colore del carattere",
+		"FontColor": "Altri colori dei caratteri...",
+		"CellColor": "Altri colori delle celle...",
+		"NoFill": "Nessun riempimento",
+		"Automatic": "Automatico",
+		"Clear": "Cancella filtro da {0}",
+		"TextFilter": "Filtri di testo",
+		"DateFilter": "Filtri data",
+		"NumberFilter": "Filtri numerici",
+		"Custom": "Filtro personalizzato...",
+		"Equal": "Equivale...",
+		"NotEqual": "Non è uguale...",
+		"GreaterThan": "Più grande di...",
+		"GreaterOrEquals": "Maggiore o uguale a...",
+		"LessThan": "Meno di...",
+		"LessThanOrEquals": "Minore o uguale a...",
+		"Between": "Tra...",
+		"Top10": "I primi 10...",
+		"AboveAverage": "Sopra la media",
+		"BelowAverage": "Sotto la media",
+		"Begin": "Inizia con...",
+		"End": "Finisce con...",
+		"Contain": "Contiene...",
+		"NotContain": "Non contiene...",
+		"Before": "Prima delle...",
+		"After": "A seguito di...",
+		"Tomorrow": "Domani",
+		"Today": "In data odierna",
+		"Yesterday": "Ieri",
+		"NextWeek": "La prossima settimana",
+		"ThisWeek": "Questa settimana",
+		"LastWeek": "La settimana scorsa",
+		"NextMonth": "Il prossimo mese",
+		"ThisMonth": "Questo mese",
+		"LastMonth": "Lo scorso mese",
+		"NextQuarter": "Prossimo trimestre",
+		"ThisQuarter": "Questo quarto",
+		"LastQuarter": "Ultimo quarto",
+		"NextYear": "L'anno prossimo",
+		"ThisYear": "Quest'anno",
+		"LastYear": "L'anno scorso",
+		"YearToDate": "Da inizio anno",
+		"AllDates": "Tutte le date nel periodo",
+		"Top10Filter": "I 10 migliori filtri automatici",
+		"CustomTitle": "Filtro automatico personalizzato",
+		"ColorTitle": "Colori celle disponibili",
+		"top": "superiore",
+		"bottom": "parte inferiore",
+		"SortCell": "Seleziona un colore per la cella in base al quale ordinare:",
+		"SortFont": "Seleziona un colore del carattere in base al quale ordinare:",
+		"FilterCell": "Seleziona un colore per la cella in base al quale filtrare:",
+		"FilterFont": "Seleziona un colore del carattere in base al quale filtrare:",
+		"Selected": "Selezionato:",
+		"IsEquals": "equivale",
+		"NotEquals": "non è uguale",
+		"IsGreaterThan": "è più grande di",
+		"IsGreaterOrEqual": "è più grande di O uguale a",
+		"IsLess": "è meno di",
+		"LessOrEqual": "è minore o uguale a",
+		"IsBeginWith": "inizia con",
+		"NotBeginWith": "non inizia con",
+		"IsEndWith": "finisce con",
+		"NotEndWith": "non finisce con",
+		"IsContain": "contiene",
+		"NotContains": "non contiene",
+		"IsAfter": "è dopo",
+		"AfterOrEqual": "è dopo o uguale a",
+		"IsBefore": "è prima",
+		"BeforeOrEqual": "è prima o uguale a",
+		"Q1": "Quarto 1",
+		"Q2": "Quarto 2",
+		"Q3": "Quarto 3",
+		"Q4": "Quarto 4",
+		"Jan": "Gennaio",
+		"Feb": "febbraio",
+		"Mar": "Marzo",
+		"Apr": "aprile",
+		"May": "Maggio",
+		"Jun": "Giugno",
+		"Jul": "Luglio",
+		"Aug": "agosto",
+		"Sep": "settembre",
+		"Oct": "ottobre",
+		"Nov": "novembre",
+		"Dec": "Dicembre",
+		"Explain1": "Uso ? per rappresentare un singolo carattere",
+		"Explain2": "Usa * per rappresentare qualsiasi serie di caratteri",
+		"Year": "",
+		"Day": "",
+		"add_current_filter": "Aggiungi la selezione corrente al filtro",
+		"invalidCondition": "Errore nella riga di analisi"
+	},
+	"Tables": {
+		"Exp_DragDropShiftTableCell": "Questa operazione non è consentita. L'operazione sta tentando di spostare le celle in una tabella del foglio di lavoro.",
+		"Exp_DragDropChangePartOfTable": "Impossibile completare l'operazione: si sta tentando di modificare una parte di una riga o di una colonna della tabella in un modo non consentito.",
+		"Exp_TableEmptyNameError": "Il nome della tabella non può essere vuoto.",
+		"Exp_TableNameInvalid": "Il nome della tabella non è valido.",
+		"Exp_TableInvalidRow": "Indice di riga o numero di righe non valido.",
+		"Exp_TableInvalidColumn": "Indice colonna o conteggio colonne non valido.",
+		"Exp_TableIntersectError": "Le tabelle non possono essere intersecate.",
+		"Exp_TableHasSameNameError": "Il foglio di lavoro corrente esiste già in una tabella con lo stesso nome.",
+		"Exp_TableRangeHasFilterError": "L'intervallo di tabelle corrente contiene un intervallo di filtri.",
+		"Exp_TableDataSourceNullError": "L'origine dati della tabella non può essere nulla.",
+		"Exp_TableMoveOutOfRange": "Il tavolo non può essere spostato fuori dal foglio.",
+		"Exp_TableResizeOutOfRange": "Il conteggio delle righe, il conteggio delle colonne e la tabella non validi non possono essere ridimensionati fuori dal foglio.",
+		"Exp_ArrayFormulaTable": "le formule di matrice a più celle non sono consentite nelle tabelle.",
+		"Exp_TableResizeInvalidRange": "Le intestazioni devono rimanere nella stessa riga e l'intervallo di tabelle risultante deve sovrapporsi all'intervallo di tabelle originale.",
+		"Exp_TableResizeToSpan": "Impossibile completare l'operazione: una tabella non può sovrapporsi a una tabella o celle unite.",
+		"Exp_TableResizeWithFilter": "Impossibile spostare le celle in un intervallo o una tabella filtrati.",
+		"Exp_TableResizeWithHidden": "Impossibile ridimensionare una tabella adiacente a una riga o colonna nascosta.",
+		"Exp_TableResizeToTable": "Impossibile completare l'operazione: le operazioni che includono celle sia all'interno che all'esterno di un intervallo di tabelle e le operazioni che interessano celle che si sovrappongono a più tabelle non sono consentite.",
+		"Exp_RowParamOutOfRange": "La riga param fuori dall'intervallo di dati della tabella.",
+		"Exp_ColParamOutOfRange": "Il parametro col fuori dall'intervallo di dati della tabella.",
+		"Exp_TableDeleteCountInvalid": "Il conteggio dei parametri da eliminare causerà una tabella vuota.",
+		"Exp_TableAddRowIntersectSpan": "Questo non funzionerà perché sposterebbe le celle in un intervallo sul tuo foglio di lavoro.",
+		"Exp_TableAddRowIntersectTable": "Questo non funzionerà perché sposterebbe le celle in una tabella sul tuo foglio di lavoro.",
+		"Exp_TableAddRowNoEnoughRoom": "Impossibile inserire nuove celle perché spingerebbe le celle non vuote della fine del foglio di lavoro. Queste celle potrebbero apparire vuote ma hanno valori vuoti, formattazione o una formula. Elimina un numero sufficiente di righe o colonne per fare spazio a ciò che desideri inserire, quindi riprova.",
+		"Table_Total": "Totale",
+		"Table_None": "Nessuno",
+		"Table_Average": "Media",
+		"Table_Count": "Contare",
+		"Table_Count_Numbers": "Contare i numeri",
+		"Table_Max": "Massimo",
+		"Table_Min": "min",
+		"Table_Sum": "Somma",
+		"Table_StdDev": "StdDev",
+		"Table_Var": "Var"
+	},
+	"Fill": {
+		"CopyCells": "Copia celle",
+		"FillSeries": "Riempi la serie",
+		"FillFormattingOnly": "Riempi solo la formattazione",
+		"FillWithoutFormatting": "Riempi senza formattare",
+		"Exp_NumberOnly": "Funziona solo con i numeri",
+		"Exp_RangeContainsMergedCell": "L'intervallo non deve contenere celle unite.",
+		"Exp_TargetContainsMergedCells": "L'intervallo di destinazione non deve contenere celle unite.",
+		"Exp_MergedCellsIdentical": "Questa operazione richiede che le celle unite abbiano dimensioni identiche.",
+		"Exp_FillRangeContainsMergedCell": "Impossibile riempire l'intervallo che contiene una cella unita.",
+		"Exp_FillCellsReadOnly": "Le celle che stai tentando di riempire sono protette e quindi di sola lettura.",
+		"Exp_ChangeMergedCell": "Impossibile modificare parte della cella unita.",
+		"Exp_ColumnReadOnly": "La colonna che stai tentando di modificare è protetta e quindi di sola lettura.",
+		"Exp_RowReadOnly": "La riga che stai tentando di modificare è protetta e quindi di sola lettura.",
+		"Exp_CellReadOnly": "La cella che stai tentando di modificare è protetta e quindi di sola lettura.",
+		"Exp_RangeIsNull": "l'intervallo è nullo",
+		"Exp_ChangePartOfArray": "Impossibile modificare parte di un array."
+	},
+	"ContextMenu": {
+		"copy": "copia",
+		"cut": "Tagliare",
+		"pasteOptions": "Opzioni Incolla:",
+		"pasteAll": "Tutto",
+		"pasteFormula": "Formule",
+		"pasteValues": "I valori",
+		"pasteFormatting": "Formattazione",
+		"pasteValuesFormatting": "Valori e formattazione",
+		"pasteFormulaFormatting": "Formula e formattazione",
+		"clearContents": "Contenuti chiari",
+		"insertRows": "Inserire",
+		"insertColumns": "Inserire",
+		"deleteRows": "Elimina",
+		"deleteColumns": "Elimina",
+		"insertSheet": "Inserire",
+		"deleteSheet": "Elimina",
+		"insertComment": "Inserisci commento",
+		"filter": "Filtro",
+		"sort": "Ordinare",
+		"insertCopiedCells": "Inserisci celle copiate...",
+		"insertCutCells": "Inserisci celle tagliate...",
+		"shiftCellsRight": "Sposta celle a destra",
+		"shiftCellsDown": "Sposta celle in basso",
+		"headerInsertCopiedCells": "Inserisci celle copiate",
+		"headerInsertCutCells": "Inserisci celle tagliate",
+		"slicerSortAscend": "Ordina dalla A alla Z",
+		"slicerSortDescend": "Ordina dalla Z alla A",
+		"sortAscend": "Ordina dalla A alla Z",
+		"sortDescend": "Ordina dalla Z alla A",
+		"hideRows": "Nascondere",
+		"hideColumns": "Nascondere",
+		"hideSheet": "Nascondere",
+		"unhideSheet": "Scopri",
+		"unhideColumns": "Scopri",
+		"unhideRows": "Scopri",
+		"editComment": "Modifica commento",
+		"deleteComment": "Elimina commento",
+		"toggleComment": "Mostra/Nascondi commento",
+		"removeSlicer": "Rimuovere",
+		"removeFloatingObject": "Rimuovere",
+		"tableInsert": "Inserire",
+		"tableInsertRowsAbove": "Righe della tabella sopra",
+		"tableInsertRowsBelow": "Riga tabella sotto",
+		"tableInsertColumnsLeft": "Colonne della tabella a sinistra",
+		"tableInsertColumnsRight": "Colonne della tabella a destra",
+		"tableDelete": "Elimina",
+		"tableDeleteRows": "Righe della tabella",
+		"tableDeleteColumns": "Colonne della tabella",
+		"hideSheetFailureInfo": "Una cartella di lavoro deve contenere almeno un foglio di lavoro visibile.",
+		"pivotTableRefresh": "Per nascondere, eliminare o spostare i fogli selezionati, devi prima inserire un nuovo foglio o mostrare un foglio che è già nascosto.",
+		"pivotTableMove": "ricaricare",
+		"pivotTableRemove_": "Spostare",
+		"pivotTableRemoveGrandTotal": "Rimuovi {0}",
+		"pivotTableValueFieldSettings": "Rimuovi GrandTotal",
+		"pivotTableOptions": "Impostazioni campo valore...",
+		"pivotTableNumberFormat": "Opzioni tabella pivot...",
+		"pivotTableSort": "Formato numero...",
+		"pivotTableSummarizeValuesBy": "Ordinare",
+		"pivotTableSum": "Riepiloga valori per",
+		"pivotTableCount": "Somma",
+		"pivotTableAverage": "Contare",
+		"pivotTableMax": "Media",
+		"pivotTableMin": "Massimo",
+		"pivotTableProduct": "min",
+		"pivotTableDistinctCount": "Prodotto",
+		"pivotTableMoreOptions": "Conte distinto",
+		"pivotTableShowValueAs": "Più opzioni",
+		"pivotTableNoCalculation": "Mostra valore come",
+		"pivotTableGrandTotal": "Nessun calcolo",
+		"pivotTableColumnTotal": "% del totale complessivo",
+		"pivotTableRowTotal": "% del totale colonna",
+		"pivotTableOf": "% del totale riga",
+		"pivotTableParentRowTotal": "% Di...",
+		"pivotTableParentColumnTotal": "% del totale riga padre",
+		"pivotTableOfParentTotal": "% del totale della colonna padre",
+		"pivotTableDifferenceFrom": "% del totale padre...",
+		"pivotTablePercentDifferenceFrom": "Differenza da...",
+		"pivotTableRunningTotalIN": "% Differenza da...",
+		"pivotTablePercentRunningTotalIn": "Totale corrente in...",
+		"pivotTableRankSmallestToLargest": "% Totale parziale in...",
+		"pivotTableRankLargestToSmallest": "Classifica dal più piccolo al più grande...",
+		"pivotTableIndex": "Classifica dal più grande al più piccolo...",
+		"pivotTableShowDetails": "Indice",
+		"pivotTableGroup": "Mostra dettagli",
+		"pivotTableUnGroup": "Gruppo...",
+		"pivotTableExpandOrCollapse": "Separa...",
+		"pivotTableFilter": "Espandi/Comprimi",
+		"pivotTableSubtotal_": "Filtro",
+		"pivotTableHideFieldList": "Subtotale {0}",
+		"pivotTableFieldSettings": "Nascondi elenco campi",
+		"pivotTableClearFilterFrom_": "Impostazioni campo...",
+		"pivotTableKeepOnlySelectedItems": "Cancella filtro da {0}",
+		"pivotTableHideSelectedItems": "Mantieni solo gli elementi selezionati",
+		"pivotTableTop10": "Nascondi elementi selezionati",
+		"pivotTableLabelFilters": "I primi 10...",
+		"pivotTableLabelFilters_Date": "Etichetta filtri...",
+		"pivotTableValueFilters": "Filtri data...",
+		"pivotTableExpand": "Filtri valore...",
+		"pivotTableCollapse": "Espandere",
+		"pivotTableExpandEntireField": "Crollo",
+		"pivotTableCollapseEntireField": "Espandi l'intero campo",
+		"pivotTableCollapseTo_": "Comprimi l'intero campo",
+		"pivotTableExpandTo_": "Comprimi in {0}",
+		"pivotTableMove_ToBeginning": "Espandi a {0}",
+		"pivotTableMove_Up": "Sposta {0} all'inizio",
+		"pivotTableMove_Down": "Sposta {0} in alto",
+		"pivotTableMove_ToEnd": "Sposta {0} in basso",
+		"pivotTableMove_ToLeft": "Sposta {0} alla fine",
+		"pivotTableMove_ToRight": "Sposta {0} a sinistra",
+		"pivotTableMove_ToColumns": "Sposta {0} a destra",
+		"sigmaValue": "Sposta {0} nelle colonne",
+		"sigmaValueTemp": "∑ Valori",
+		"pivotTableSortAscend": "I valori",
+		"pivotTableSortDescend": "Ordina dal più piccolo al più grande",
+		"pinRows": "Ordina dal più grande al più piccolo",
+		"pinColumns": "Fissa/Sblocca righe",
+		"promote": "Fissa/Sblocca colonne",
+		"demote": "Promuovere",
+		"moveUp": "Retrocedere",
+		"moveDown": "Andare avanti",
+		"addAfter": "Abbassati",
+		"addBefore": "Aggiungi Dopo",
+		"addAbove": "Aggiungi prima",
+		"addBelow": "Aggiungi sopra",
+		"expandAllLevels": "Aggiungi sotto",
+		"collapseAllLevels": "Espandi Tutti i livelli",
+		"expandLevel1": "Comprimi tutti i livelli",
+		"expandLevel2": "Espandi al livello 1",
+		"expandLevel3": "Espandi al livello 2",
+		"expandLevel4": "Espandi al livello 3",
+		"expandLevel5": "Espandi al livello 4",
+		"expandLevel6": "Espandi al livello 5",
+		"expandLevel7": "Espandi al livello 6",
+		"expandLevel8": "Espandi al livello 7",
+		"expandLevel9": "Espandi al livello 8",
+		"paste": "Espandi al livello 9"
+	},
+	"OutlineColumn": {
+		"Exp_GROUP_PROTECTED": "Impasto"
+	},
+	"StatusBar": {
+		"cellMode": "Non puoi usare questo comando su un foglio protetto. Per utilizzare questo comando, devi prima rimuovere la protezione del foglio.",
+		"cellModeReady": "Modalità cellulare",
+		"cellModeEnter": "Pronto",
+		"cellModeEdit": "accedere",
+		"formulaAverage": "Modificare",
+		"formulaCount": "Media",
+		"formulaNumericalCount": "Contare",
+		"formulaMin": "Conteggio numerico",
+		"formulaMax": "min",
+		"formulaSum": "Massimo",
+		"zoomSlider": "Somma",
+		"zoom": "Cursore dello zoom",
+		"toolTipCellMode": "Ingrandisci",
+		"toolTipFormulaAverage": "In modalità {0}",
+		"toolTipFormulaCount": "Media delle celle selezionate",
+		"toolTipFormulaNumericalCount": "Numero di celle selezionate che contengono dati",
+		"toolTipFormulaMin": "Numero di celle selezionate che contengono dati numerici",
+		"toolTipFormulaMax": "Valore minimo nella selezione",
+		"toolTipFormulaSum": "Valore massimo nella selezione",
+		"toolTipZoomOut": "Somma delle celle selezionate",
+		"toolTipZoomIn": "Zoom indietro",
+		"toolTipSlider": "Ingrandire",
+		"toolTipZoomPanel": "Ingrandisci",
+		"progressItem": "Livello di ingrandimento"
+	},
+	"AutoMerge": {
+		"Exp_RangeIsIntersected": "Progresso"
+	},
+	"NameBox": {
+		"invalidName": "L'intervallo non deve intersecare con gli intervalli di uscita."
+	},
+	"Print": {
+		"Exp_InvalidSheetIndex": "Devi inserire un riferimento valido a cui vuoi andare o digitare un nome valido per la selezione."
+	},
+	"Charts": {
+		"period": "Indice foglio non valido.",
+		"movingAverage": "periodo",
+		"exponential": "Media mobile",
+		"linear": "Esponenziale",
+		"logarithmic": "Lineare",
+		"polynomial": "Logaritmico",
+		"power": "Polinomio"
+	},
+	"Shapes": {
+		"Exp_InvalidConnectionSite": "Energia",
+		"Exp_DuplicatedName": "Sito di connessione non valido.",
+		"Exp_EmptyName": "Nome duplicato.",
+		"Exp_InvalidRange": "Nome vuoto."
+	},
+	"Slicer": {
+		"Blank": "Intervallo non valido",
+		"Exp_SlicerNameInvalid": "(vuoto)",
+		"Exp_SlicerNameExist": "Il nome del filtro dati non è valido.",
+		"SlicerNameInFormula": "Il nome dello slicer è già in uso; inserisci un nome univoco."
+	},
+	"PDF": {
+		"Exp_FileIOError": "Affettatrice",
+		"Exp_FontError": "Eccezione di lettura e scrittura del file."
+	},
+	"PivotEngine": {
+		"dateResource": "Non è un formato di carattere supportato o un carattere PDF standard.",
+		"Exp_NoItemParseError": "[oggetto Oggetto]",
+		"Exp_UnsupportedCalcItemType": "Impossibile trovare il nome di un elemento. Verifica di aver digitato correttamente il nome e che l'elemento sia presente nel rapporto di tabella pivot.",
+		"blank": "Riferimenti, nomi e matrici non sono supportati nelle formule di tabella pivot."
+	},
+	"PivotTables": {
+		"RepeatName": "(vuoto)",
+		"NotExist": "Ripeti il ​​nome",
+		"SubtotalType_Prefix_0": "Non esiste",
+		"SubtotalType_Prefix_1": "Media di",
+		"SubtotalType_Prefix_2": "Conte di",
+		"SubtotalType_Prefix_3": "CountNum di",
+		"SubtotalType_Prefix_4": "Massimo di",
+		"SubtotalType_Prefix_5": "Minimo di",
+		"SubtotalType_Prefix_6": "Prodotto di",
+		"SubtotalType_Prefix_7": "StdDev di",
+		"SubtotalType_Prefix_8": "StdDevp di",
+		"SubtotalType_Prefix_9": "Somma di",
+		"SubtotalType_Prefix_10": "Var di",
+		"ColumnLabels": "Varp di",
+		"Total": "Etichette di colonna",
+		"All": "Totale",
+		"MultipleItems": "Tutto",
+		"RowLabels": "Articoli multipli",
+		"GrandTotal": "Etichette di riga",
+		"Values": "Somma totale",
+		"PivotPanel_Title": "I valori",
+		"PivotPanel_ReportText": "Campi tabella pivot",
+		"PivotPanel_SearchPlaceholder": "Scegli i campi da aggiungere al rapporto",
+		"PivotPanel_FieldAreaText": "Ricerca",
+		"PivotPanel_FiltersItemsTitle": "Trascina i campi tra le aree sottostanti:",
+		"PivotPanel_RowsItemsTitle": "Filtri",
+		"PivotPanel_ColumnsItemsTitle": "Righe",
+		"PivotPanel_ValuesItemsTitle": "Colonne",
+		"PivotPanel_DeferUpdateText": "I valori",
+		"EmptyPivotTable_PromptMessage1": "Rinvia l'aggiornamento del layout",
+		"EmptyPivotTable_PromptMessage2": "Fare clic in quest'area per lavorare con il rapporto di tabella pivot",
+		"PivotPanel_Update": "Attiva l'Elenco campi tabella pivot per lavorare con la tabella pivot",
+		"PivotPanel_DropDownList_Up": "Aggiornare",
+		"PivotPanel_DropDownList_Down": "Andare avanti",
+		"PivotPanel_DropDownList_Beginning": "Abbassati",
+		"PivotPanel_DropDownList_End": "Sposta all'inizio",
+		"PivotPanel_DropDownList_ReportFilter": "Sposta alla fine",
+		"PivotPanel_DropDownList_Row": "Passa a Filtro rapporto",
+		"PivotPanel_DropDownList_Col": "Passa a Etichette di riga",
+		"PivotPanel_DropDownList_Values": "Passa a Etichette colonna",
+		"PivotPanel_DropDownList_Remove": "Passa a Valori",
+		"PivotPanel_DropDownList_Set": "Rimuovi campo",
+		"PivotPanel_DropDownList_ValueSet": "Impostazioni campo...",
+		"PivotPanel_Fields_MoveTo_ReportField": "Impostazioni campo valore...",
+		"PivotPanel_Fields_MoveTo_RowLabel": "Aggiungi al filtro rapporto",
+		"PivotPanel_Fields_MoveTo_ColLabel": "Aggiungi a etichette di riga",
+		"PivotPanel_Fields_MoveTo_Value": "Aggiungi alle etichette delle colonne",
+		"PivotPanel_LabelOrValue_ClearFilter": "Aggiungi ai valori",
+		"PivotPanel_ValueFilterOrLabel_Equals": "Filtro pulito",
+		"PivotPanel_ValueFilterOrLabel_NotEqual": "Equivale...",
+		"PivotPanel_ValueFilterOrLabel_GreaterThan": "Non è uguale...",
+		"PivotPanel_ValueFilterOrLabel_GreaterOrTo": "Più grande di...",
+		"PivotPanel_ValueFilterOrLabel_LessThan": "Maggiore o uguale a...",
+		"PivotPanel_ValueFilterOrLabel_LessOrTo": "Meno di...",
+		"PivotPanel_ValueFilterOrLabel_Between": "Minore o uguale a...",
+		"PivotPanel_ValueFilterOrLabel_NotBetween": "Tra...",
+		"PivotPanel_ValueFilter_Top10": "Non in mezzo...",
+		"PivotPanel_ValueFilterOrLabel_IsBeginWith": "I primi 10...",
+		"PivotPanel_ValueFilterOrLabel_NotBegin": "Inizia con...",
+		"PivotPanel_ValueFilterOrLabel_End": "Non inizia con...",
+		"PivotPanel_ValueFilterOrLabel_NotEndWith": "Finisce con...",
+		"PivotPanel_ValueFilterOrLabel_Contain": "Non finisce con...",
+		"PivotPanel_ValueFilterOrLabel_NotContain": "Contiene...",
+		"ValueFilterOrLabel_Equals": "Non contiene...",
+		"ValueFilterOrLabel_NotEqual": "equivale",
+		"ValueFilterOrLabel_GreaterThan": "non è uguale",
+		"ValueFilterOrLabel_GreaterOrTo": "più grande di",
+		"ValueFilterOrLabel_LessThan": "maggiore o uguale a",
+		"ValueFilterOrLabel_LessOrTo": "meno di",
+		"ValueFilterOrLabel_Between": "minore o uguale a",
+		"ValueFilterOrLabel_NotBetween": "tra",
+		"ValueFilterOrLabelSelect_GreaterThan": "non in mezzo",
+		"ValueFilterOrLabelSelect_GreaterOrTo": "è più grande di",
+		"ValueFilterOrLabelSelect_LessThan": "è più grande di O uguale a",
+		"ValueFilterOrLabelSelect_LessOrTo": "è meno di",
+		"ValueFilterOrLabelSelect_Between": "è minore o uguale a",
+		"ValueFilterOrLabelSelect_NotBetween": "è tra",
+		"ValueFilterOrLabel_IsBeginWith": "non è tra",
+		"ValueFilterOrLabel_NotBegin": "inizia con",
+		"ValueFilterOrLabel_End": "non inizia con",
+		"ValueFilterOrLabel_NotEndWith": "finisce con",
+		"ValueFilterOrLabel_Contain": "non finisce con",
+		"ValueFilterOrLabel_NotContain": "contiene",
+		"PivotPanel_ValueFilterOrLabel_Before": "non contiene",
+		"PivotPanel_ValueFilterOrLabel_After": "Prima delle...",
+		"PivotPanel_ValueFilterOrLabel_Tomorrow": "A seguito di...",
+		"PivotPanel_ValueFilterOrLabel_Today": "Domani",
+		"PivotPanel_ValueFilterOrLabel_Yesterday": "In data odierna",
+		"PivotPanel_ValueFilterOrLabel_NextWeek": "Ieri",
+		"PivotPanel_ValueFilterOrLabel_ThisWeek": "La prossima settimana",
+		"PivotPanel_ValueFilterOrLabel_LastWeek": "Questa settimana",
+		"PivotPanel_ValueFilterOrLabel_NextMonth": "La settimana scorsa",
+		"PivotPanel_ValueFilterOrLabel_ThisMonth": "Il prossimo mese",
+		"PivotPanel_ValueFilterOrLabel_LastMonth": "Questo mese",
+		"PivotPanel_ValueFilterOrLabel_NextQuarter": "Lo scorso mese",
+		"PivotPanel_ValueFilterOrLabel_ThisQuarter": "Prossimo trimestre",
+		"PivotPanel_ValueFilterOrLabel_LastQuarter": "Questo quarto",
+		"PivotPanel_ValueFilterOrLabel_NextYear": "Ultimo quarto",
+		"PivotPanel_ValueFilterOrLabel_ThisYear": "L'anno prossimo",
+		"PivotPanel_ValueFilterOrLabel_LastYear": "Quest'anno",
+		"PivotPanel_ValueFilterOrLabel_YearToDate": "L'anno scorso",
+		"PivotPanel_ValueFilterOrLabel_MonthToDate": "Da inizio anno",
+		"PivotPanel_ValueFilterOrLabel_QuarterToDate": "Dall'inizio del mese a oggi",
+		"PivotPanel_ValueFilterOrLabel_ParallelYearToDate": "Trimestre fino ad oggi",
+		"PivotPanel_ValueFilterOrLabel_ParallelMonthToDate": "Parallelo da inizio anno",
+		"PivotPanel_ValueFilterOrLabel_ParallelQuarterToDate": "Parallelo dal mese alla data",
+		"PivotPanel_ValueFilterOrLabel_AllDates": "Quarto parallelo fino ad oggi",
+		"PivotPanel_ValueFilterOrLabel_Custom": "Tutte le date nel periodo",
+		"PivotPanel_Sort_A_Z": "Filtro personalizzato...",
+		"PivotPanel_Sort_Z_A": "Ordina dalla A alla Z",
+		"PivotPanel_Sort_Smallest_Largest": "Ordina dalla Z alla A",
+		"PivotPanel_Sort_Largest_Smallest": "Ordina dal più piccolo al più grande",
+		"PivotPanel_Sort_More": "Ordina dal più grande al più piccolo",
+		"PivotPanel_Filter_Clear": "Altre opzioni di ordinamento...",
+		"PivotPanel_Filter_Label": "Cancella filtro da {0}",
+		"PivotPanel_Filter_Value": "Etichetta filtri",
+		"PivotPanel_Date_Filter": "Filtri di valore",
+		"Ok": "Filtri data",
+		"Cancel": "OK",
+		"NumberFormat": "Annulla",
+		"LabelFormat": "Formato numerico",
+		"Number": "Formato etichetta",
+		"FormatCells": "Numero",
+		"Sample": "Formatta celle",
+		"Type": "Campione",
+		"CustomFormats": "Tipo",
+		"Select_Field": "Generale,0,0.00,#,##0,#,##0.00,#,##0;(#,##0),#,##0;[Rosso](#,##0),# ,##0.00;(#,##0.00),#,##0.00;[Rosso](#,##0.00),$#,##0;($#,##0),$#,# #0;[Rosso]($#,##0),$#,##0.00;($#,##0.00),$#,##0.00;[Rosso]($#,##0.00), 0%,0.00%,0.00E+00,##0.0E+0,# ?/?,# ?????,m/g/aaaa,g-mmm-aa,g-mmm,mmm-aa, h:mm AM/PM,h:mm:ss AM/PM,hh:mm,hh:mm:ss,m/g/aaaa hh:mm,mm:ss,mm:ss.0,@,[h] :mm:ss,$ #,##0;$ (#,##0);$ \"-\";@, #,##0; (#,##0); \"-\";@,$ #,##0.00;$ (#,##0.00);$ \"-\"??;@, #,##0.00; (#,##0.00); \"-\"??;@,hh:mm:ss,00000,# ???/???,000-00-0000,gggg, mmmm gg, aaaa,m/g;@,[<=9999999]# ##-####;(###) ###-####,# ?/8",
+		"PivotPanel_Filter_SelectAll": "Seleziona campo",
+		"PivotPanel_Filter_NoSelectAll": "Seleziona tutto",
+		"PivotPanel_Filter_Search": "Deseleziona tutto",
+		"Label_Title": "ricerca",
+		"Label_Show": "Filtro etichetta",
+		"Use_Single_Character": "Mostra gli articoli per i quali l'etichetta",
+		"Use_Series_Characters": "Uso ? per rappresentare un singolo carattere",
+		"Value_Show": "Usa * per rappresentare qualsiasi carattere della serie",
+		"Value_Title": "Mostra gli elementi per i quali",
+		"Top_Ten_Filter": "Filtro valore",
+		"TopTenShow": "Top 10 filtro",
+		"Top": "mostrare",
+		"Bottom": "Superiore",
+		"Top_Item": "Parte inferiore",
+		"Top_Percent": "Elementi",
+		"Top_Sum": "Per cento",
+		"ByJoiner": "Somma",
+		"AndJoiner": "di",
+		"Q1": "e",
+		"Q2": "Quarto 1",
+		"Q3": "Quarto 2",
+		"Q4": "Quarto 3",
+		"Jan": "Quarto 4",
+		"Feb": "Gennaio",
+		"Mar": "febbraio",
+		"Apr": "Marzo",
+		"May": "aprile",
+		"Jun": "Maggio",
+		"Jul": "Giugno",
+		"Aug": "Luglio",
+		"Sep": "agosto",
+		"Oct": "settembre",
+		"Nov": "ottobre",
+		"Dec": "novembre",
+		"IsBefore": "Dicembre",
+		"IsBeforeOrEqual": "è prima",
+		"IsAfter": "è prima o uguale a",
+		"IsAfterOrEqual": "è dopo",
+		"IsBetween": "è dopo o uguale a",
+		"IsNotBetween": "è tra",
+		"DateFilterTitle": "non è tra",
+		"DateShow": "Filtro data",
+		"WholeDays": "Mostra gli elementi per i quali la data",
+		"FieldSetting": "Intere giornate",
+		"ValueSetting": "Impostazioni sul campo",
+		"SourceName": "Impostazioni campo valore",
+		"CustomName": "Nome fonte:",
+		"SummarizeValue": "Nome personalizzato:",
+		"ShowValueAs": "Riepiloga valori per",
+		"CalculationForDialog": "Mostra valore come",
+		"BaseFieldForDialog": "Calcolo:",
+		"BaseItemForDialog": "Campo base:",
+		"BaseItemNext": "Articolo base:",
+		"BaseItemPrevious": "(prossimo)",
+		"SummarizeValueField": "(precedente)",
+		"ShowValueAsField": "Riepiloga il campo dei valori per",
+		"ChooseType": "Mostra valore come",
+		"Sum": "Scegli il tipo di calcolo che desideri utilizzare per riepilogare i dati dal campo selezionato",
+		"Count": "Somma",
+		"Average": "Contare",
+		"Max": "Media",
+		"Min": "Massimo",
+		"Product": "min",
+		"CountNumbers": "Prodotto",
+		"StdDev": "Contare i numeri",
+		"StdDevp": "StdDev",
+		"Var": "StdDevp",
+		"Varp": "Var",
+		"sigmaValue": "Varp",
+		"sigmaValueTemp": "∑ Valori",
+		"DateFormatError": "I valori",
+		"noCalculation": "Questa non è una data valida",
+		"percentGrandTotal": "Nessun calcolo",
+		"percentColumnTotal": "% del totale complessivo",
+		"percentRowTotal": "% del totale colonna",
+		"percentEllipsis": "% del totale riga",
+		"percentParentRowTotal": "% Di ...",
+		"percentParentColumnTotal": "% del totale riga padre",
+		"percentParentTotal": "% del totale della colonna padre",
+		"difference": "% del totale padre...",
+		"percentDifference": "Differenza da...",
+		"runningTotal": "% Differenza da...",
+		"percentRunningTotal": "Totale corrente in...",
+		"rankSmallestLargest": "% totale parziale in...",
+		"rankLargestSmallest": "Classifica dal più piccolo al più grande...",
+		"index": "Classifica dal più grande al più piccolo...",
+		"showValueAsDialog": "Indice",
+		"baseField": ",,,,% di ,,,% del totale padre ,Differenza da ,% Differenza da ,Totale parziale in ,% Totale parziale in ,Rango dal più piccolo al più grande ,Rango dal più grande al più piccolo ,",
+		"baseItem": "Campo base:",
+		"grouping": "Articolo base:",
+		"auto": "Raggruppamento",
+		"startingAt": "Auto",
+		"endingAt": "A partire da:",
+		"groupBy": "Fine alle:",
+		"seconds": "Di:",
+		"minutes": "Secondi",
+		"hours": "Minuti",
+		"days": "Ore",
+		"months": "Giorni",
+		"quarters": "Mesi",
+		"years": "Quarti",
+		"numberOfDays": "Anni",
+		"NoHaveSpread": "Numero di giorni",
+		"SourceError": "eccezione della cartella di lavoro",
+		"SourceNotIsTableNameOrFormula": "Eccezione dati di origine, impossibile creare un rapporto di tabella pivot",
+		"SourceDataOnlyOne": "i dati di origine non sono il nome e la formula della tabella",
+		"FieldAreaLimited": "Questo comando richiede almeno due righe di dati di origine. Non è possibile utilizzare il comando su una selezione in una sola riga",
+		"Views": "Il campo che stai spostando non può essere posizionato in quell'area del report.",
+		"Group": "Visualizzazioni",
+		"param_error": "Gruppo",
+		"EmptyValueFieldError": "il parametro è nullo o indefinito",
+		"DefaultPivotTableViewName": "È necessario almeno un campo nell'area Valori per applicare un filtro valore",
+		"toolTipContent_Row": "Vista pivot",
+		"toolTipContent_Column": "Riga:",
+		"toolTipContent_Value": "Colonna:",
+		"toolTipContent_NoValue": "Valore:",
+		"deferLayoutUpdate": "Nessun valore",
+		"PivotTableErrorMessage_ShowDetail": "Rinvia l'aggiornamento del layout",
+		"PivotTableErrorMessage_MakeChange": "Impossibile mostrare o nascondere i dettagli per questa selezione",
+		"PivotTableErrorMessage_ExistData": "Non possiamo apportare questa modifica per le celle selezionate perché influirà su una tabella pivot. Utilizzare l'elenco dei campi per modificare il report. Se stai tentando di inserire o eliminare celle, sposta la tabella pivot e riprova.",
+		"PivotTableErrorMessage_EditWhenDefer": "Sono già presenti dati in {}. Vuoi sostituirlo?",
+		"PivotTableErrorMessage_DuplicatedFieldName": "Il rapporto di tabella pivot non può essere modificato con la casella di controllo Rinvia aggiornamento layout selezionata. Per modificare il rapporto, deselezionare la casella di controllo Posticipa aggiornamento layout nella parte inferiore dell'Elenco campi tabella pivot.",
+		"PivotTableErrorMessage_EmptyFieldName": "Il nome del campo della tabella pivot esiste già.",
+		"PivotTableErrorMessage_Protect": "Impossibile immettere un valore nullo come nome di un elemento o di un campo in un rapporto di tabella pivot.",
+		"PivotTableErrorMessage_EmptySourceFieldName": "Tale comando non può essere eseguito mentre un foglio protetto contiene un altro rapporto di tabella pivot basato sugli stessi dati di origine. Per rimuovere la protezione dal foglio che contiene l'altro report, fare clic sulla scheda del foglio, quindi su Rimuovi protezione foglio (scheda Revisione, gruppo Modifiche). Quindi riprovare il comando.",
+		"PivotTableErrorMessage_Overlap": "Il nome del campo della tabella pivot non è valido. Per creare un rapporto di tabella pivot, è necessario utilizzare dati organizzati come un elenco con colonne etichettate. Se si modifica il nome di un campo di tabella pivot, è necessario digitare un nuovo nome per il campo.",
+		"PivotTableErrorMessage_InvalidChange": "Un rapporto di tabella pivot non può sovrapporsi a un altro rapporto di tabella pivot.",
+		"PivotTableErrorMessage_InvalidGroup": "Non possiamo modificare questa parte della tabella pivot.",
+		"PivotTableErrorMessage_InvalidReference": "Impossibile raggruppare quella selezione.",
+		"PivotTableForAccessibility": "Il riferimento non è valido.",
+		"PivotTableCalcItemHasTowCacheField": "Tabella pivot:",
+		"PivotTableHasNumberOrDateGroup": "Nome tabella pivot:",
+		"PivotTableSubtotalType": "Se uno o più campi della tabella pivot contengono elementi calcolati, nessun campo può essere utilizzato nell'area dati due o più volte oppure nell'area dati e in un'altra area contemporaneamente. Se stai tentando di aggiungere un campo, rimuovi gli elementi calcolati e aggiungi nuovamente il campo. Se stai tentando di aggiungere un elemento calcolato, modifica il rapporto di tabella pivot in modo che nessun campo venga utilizzato più di una volta, quindi aggiungi l'elemento calcolato.",
+		"PivotTableHasSameItemName": "Questo campo del rapporto di tabella pivot è raggruppato, non è possibile aggiungere un elemento calcolato a un campo raggruppato. Per separare il campo, assicurarsi che si trovi nell'area della riga o della colonna, selezionare uno degli elementi del campo raggruppato, fare clic sul pulsante Separa nel gruppo Raggruppa nella scheda Analizza, quindi inserire l'elemento calcolato. Dopo l'inserimento è possibile raggruppare nuovamente gli elementi del campo.",
+		"PivotTableCalcItemHasMultipleDataField": "Le medie, le deviazioni standard e le varianze non sono supportate quando un rapporto di tabella pivot contiene elementi calcolati.",
+		"PivotTableMoveCalcItemFieldToReport": "Impossibile creare l'elemento o il campo calcolato perché esiste un altro elemento o campo con lo stesso nome.",
+		"PivotTableErrorFormula": "Più campi dati dello stesso campo non sono supportati quando un rapporto di tabella pivot contiene elementi calcolati.",
+		"SlicerNameInFormula": "Questo campo non può essere inserito nel filtro del report perché contiene elementi calcolati. Per inserire questo campo nel filtro del report, eliminare prima gli elementi calcolati.",
+		"search": "Impossibile trovare il nome di un elemento. Verifica di aver digitato correttamente il nome e che l'elemento sia presente nel rapporto di tabella pivot.",
+		"AddSearchResult": "Affettatrice",
+		"Layout": "Ricerca",
+		"showNoData": "Aggiungi la selezione corrente al filtro",
+		"TIMELINE_PLACE_HOLDER": "Disposizione",
+		"ALL_DATES_IN": "Mostra elementi senza dati",
+		"ALL_PERIODS": "{TL}",
+		"INVALID_DATE_SELECTION": "Tutte le date in",
+		"QUARTER_MAP": "Tutti i periodi",
+		"DateNotEqual": "Selezione data non valida!",
+		"DateNewerThan": ",Q1,Q2,Q3,Q4",
+		"DateNewerThanOrEqual": "Non {TL}",
+		"DateOlderThan": "Dopo {TL}",
+		"DateOlderThanOrEqual": "Dopo o il {TL}",
+		"DateNotBetween": "Prima di {TL}",
+		"AllDatesIn_Quarter1": "Prima o il {TL}",
+		"AllDatesIn_Quarter2": "Non tra {TL}",
+		"AllDatesIn_Quarter3": "Tutte le date nel primo trimestre",
+		"AllDatesIn_Quarter4": "Tutte le date nel secondo trimestre",
+		"AllDatesIn_January": "Tutte le date nel terzo trimestre",
+		"AllDatesIn_February": "Tutte le date nel quarto trimestre",
+		"AllDatesIn_March": "Tutte le date di gennaio",
+		"AllDatesIn_April": "Tutte le date di febbraio",
+		"AllDatesIn_May": "Tutte le date di marzo",
+		"AllDatesIn_June": "Tutte le date di aprile",
+		"AllDatesIn_July": "Tutte le date di maggio",
+		"AllDatesIn_August": "Tutte le date di giugno",
+		"AllDatesIn_September": "Tutte le date di luglio",
+		"AllDatesIn_October": "Tutte le date di agosto",
+		"AllDatesIn_November": "Tutte le date di settembre",
+		"AllDatesIn_December": "Tutte le date di ottobre",
+		"TIME_LEVEL_YEARS": "Tutte le date di novembre",
+		"TIME_LEVEL_QUARTERS": "Tutte le date di dicembre",
+		"TIME_LEVEL_MONTHS": "ANNI",
+		"TIME_LEVEL_DAYS": "QUARTIERI",
+		"PivotTableErrorMessage_ExistTable": "MESI"
+	},
+	"Functions": {
+		"ABS": {
+			"description": "Questa funzione calcola il valore assoluto del valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ACCRINT": {
+			"description": "Questa funzione calcola l'interesse maturato per un titolo che paga interessi periodici.",
+			"parameters": [
+				{
+					"name": "problema"
+				},
+				{
+					"name": "primo_interesse"
+				},
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "par"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ACCRINTM": {
+			"description": "Questa funzione calcola gli interessi maturati alla scadenza per un titolo che paga interessi periodici.",
+			"parameters": [
+				{
+					"name": "problema"
+				},
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "par"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ACOS": {
+			"description": "Questa funzione calcola l'arcocoseno, ovvero l'angolo il cui coseno è il valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ACOSH": {
+			"description": "Questa funzione calcola il coseno iperbolico inverso del valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ADDRESS": {
+			"description": "Questa funzione utilizza i numeri di riga e colonna per creare un indirizzo di cella nel testo.",
+			"parameters": [
+				{
+					"name": "numero_riga"
+				},
+				{
+					"name": "colonna_num"
+				},
+				{
+					"name": "abs_num"
+				},
+				{
+					"name": "a1style"
+				},
+				{
+					"name": "foglio_testo"
+				}
+			]
+		},
+		"AGGREGATE": {
+			"description": "Questa funzione aggrega un elenco di numeri utilizzando una funzione incorporata specificata.",
+			"parameters": [
+				{
+					"name": "funzione_num"
+				},
+				{
+					"name": "opzioni"
+				},
+				{
+					"name": "rif1"
+				},
+				{
+					"name": "rif2",
+					"repeatable": false
+				}
+			]
+		},
+		"AMORDEGRC": {
+			"description": "Questa funzione restituisce l'ammortamento di un periodo contabile, prendendo in considerazione l'ammortamento proporzionale, e applica un coefficiente di ammortamento nel calcolo basato sulla vita dei cespiti.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "data_acquisto"
+				},
+				{
+					"name": "primo periodo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "periodo"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"AMORLINC": {
+			"description": "Questa funzione calcola l'ammortamento per un periodo contabile, tenendo conto dell'ammortamento proporzionale.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "data_acquisto"
+				},
+				{
+					"name": "primo periodo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "periodo"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"AND": {
+			"description": "Controlla se tutti gli argomenti sono veri e restituisce vero se tutti gli argomenti sono veri.",
+			"parameters": [
+				{
+					"name": "logico1"
+				},
+				{
+					"name": "logico2"
+				}
+			]
+		},
+		"ASIN": {
+			"description": "Questa funzione calcola l'arcoseno, ovvero l'angolo il cui seno è il valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ASINH": {
+			"description": "Questa funzione calcola l'inverso del seno iperbolico di un numero.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ATAN": {
+			"description": "Questa funzione calcola l'arcotangente, ovvero l'angolo la cui tangente è il valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ATAN2": {
+			"description": "Questa funzione calcola l'arcotangente delle coordinate x e y specificate.",
+			"parameters": [
+				{
+					"name": "x_num"
+				},
+				{
+					"name": "y_num"
+				}
+			]
+		},
+		"ATANH": {
+			"description": "Questa funzione calcola la tangente iperbolica inversa di un numero.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"AVEDEV": {
+			"description": "Questa funzione calcola la media delle deviazioni assolute dei valori specificati dalla loro media.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"AVERAGE": {
+			"description": "Questa funzione calcola la media dei valori numerici specificati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"AVERAGEA": {
+			"description": "Questa funzione calcola la media dei valori specificati, inclusi testo o valori logici nonché valori numerici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"AVERAGEIF": {
+			"description": "Questa funzione calcola la media dei valori numerici specificati a condizione che soddisfino i criteri specificati.",
+			"parameters": [
+				{
+					"name": "allineare"
+				},
+				{
+					"name": "criteri"
+				},
+				{
+					"name": "[intervallo_medio]"
+				}
+			]
+		},
+		"AVERAGEIFS": {
+			"description": "Questa funzione calcola la media di tutte le celle che soddisfano più criteri specificati.",
+			"parameters": [
+				{
+					"name": "intervallo_medio"
+				},
+				{
+					"name": "criteri_intervallo1",
+					"repeatable": false
+				},
+				{
+					"name": "criteri1",
+					"repeatable": false
+				}
+			]
+		},
+		"BESSELI": {
+			"description": "Questa funzione calcola la funzione di Bessel modificata del primo tipo valutata per argomenti puramente immaginari.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "ordine"
+				}
+			]
+		},
+		"BESSELJ": {
+			"description": "Questa funzione calcola la funzione di Bessel del primo tipo.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "ordine"
+				}
+			]
+		},
+		"BESSELK": {
+			"description": "Questa funzione calcola la funzione di Bessel modificata del secondo tipo valutata per argomenti puramente immaginari.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "ordine"
+				}
+			]
+		},
+		"BESSELY": {
+			"description": "Questa funzione calcola la funzione di Bessel del secondo tipo.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "ordine"
+				}
+			]
+		},
+		"BETADIST": {
+			"description": "Questa funzione calcola la funzione di distribuzione cumulativa beta.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "minore"
+				},
+				{
+					"name": "superiore"
+				}
+			]
+		},
+		"BETAINV": {
+			"description": "Questa funzione calcola l'inverso della funzione di distribuzione cumulativa beta.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "minore"
+				},
+				{
+					"name": "superiore"
+				}
+			]
+		},
+		"BIN2DEC": {
+			"description": "Questa funzione converte un numero binario in un numero decimale",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"BIN2HEX": {
+			"description": "Questa funzione converte un numero binario in un numero esadecimale.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"BIN2OCT": {
+			"description": "Questa funzione converte un numero binario in un numero ottale.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"BINOMDIST": {
+			"description": "Questa funzione calcola la probabilità di distribuzione binomiale del termine individuale.",
+			"parameters": [
+				{
+					"name": "numeri"
+				},
+				{
+					"name": "prove"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"CEILING": {
+			"description": "Questa funzione arrotonda un numero al multiplo più vicino di un valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "significato"
+				}
+			]
+		},
+		"CHAR": {
+			"description": "Questa funzione restituisce il carattere specificato da un numero.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"CHIDIST": {
+			"description": "Questa funzione calcola la probabilità unidirezionale della distribuzione chi quadrato.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CHIINV": {
+			"description": "Questa funzione calcola l'inverso della probabilità a una coda della distribuzione chi quadrato",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CHITEST": {
+			"description": "Questa funzione calcola il test di indipendenza dalla distribuzione del chi quadrato.",
+			"parameters": [
+				{
+					"name": "intervallo_effettivo"
+				},
+				{
+					"name": "intervallo_previsto"
+				}
+			]
+		},
+		"CHOOSE": {
+			"description": "Questa funzione restituisce un valore da un elenco di valori.",
+			"parameters": [
+				{
+					"name": "indice_num"
+				},
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"CLEAN": {
+			"description": "Questa funzione rimuove tutti i caratteri non stampabili dal testo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"CODE": {
+			"description": "Questa funzione restituisce un codice numerico per rappresentare il primo carattere in una stringa di testo. Il codice restituito corrisponde al set di caratteri di Windows (ANSI).",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"COLUMN": {
+			"description": "Questa funzione restituisce il numero di colonna di un riferimento.",
+			"parameters": [
+				{
+					"name": "riferimento"
+				}
+			]
+		},
+		"COLUMNS": {
+			"description": "Questa funzione restituisce il numero di colonne in un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				}
+			]
+		},
+		"COMBIN": {
+			"description": "Questa funzione calcola il numero di combinazioni possibili per un numero specificato di elementi.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "numero_scelto"
+				}
+			]
+		},
+		"COMPLEX": {
+			"description": "Questa funzione converte coefficienti reali e immaginari in un numero complesso.",
+			"parameters": [
+				{
+					"name": "numero_reale"
+				},
+				{
+					"name": "numero_immagine"
+				},
+				{
+					"name": "suffisso"
+				}
+			]
+		},
+		"CONCATENATE": {
+			"description": "Questa funzione combina più stringhe di testo o numeri in un'unica stringa di testo.",
+			"parameters": [
+				{
+					"name": "Testo 1"
+				},
+				{
+					"name": "testo2",
+					"repeatable": false
+				}
+			]
+		},
+		"CONFIDENCE": {
+			"description": "Questa funzione restituisce l'intervallo di confidenza per una media della popolazione.",
+			"parameters": [
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "standard_dev"
+				},
+				{
+					"name": "taglia"
+				}
+			]
+		},
+		"CONVERT": {
+			"description": "Questa funzione converte un numero da un sistema di misurazione al suo equivalente in un altro sistema di misurazione.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "from_unit"
+				},
+				{
+					"name": "to_unit"
+				}
+			]
+		},
+		"CORREL": {
+			"description": "Questa funzione restituisce il coefficiente di correlazione dei due insiemi di dati.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"COS": {
+			"description": "Questa funzione restituisce il coseno dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"COSH": {
+			"description": "Questa funzione restituisce il coseno iperbolico del valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"COUNT": {
+			"description": "Questa funzione restituisce il numero di celle che contengono numeri.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"COUNTA": {
+			"description": "Questa funzione restituisce il numero di celle che contengono numeri, testo o valori logici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"COUNTBLANK": {
+			"description": "Questa funzione restituisce il numero di celle vuote (o vuote) in un intervallo di celle su un foglio.",
+			"parameters": [
+				{
+					"name": "cellrange"
+				}
+			]
+		},
+		"COUNTIF": {
+			"description": "Questa funzione restituisce il numero di celle che soddisfano una determinata condizione",
+			"parameters": [
+				{
+					"name": "cellrange"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"COUNTIFS": {
+			"description": "Questa funzione restituisce il numero di celle che soddisfano più condizioni.",
+			"parameters": [
+				{
+					"name": "criteri_intervallo1",
+					"repeatable": false
+				},
+				{
+					"name": "criteri1",
+					"repeatable": false
+				}
+			]
+		},
+		"COUPDAYBS": {
+			"description": "Questa funzione calcola il numero di giorni dall'inizio del periodo della cedola alla data di regolamento.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COUPDAYS": {
+			"description": "Questa funzione restituisce il numero di giorni nel periodo della cedola che contiene la data di liquidazione.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COUPDAYSNC": {
+			"description": "Questa funzione calcola il numero di giorni dalla data di liquidazione alla data della cedola successiva.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COUPNCD": {
+			"description": "Questa funzione restituisce un numero di data della data della cedola successiva alla data di liquidazione.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COUPNUM": {
+			"description": "Questa funzione restituisce il numero di cedole scadute tra la data di regolamento e la data di scadenza.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COUPPCD": {
+			"description": "Questa funzione restituisce un numero di data della data della cedola precedente prima della data di liquidazione.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"COVAR": {
+			"description": "Questa funzione restituisce la covarianza, che è la media dei prodotti delle deviazioni per ciascuna coppia di punti dati in due insiemi di numeri.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"CRITBINOM": {
+			"description": "Questa funzione restituisce il criterio binomiale, il valore più piccolo per il quale la distribuzione cumulativa binomiale è maggiore o uguale a un valore criterio.",
+			"parameters": [
+				{
+					"name": "prove"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "alfa"
+				}
+			]
+		},
+		"CUMIPMT": {
+			"description": "Questa funzione restituisce l'interesse cumulativo pagato su un prestito tra il periodo iniziale e quello finale.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "inizio_periodo"
+				},
+				{
+					"name": "fine_periodo"
+				},
+				{
+					"name": "paytype"
+				}
+			]
+		},
+		"CUMPRINC": {
+			"description": "Questa funzione restituisce il capitale cumulativo pagato su un prestito tra i periodi di inizio e fine.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "inizio_periodo"
+				},
+				{
+					"name": "fine_periodo"
+				},
+				{
+					"name": "paytype"
+				}
+			]
+		},
+		"DATE": {
+			"description": "Questa funzione restituisce l'oggetto DateTime per una data particolare, specificata dall'anno, mese e giorno.",
+			"parameters": [
+				{
+					"name": "anno"
+				},
+				{
+					"name": "mese"
+				},
+				{
+					"name": "giorno"
+				}
+			]
+		},
+		"DATEDIF": {
+			"description": "Questa funzione restituisce il numero di giorni, mesi o anni tra due date.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "unità"
+				}
+			]
+		},
+		"DATEVALUE": {
+			"description": "Questa funzione restituisce un oggetto DateTime della data specificata.",
+			"parameters": [
+				{
+					"name": "data_testo"
+				}
+			]
+		},
+		"DAVERAGE": {
+			"description": "Questa funzione calcola la media dei valori in una colonna di un elenco o database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DAY": {
+			"description": "Questa funzione restituisce il numero del giorno del mese (numero intero da 1 a 31) che corrisponde alla data specificata.",
+			"parameters": [
+				{
+					"name": "Data"
+				}
+			]
+		},
+		"DAYS360": {
+			"description": "Questa funzione restituisce il numero di giorni tra due date in base a un anno di 360 giorni.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "metodo"
+				}
+			]
+		},
+		"DB": {
+			"description": "Questa funzione calcola l'ammortamento di un cespite per un periodo specificato utilizzando il metodo del saldo decrescente fisso",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "vita"
+				},
+				{
+					"name": "periodo"
+				},
+				{
+					"name": "mese"
+				}
+			]
+		},
+		"DCOUNT": {
+			"description": "Questa funzione conta le celle che contengono numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DCOUNTA": {
+			"description": "Questa funzione conta le celle non vuote in una colonna di un elenco o database che soddisfano le condizioni specificate",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DDB": {
+			"description": "Questa funzione calcola l'ammortamento di un cespite per un periodo specificato utilizzando il metodo del saldo a doppia diminuzione o un altro metodo specificato.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "vita"
+				},
+				{
+					"name": "periodo"
+				},
+				{
+					"name": "fattore"
+				}
+			]
+		},
+		"DEC2BIN": {
+			"description": "Questa funzione converte un numero decimale in un numero binario.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"DEC2HEX": {
+			"description": "Questa funzione converte un numero decimale in un numero esadecimale",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"DEC2OCT": {
+			"description": "Questa funzione converte un numero decimale in un numero ottale",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"DEGREES": {
+			"description": "Questa funzione converte il valore specificato da radianti a gradi",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"DELTA": {
+			"description": "Questa funzione identifica se due valori sono uguali. Restituisce 1 se sono uguali; restituisce 0 altrimenti.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"DEVSQ": {
+			"description": "Questa funzione calcola la somma dei quadrati delle deviazioni dei punti dati (o di un array di punti dati) dalla loro media campionaria.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"DGET": {
+			"description": "Questa funzione estrae un singolo valore da una colonna di un elenco o database che corrisponde alle condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DISC": {
+			"description": "Questa funzione calcola il tasso di sconto per un titolo.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"DMAX": {
+			"description": "Questa funzione restituisce il numero più grande in una colonna di un elenco o di un database che corrisponde alle condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DMIN": {
+			"description": "Questa funzione restituisce il numero più piccolo in una colonna di un elenco o di un database che corrisponde alle condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DOLLAR": {
+			"description": "Questa funzione converte un numero in testo utilizzando il formato valuta, con i decimali arrotondati alla posizione specificata.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "decimali"
+				}
+			]
+		},
+		"DOLLARDE": {
+			"description": "Questa funzione converte una frazione di prezzo in dollari in un prezzo decimale in dollari.",
+			"parameters": [
+				{
+					"name": "dollaro_frazionario"
+				},
+				{
+					"name": "frazione"
+				}
+			]
+		},
+		"DOLLARFR": {
+			"description": "Questa funzione converte un prezzo in dollari di un numero decimale in un prezzo in dollari di frazione.",
+			"parameters": [
+				{
+					"name": "decimale_dollaro"
+				},
+				{
+					"name": "frazione"
+				}
+			]
+		},
+		"DPRODUCT": {
+			"description": "Questa funzione moltiplica i valori in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DSTDEV": {
+			"description": "Questa funzione stima la deviazione standard di una popolazione basata su un campione utilizzando i numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DSTDEVP": {
+			"description": "Questa funzione calcola la deviazione standard di una popolazione in base all'intera popolazione utilizzando i numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DSUM": {
+			"description": "Questa funzione aggiunge i numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DURATION": {
+			"description": "Questa funzione restituisce la durata Macaulay per un valore nominale presunto di $100.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "buono"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"DVAR": {
+			"description": "Questa funzione stima la varianza di una popolazione basata su un campione utilizzando i numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"DVARP": {
+			"description": "Questa funzione calcola la varianza di una popolazione in base all'intera popolazione utilizzando i numeri in una colonna di un elenco o di un database che soddisfano le condizioni specificate.",
+			"parameters": [
+				{
+					"name": "Banca dati"
+				},
+				{
+					"name": "campo"
+				},
+				{
+					"name": "criteri"
+				}
+			]
+		},
+		"EDATE": {
+			"description": "Questa funzione calcola la data che è il numero indicato di mesi prima o dopo una data specificata.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "mesi"
+				}
+			]
+		},
+		"EFFECT": {
+			"description": "Questa funzione calcola il tasso di interesse annuo effettivo per un dato tasso di interesse annuo nominale e il numero di periodi di capitalizzazione all'anno.",
+			"parameters": [
+				{
+					"name": "tasso_nominale"
+				},
+				{
+					"name": "npery"
+				}
+			]
+		},
+		"EOMONTH": {
+			"description": "Questa funzione calcola la data dell'ultimo giorno del mese (fine del mese) che è il numero indicato di mesi prima o dopo la data di inizio.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "mesi"
+				}
+			]
+		},
+		"ERF": {
+			"description": "Questa funzione calcola la funzione di errore integrata tra un limite inferiore e uno superiore.",
+			"parameters": [
+				{
+					"name": "limite inferiore"
+				},
+				{
+					"name": "limite superiore"
+				}
+			]
+		},
+		"ERFC": {
+			"description": "Questa funzione calcola la funzione di errore complementare integrata tra un limite inferiore e l'infinito.",
+			"parameters": [
+				{
+					"name": "limite inferiore"
+				}
+			]
+		},
+		"ERROR.TYPE": {
+			"description": "Questa funzione restituisce un numero corrispondente a uno dei valori di errore.",
+			"parameters": [
+				{
+					"name": "errore_val"
+				}
+			]
+		},
+		"EURO": {
+			"description": "Questa funzione restituisce l'equivalente di un euro in base al codice valuta ISO.",
+			"parameters": [
+				{
+					"name": "codice"
+				}
+			]
+		},
+		"EUROCONVERT": {
+			"description": "Questa funzione converte la valuta da una valuta membro Euro (inclusi Euro) a un'altra valuta membro Euro (inclusi Euro).",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "fonte"
+				},
+				{
+					"name": "obbiettivo"
+				},
+				{
+					"name": "precisione_completa"
+				},
+				{
+					"name": "triangolazione_precisione"
+				}
+			]
+		},
+		"EVEN": {
+			"description": "Questa funzione arrotonda il valore specificato all'intero pari più vicino.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"EXACT": {
+			"description": "Questa funzione restituisce true se due stringhe sono uguali; altrimenti, falso.",
+			"parameters": [
+				{
+					"name": "Testo 1"
+				},
+				{
+					"name": "testo2"
+				}
+			]
+		},
+		"EXP": {
+			"description": "Questa funzione restituisce e elevato alla potenza del valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"EXPONDIST": {
+			"description": "Questa funzione restituisce la distribuzione esponenziale o la densità di probabilità.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "lambda"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"FACT": {
+			"description": "Questa funzione calcola il fattoriale del numero specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"FACTDOUBLE": {
+			"description": "Questa funzione calcola il doppio fattoriale del numero specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"FALSE": {
+			"description": "Questa funzione restituisce il valore per FALSE logico.",
+			"parameters": []
+		},
+		"FDIST": {
+			"description": "Questa funzione calcola la distribuzione di probabilità F, per visualizzare i gradi di diversità tra due insiemi di dati.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				}
+			]
+		},
+		"FIND": {
+			"description": "Questa funzione trova un valore di testo all'interno di un altro e restituisce la posizione del valore di testo nel testo cercato.",
+			"parameters": [
+				{
+					"name": "trova_testo"
+				},
+				{
+					"name": "entro_testo"
+				},
+				{
+					"name": "[start_num]"
+				}
+			]
+		},
+		"FINV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione di probabilità F.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				}
+			]
+		},
+		"FISHER": {
+			"description": "Questa funzione restituisce la trasformazione di Fisher per un valore specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"FISHERINV": {
+			"description": "Questa funzione restituisce l'inverso della trasformazione di Fisher per un valore specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"FIXED": {
+			"description": "Questa funzione arrotonda un numero al numero specificato di posizioni decimali, formatta il numero in formato decimale utilizzando un punto e virgole (se specificato) e restituisce il risultato come testo.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "decimali"
+				},
+				{
+					"name": "nessuna_virgola"
+				}
+			]
+		},
+		"FLOOR": {
+			"description": "Questa funzione arrotonda un numero per difetto al multiplo più vicino di un valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "significato"
+				}
+			]
+		},
+		"FORECAST": {
+			"description": "Questa funzione calcola un valore futuro utilizzando i valori esistenti.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "Yarray"
+				},
+				{
+					"name": "Xarray"
+				}
+			]
+		},
+		"FREQUENCY": {
+			"description": "Questa funzione calcola la frequenza con cui i valori si verificano all'interno di un intervallo di valori. Questa funzione restituisce una matrice verticale di numeri.",
+			"parameters": [
+				{
+					"name": "matrice_dati"
+				},
+				{
+					"name": "bins_array"
+				}
+			]
+		},
+		"FTEST": {
+			"description": "Questa funzione restituisce il risultato di un test F, che restituisce la probabilità unidirezionale che le varianze in due matrici non siano significativamente diverse.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"FV": {
+			"description": "Questa funzione restituisce il valore futuro di un investimento basato su un valore attuale, pagamenti periodici e un tasso di interesse specificato.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "numero"
+				},
+				{
+					"name": "pagamento"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"FVSCHEDULE": {
+			"description": "Questa funzione restituisce il valore futuro di un capitale iniziale dopo aver applicato una serie di tassi di interesse composti. Calcola il valore futuro di un investimento con un tasso variabile o regolabile.",
+			"parameters": [
+				{
+					"name": "principale"
+				},
+				{
+					"name": "orario"
+				}
+			]
+		},
+		"GAMMADIST": {
+			"description": "Questa funzione restituisce la distribuzione gamma.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"GAMMAINV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa gamma.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				}
+			]
+		},
+		"GAMMALN": {
+			"description": "Questa funzione restituisce il logaritmo naturale della funzione Gamma, G(x).",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"GCD": {
+			"description": "Questa funzione restituisce il massimo comune divisore di due numeri.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"GEOMEAN": {
+			"description": "Questa funzione restituisce la media geometrica di un insieme di dati positivi.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"GESTEP": {
+			"description": "Questa funzione, maggiore o uguale a step, restituisce un'indicazione se un numero è uguale a una soglia.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "fare un passo"
+				}
+			]
+		},
+		"GROWTH": {
+			"description": "Questa funzione calcola la crescita esponenziale prevista. Questa funzione restituisce i valori y per una serie di nuovi valori x specificati utilizzando i valori x e y esistenti.",
+			"parameters": [
+				{
+					"name": "si"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "newx"
+				},
+				{
+					"name": "costante"
+				}
+			]
+		},
+		"HARMEAN": {
+			"description": "Questa funzione restituisce la media armonica di un insieme di dati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"HEX2BIN": {
+			"description": "Questa funzione converte un numero esadecimale in un numero binario.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"HEX2DEC": {
+			"description": "Questa funzione converte un numero esadecimale in un numero decimale.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"HEX2OCT": {
+			"description": "Questa funzione converte un numero esadecimale in un numero ottale.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"HLOOKUP": {
+			"description": "Questa funzione cerca un valore nella riga superiore e quindi restituisce un valore nella stessa colonna da una riga specificata.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "matrice di tabella"
+				},
+				{
+					"name": "numero_indice_riga"
+				},
+				{
+					"name": "range_lookup"
+				}
+			]
+		},
+		"HOUR": {
+			"description": "Questa funzione restituisce l'ora che corrisponde a un'ora specificata.",
+			"parameters": [
+				{
+					"name": "volta"
+				}
+			]
+		},
+		"HYPGEOMDIST": {
+			"description": "Questa funzione restituisce la distribuzione ipergeometrica.",
+			"parameters": [
+				{
+					"name": "campioni"
+				},
+				{
+					"name": "numero_campione"
+				},
+				{
+					"name": "popolazione_s"
+				},
+				{
+					"name": "numero_pop"
+				}
+			]
+		},
+		"IF": {
+			"description": "Questa funzione esegue un confronto e restituisce uno dei due valori forniti in base a tale confronto.",
+			"parameters": [
+				{
+					"name": "test_logico"
+				},
+				{
+					"name": "valore_se_vero"
+				},
+				{
+					"name": "valore_se_falso"
+				}
+			]
+		},
+		"IFERROR": {
+			"description": "Questa funzione valuta una formula e restituisce un valore che fornisci se c'è un errore o il risultato della formula.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "valore_se_errore"
+				}
+			]
+		},
+		"IMABS": {
+			"description": "Questa funzione restituisce il valore assoluto o il modulo di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMAGINARY": {
+			"description": "Questa funzione restituisce il coefficiente immaginario di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMARGUMENT": {
+			"description": "Questa funzione restituisce l'argomento theta, che è un angolo espresso in radianti.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMCONJUGATE": {
+			"description": "Questa funzione restituisce il complesso coniugato di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMCOS": {
+			"description": "Questa funzione restituisce il coseno di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMDIV": {
+			"description": "Questa funzione restituisce il quoziente di due numeri complessi.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				},
+				{
+					"name": "complexdenom"
+				}
+			]
+		},
+		"IMEXP": {
+			"description": "Questa funzione restituisce l'esponenziale di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMLN": {
+			"description": "Questa funzione restituisce il logaritmo naturale di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMLOG2": {
+			"description": "Questa funzione restituisce il logaritmo in base 2 di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMLOG10": {
+			"description": "Questa funzione restituisce il logaritmo comune di un numero complesso.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMPOWER": {
+			"description": "Questa funzione restituisce un numero complesso elevato a potenza.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				},
+				{
+					"name": "powernum"
+				}
+			]
+		},
+		"IMPRODUCT": {
+			"description": "Questa funzione restituisce il prodotto di un massimo di 29 numeri complessi nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numero complesso1"
+				},
+				{
+					"name": "numerocomplesso2",
+					"repeatable": false
+				}
+			]
+		},
+		"IMREAL": {
+			"description": "Questa funzione restituisce il coefficiente reale di un numero complesso nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSIN": {
+			"description": "Questa funzione restituisce il seno di un numero complesso nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSQRT": {
+			"description": "Questa funzione restituisce la radice quadrata di un numero complesso nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSUB": {
+			"description": "Questa funzione restituisce la differenza di due numeri complessi nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numero complesso1"
+				},
+				{
+					"name": "numerocomplesso2"
+				}
+			]
+		},
+		"IMSUM": {
+			"description": "Questa funzione restituisce la somma di due o più numeri complessi nel formato di testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numero complesso1"
+				},
+				{
+					"name": "numerocomplesso2",
+					"repeatable": false
+				}
+			]
+		},
+		"INDEX": {
+			"description": "Questa funzione restituisce un valore o il riferimento a un valore all'interno di una matrice o di un intervallo.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "numero_riga"
+				},
+				{
+					"name": "colonna_num"
+				},
+				{
+					"name": "area_num"
+				}
+			]
+		},
+		"INDIRECT": {
+			"description": "Questa funzione restituisce il riferimento specificato da una stringa di testo. I riferimenti vengono immediatamente valutati per visualizzarne il contenuto.",
+			"parameters": [
+				{
+					"name": "ref_text"
+				},
+				{
+					"name": "[stile_a1]"
+				}
+			]
+		},
+		"INT": {
+			"description": "Questa funzione arrotonda un numero specificato all'intero più vicino.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"INTERCEPT": {
+			"description": "Questa funzione restituisce le coordinate di un punto in cui una linea interseca l'asse y, utilizzando i valori x e y esistenti.",
+			"parameters": [
+				{
+					"name": "dipendente"
+				},
+				{
+					"name": "indipendente"
+				}
+			]
+		},
+		"INTRATE": {
+			"description": "Questa funzione calcola il tasso di interesse per un titolo interamente investito.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "investimento"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"IPMT": {
+			"description": "Questa funzione calcola il pagamento degli interessi su un prestito.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "per"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"IRR": {
+			"description": "Questa funzione restituisce il tasso di rendimento interno per una serie di flussi di cassa rappresentati dai numeri in una matrice.",
+			"parameters": [
+				{
+					"name": "arrayvals"
+				},
+				{
+					"name": "stima"
+				}
+			]
+		},
+		"ISBLANK": {
+			"description": "Questa funzione verifica se un valore, un'espressione o il contenuto di una cella di riferimento è vuoto.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISERR": {
+			"description": "Questa funzione, È un errore diverso da non disponibile, verifica se un valore, un'espressione o il contenuto di una cella di riferimento presenta un errore diverso da non disponibile (#N/D).",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISERROR": {
+			"description": "Questa funzione, Is Error of Any Kind, verifica se un valore, un'espressione o il contenuto di una cella di riferimento presenta un errore di qualsiasi tipo.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISEVEN": {
+			"description": "Questa funzione, Is Number Even, verifica se un valore, un'espressione o il contenuto di una cella di riferimento è pari.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISLOGICAL": {
+			"description": "Questa funzione verifica se un valore, un'espressione o il contenuto di una cella di riferimento è un valore logico (booleano).",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISNA": {
+			"description": "Questa funzione, Is Not Available, verifica se un valore, un'espressione o il contenuto di una cella di riferimento ha il valore di errore non disponibile (#N/D).",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISNONTEXT": {
+			"description": "Questa funzione verifica se un valore, un'espressione o il contenuto di una cella di riferimento ha un tipo di dati diverso dal testo.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISNUMBER": {
+			"description": "Questa funzione verifica se un valore, un'espressione o il contenuto di una cella di riferimento contiene dati numerici.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISODD": {
+			"description": "Questa funzione, Is Number Odd, verifica se un valore, un'espressione o il contenuto di una cella di riferimento contiene dati numerici.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISPMT": {
+			"description": "Questa funzione calcola gli interessi pagati durante un periodo specifico di un investimento.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "per"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "p.v"
+				}
+			]
+		},
+		"ISREF": {
+			"description": "Questa funzione, Is Reference, verifica se un valore, un'espressione o il contenuto di una cella di riferimento è un riferimento a un'altra cella.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"ISTEXT": {
+			"description": "Questa funzione verifica se un valore, un'espressione o il contenuto di una cella di riferimento contiene dati di testo.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"KURT": {
+			"description": "Questa funzione restituisce la curtosi di un set di dati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				},
+				{
+					"name": "numero 3"
+				},
+				{
+					"name": "numero4",
+					"repeatable": false
+				}
+			]
+		},
+		"LARGE": {
+			"description": "Questa funzione restituisce l'ennesimo valore più grande in un set di dati, dove n è specificato.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "n"
+				}
+			]
+		},
+		"LCM": {
+			"description": "Questa funzione restituisce il minimo comune multiplo di due numeri.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"LEFT": {
+			"description": "Questa funzione restituisce i caratteri più a sinistra specificati da un valore di testo e in base al numero di caratteri specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "num_caratteri"
+				}
+			]
+		},
+		"LEN": {
+			"description": "Questa funzione restituisce la lunghezza del numero di caratteri in una stringa di testo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"LINEST": {
+			"description": "Questa funzione calcola le statistiche per una linea.",
+			"parameters": [
+				{
+					"name": "si"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "costante"
+				},
+				{
+					"name": "statistiche"
+				}
+			]
+		},
+		"LN": {
+			"description": "Questa funzione restituisce il logaritmo naturale del numero specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"LOG": {
+			"description": "Questa funzione restituisce la base logaritmica Y di un numero X.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"LOG10": {
+			"description": "Questa funzione restituisce il logaritmo in base 10 del numero dato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"LOGEST": {
+			"description": "Questa funzione calcola una curva esponenziale che si adatta ai dati e restituisce una matrice di valori che descrive la curva.",
+			"parameters": [
+				{
+					"name": "si"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "costante"
+				},
+				{
+					"name": "statistiche"
+				}
+			]
+		},
+		"LOGINV": {
+			"description": "Questa funzione restituisce l'inverso della funzione di distribuzione cumulativa lognormale di x, dove LN(x) è normalmente distribuito con la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"LOGNORMDIST": {
+			"description": "Questa funzione restituisce la distribuzione normale logaritmica naturale cumulativa di x, dove LN(x) è normalmente distribuito con la media e la deviazione standard specificate. Analizzare i dati che sono stati trasformati logaritmicamente con questa funzione.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"LOOKUP": {
+			"description": "Questa funzione cerca un valore e restituisce un valore dalla stessa posizione in una seconda area.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "ricerca_vettore"
+				},
+				{
+					"name": "risultato_vettore"
+				}
+			]
+		},
+		"LOWER": {
+			"description": "Questa funzione converte il testo in lettere minuscole.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"MATCH": {
+			"description": "Questa funzione restituisce la posizione relativa di un elemento specificato in un intervallo.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "ricerca_array"
+				},
+				{
+					"name": "match_type"
+				}
+			]
+		},
+		"XMATCH": {
+			"description": "Questa funzione restituisce la posizione relativa di un elemento in un array. Per impostazione predefinita, è richiesta una corrispondenza esatta.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "ricerca_array"
+				},
+				{
+					"name": "[modalità_partita]"
+				},
+				{
+					"name": "[modalità_ricerca]"
+				}
+			]
+		},
+		"XLOOKUP": {
+			"description": "Questa funzione cerca una corrispondenza in un intervallo o in un array e restituisce l'elemento corrispondente da un secondo intervallo o array. Per impostazione predefinita, viene utilizzata una corrispondenza esatta.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "ricerca_array"
+				},
+				{
+					"name": "matrice_ritorno"
+				},
+				{
+					"name": "[se_non_trovato]"
+				},
+				{
+					"name": "[modalità_partita]"
+				},
+				{
+					"name": "[modalità_ricerca]"
+				}
+			]
+		},
+		"MAX": {
+			"description": "Questa funzione restituisce il valore massimo, il valore più grande, di tutti i valori negli argomenti.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"MAXA": {
+			"description": "Questa funzione restituisce il valore più grande in un elenco di argomenti, inclusi testo e valori logici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"MDETERM": {
+			"description": "Questa funzione restituisce il determinante della matrice di un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				}
+			]
+		},
+		"MDURATION": {
+			"description": "Questa funzione calcola la durata Macaulay modificata di un titolo con un valore nominale presunto di $100.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "buono"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"MEDIAN": {
+			"description": "Questa funzione restituisce la mediana, il numero al centro dell'insieme di numeri fornito; ovvero metà dei numeri ha valori superiori alla mediana e metà ha valori inferiori alla mediana.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"MID": {
+			"description": "Questa funzione restituisce il numero richiesto di caratteri da una stringa di testo a partire dalla posizione specificata e in base al numero di caratteri specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "numero_inizio"
+				},
+				{
+					"name": "num_caratteri"
+				}
+			]
+		},
+		"MIN": {
+			"description": "Questa funzione restituisce il valore minimo, il valore minimo, di tutti i valori negli argomenti.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"MINA": {
+			"description": "Questa funzione restituisce il valore minimo in un elenco di argomenti, inclusi testo e valori logici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"MINUTE": {
+			"description": "Questa funzione restituisce il minuto corrispondente a un'ora specificata.",
+			"parameters": [
+				{
+					"name": "volta"
+				}
+			]
+		},
+		"MINVERSE": {
+			"description": "Questa funzione restituisce la matrice inversa per la matrice memorizzata in un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				}
+			]
+		},
+		"MIRR": {
+			"description": "Questa funzione restituisce il tasso di rendimento interno modificato per una serie di flussi di cassa periodici.",
+			"parameters": [
+				{
+					"name": "i valori"
+				},
+				{
+					"name": "tasso_finanziario"
+				},
+				{
+					"name": "reinvest_rate"
+				}
+			]
+		},
+		"MMULT": {
+			"description": "Questa funzione restituisce il prodotto della matrice per due matrici.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"MOD": {
+			"description": "Questa funzione restituisce il resto di un'operazione di divisione.",
+			"parameters": [
+				{
+					"name": "dividendo"
+				},
+				{
+					"name": "divisore"
+				}
+			]
+		},
+		"MODE": {
+			"description": "Questa funzione restituisce il valore che ricorre più di frequente in un insieme di dati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"MONTH": {
+			"description": "Questa funzione restituisce il mese corrispondente al valore di data specificato.",
+			"parameters": [
+				{
+					"name": "Data"
+				}
+			]
+		},
+		"MROUND": {
+			"description": "Questa funzione restituisce un numero arrotondato al multiplo desiderato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "multiplo"
+				}
+			]
+		},
+		"MULTINOMIAL": {
+			"description": "Questa funzione calcola il rapporto tra il fattoriale di una somma di valori e il prodotto di fattoriali.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"MUNIT": {
+			"description": "La funzione restituisce la matrice unitaria per la dimensione specificata.",
+			"parameters": [
+				{
+					"name": "dimensione"
+				}
+			]
+		},
+		"N": {
+			"description": "Questa funzione restituisce un valore convertito in un numero.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"NA": {
+			"description": "Questa funzione restituisce il valore di errore #N/D che significa non disponibile.",
+			"parameters": []
+		},
+		"SHEET": {
+			"description": "Restituisce il numero di foglio del foglio di riferimento.",
+			"parameters": [
+				{
+					"name": "[valore]"
+				}
+			]
+		},
+		"SHEETS": {
+			"description": "Restituisce il numero di fogli in un riferimento.",
+			"parameters": [
+				{
+					"name": "[riferimento]"
+				}
+			]
+		},
+		"NEGBINOMDIST": {
+			"description": "Questa funzione restituisce la distribuzione binomiale negativa.",
+			"parameters": [
+				{
+					"name": "numero_f"
+				},
+				{
+					"name": "numeri"
+				},
+				{
+					"name": "probabilità_s"
+				}
+			]
+		},
+		"NETWORKDAYS": {
+			"description": "Questa funzione restituisce il numero totale di giorni lavorativi completi tra le date di inizio e di fine.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "vacanze"
+				}
+			]
+		},
+		"NOMINAL": {
+			"description": "Questa funzione restituisce il tasso di interesse annuo nominale per un dato tasso effettivo e il numero di periodi di capitalizzazione all'anno.",
+			"parameters": [
+				{
+					"name": "tasso_effetto"
+				},
+				{
+					"name": "npery"
+				}
+			]
+		},
+		"NORMDIST": {
+			"description": "Questa funzione restituisce la distribuzione cumulativa normale per la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"NORMINV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa normale per la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"NORMSDIST": {
+			"description": "Questa funzione restituisce la funzione di distribuzione cumulativa normale standard.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"NORMSINV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa normale standard. La distribuzione ha media zero e deviazione standard uno.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				}
+			]
+		},
+		"NOT": {
+			"description": "Questa funzione inverte il valore logico del suo argomento.",
+			"parameters": [
+				{
+					"name": "logico"
+				}
+			]
+		},
+		"NOW": {
+			"description": "Questa funzione restituisce la data e l'ora correnti.",
+			"parameters": []
+		},
+		"NPER": {
+			"description": "Questa funzione restituisce il numero di periodi per un investimento in base a un valore attuale, un valore futuro, pagamenti periodici e un tasso di interesse specificato.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "pagamento"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"NPV": {
+			"description": "Questa funzione calcola il valore attuale netto di un investimento utilizzando un tasso di sconto e una serie di pagamenti e proventi futuri.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"OBJECT": {
+			"description": "Questa funzione converte la sequenza di proprietà/espressione in un oggetto.",
+			"parameters": [
+				{
+					"name": "proprietà1",
+					"repeatable": false
+				},
+				{
+					"name": "espressione1",
+					"repeatable": false
+				}
+			]
+		},
+		"OCT2BIN": {
+			"description": "Questa funzione converte un numero ottale in un numero binario.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"OCT2DEC": {
+			"description": "Questa funzione converte un numero ottale in un numero decimale.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"OCT2HEX": {
+			"description": "Questa funzione converte un numero ottale in un numero esadecimale.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "posti"
+				}
+			]
+		},
+		"ODD": {
+			"description": "Questa funzione arrotonda il valore specificato all'intero dispari più vicino.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ODDFPRICE": {
+			"description": "Questa funzione calcola il prezzo per $100 di valore nominale di un titolo con un primo periodo dispari.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "problema"
+				},
+				{
+					"name": "primo_coupon"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ODDFYIELD": {
+			"description": "Questa funzione calcola il rendimento di un titolo con un primo periodo dispari.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "problema"
+				},
+				{
+					"name": "primo_coupon"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ODDLPRICE": {
+			"description": "Questa funzione calcola il prezzo per $100 di valore nominale di un titolo con un ultimo periodo di cedola dispari.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "ultimo_interesse"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ODDLYIELD": {
+			"description": "Questa funzione calcola il rendimento di un titolo con un ultimo periodo dispari.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "ultimo_interesse"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"OFFSET": {
+			"description": "Questa funzione restituisce un riferimento a un intervallo. L'intervallo è un numero specificato di righe e colonne da una cella o un intervallo di celle. La funzione restituisce una singola cella o un intervallo di celle.",
+			"parameters": [
+				{
+					"name": "riferimento"
+				},
+				{
+					"name": "righe"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "altezza"
+				},
+				{
+					"name": "larghezza"
+				}
+			]
+		},
+		"OR": {
+			"description": "Questa funzione calcola l'OR logico. Restituisce TRUE se uno qualsiasi dei suoi argomenti è vero; in caso contrario, restituisce FALSO se tutti gli argomenti sono falsi.",
+			"parameters": [
+				{
+					"name": "logico1"
+				},
+				{
+					"name": "logico2",
+					"repeatable": false
+				}
+			]
+		},
+		"PEARSON": {
+			"description": "Questa funzione restituisce il coefficiente di correlazione del momento del prodotto di Pearson, un indice adimensionale compreso tra -1,0 e 1,0 inclusi indicativo della relazione lineare di due set di dati.",
+			"parameters": [
+				{
+					"name": "array_ind"
+				},
+				{
+					"name": "array_dep"
+				}
+			]
+		},
+		"PERCENTILE": {
+			"description": "Questa funzione restituisce l'ennesimo percentile di valori in un intervallo.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "n"
+				}
+			]
+		},
+		"PERCENTRANK": {
+			"description": "Questa funzione restituisce il rango di un valore in un set di dati come percentuale del set di dati.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "significato"
+				}
+			]
+		},
+		"PERMUT": {
+			"description": "Questa funzione restituisce il numero di possibili permutazioni per un numero specificato di elementi.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "numero_scelto"
+				}
+			]
+		},
+		"PI": {
+			"description": "Questa funzione restituisce PI come 3.1415926536.",
+			"parameters": []
+		},
+		"PMT": {
+			"description": "Questa funzione restituisce l'importo del pagamento per un prestito dato il valore attuale, il tasso di interesse specificato e il numero di scadenze.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"POISSON": {
+			"description": "Questa funzione restituisce la distribuzione di Poisson.",
+			"parameters": [
+				{
+					"name": "eventi"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"POWER": {
+			"description": "Questa funzione eleva il numero specificato alla potenza specificata.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "energia"
+				}
+			]
+		},
+		"PPMT": {
+			"description": "Questa funzione restituisce l'importo del pagamento del capitale per un prestito dato il valore attuale, il tasso di interesse specificato e il numero di scadenze.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "per"
+				},
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"PRICE": {
+			"description": "Questa funzione calcola il prezzo per $100 di valore nominale di un titolo a interesse periodico",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"PRICEDISC": {
+			"description": "Questa funzione restituisce il prezzo per $100 di valore nominale di un titolo scontato.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "sconto"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"PRICEMAT": {
+			"description": "Questa funzione restituisce il prezzo alla scadenza per $100 di valore nominale di un titolo che paga interessi.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "problema"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prodotto"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"PROB": {
+			"description": "Questa funzione restituisce la probabilità che i valori in un intervallo siano compresi tra due limiti.",
+			"parameters": [
+				{
+					"name": "x_range"
+				},
+				{
+					"name": "prob_range"
+				},
+				{
+					"name": "limite inferiore"
+				},
+				{
+					"name": "limite superiore"
+				}
+			]
+		},
+		"PRODUCT": {
+			"description": "Questa funzione moltiplica tutti gli argomenti e restituisce il prodotto.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"PROPER": {
+			"description": "Questa funzione rende maiuscola la prima lettera di ogni parola di una stringa di testo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"PROPERTY": {
+			"description": "Questa funzione restituisce il valore della proprietà path nell'oggetto.",
+			"parameters": [
+				{
+					"name": "espressione_dati"
+				},
+				{
+					"name": "percorso_proprietà"
+				}
+			]
+		},
+		"PV": {
+			"description": "Questa funzione restituisce il valore attuale di un investimento in base al tasso di interesse, al numero e all'importo dei pagamenti periodici e al valore futuro. Il valore attuale è l'importo totale che vale ora una serie di pagamenti futuri.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "numero"
+				},
+				{
+					"name": "pagamento"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"QUARTILE": {
+			"description": "Questa funzione restituisce quale quartile (quale trimestre o 25 percento) di un set di dati è un valore.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "quarto"
+				}
+			]
+		},
+		"QUOTIENT": {
+			"description": "Questa funzione restituisce la parte intera di una divisione. Usalo per ignorare il resto di una divisione.",
+			"parameters": [
+				{
+					"name": "numeratore"
+				},
+				{
+					"name": "denominatore"
+				}
+			]
+		},
+		"RADIANS": {
+			"description": "Questa funzione converte il numero specificato da gradi a radianti.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"RAND": {
+			"description": "Questa funzione restituisce un numero casuale distribuito uniformemente tra 0 e 1.",
+			"parameters": []
+		},
+		"RANDBETWEEN": {
+			"description": "Questa funzione restituisce un numero casuale compreso tra i numeri specificati.",
+			"parameters": [
+				{
+					"name": "parte inferiore"
+				},
+				{
+					"name": "superiore"
+				}
+			]
+		},
+		"RANGEBLOCKSPARKLINE": {
+			"description": "Questa funzione restituisce un rangetemplate.",
+			"parameters": [
+				{
+					"name": "template_range"
+				},
+				{
+					"name": "espressione_dati"
+				}
+			]
+		},
+		"RANK": {
+			"description": "Questa funzione restituisce il rango di un numero in un insieme di numeri. Se dovessi ordinare l'insieme, il rango del numero sarebbe la sua posizione nell'elenco.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "rif"
+				},
+				{
+					"name": "ordine"
+				}
+			]
+		},
+		"RATE": {
+			"description": "Questa funzione restituisce il tasso di interesse per periodo di una rendita.",
+			"parameters": [
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pmt"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				},
+				{
+					"name": "genere"
+				},
+				{
+					"name": "indovinare"
+				}
+			]
+		},
+		"RECEIVED": {
+			"description": "Questa funzione restituisce l'importo ricevuto alla scadenza per un titolo interamente investito.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "investimento"
+				},
+				{
+					"name": "sconto"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"REPLACE": {
+			"description": "Questa funzione sostituisce parte di una stringa di testo con una stringa di testo diversa, in base al numero di caratteri specificato.",
+			"parameters": [
+				{
+					"name": "vecchio_testo"
+				},
+				{
+					"name": "numero_inizio"
+				},
+				{
+					"name": "num_caratteri"
+				},
+				{
+					"name": "nuovo_testo"
+				}
+			]
+		},
+		"REPT": {
+			"description": "Questa funzione ripete il testo un numero specificato di volte.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "numero_volte"
+				}
+			]
+		},
+		"RIGHT": {
+			"description": "Questa funzione restituisce i caratteri più a destra specificati da un valore di testo e in base al numero di caratteri specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "num_caratteri"
+				}
+			]
+		},
+		"ROMAN": {
+			"description": "Questa funzione converte un numero arabo in un equivalente testuale di un numero romano.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "modulo"
+				}
+			]
+		},
+		"ROUND": {
+			"description": "Questa funzione arrotonda il valore specificato al numero più vicino, utilizzando il numero specificato di posizioni decimali.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "num_cifre"
+				}
+			]
+		},
+		"ROUNDDOWN": {
+			"description": "Questa funzione arrotonda il numero specificato al numero più vicino, utilizzando il numero specificato di posizioni decimali.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "num_cifre"
+				}
+			]
+		},
+		"ROUNDUP": {
+			"description": "Questa funzione arrotonda il numero specificato al numero più vicino, utilizzando il numero specificato di posizioni decimali.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "num_cifre"
+				}
+			]
+		},
+		"ROW": {
+			"description": "Questa funzione restituisce il numero di una riga da un riferimento.",
+			"parameters": [
+				{
+					"name": "riferimento"
+				}
+			]
+		},
+		"ROWS": {
+			"description": "Questa funzione restituisce il numero di righe in un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				}
+			]
+		},
+		"RSQ": {
+			"description": "Questa funzione restituisce il quadrato del coefficiente di correlazione del momento del prodotto di Pearson (R-quadrato) attraverso i punti dati nelle y note e nelle x note.",
+			"parameters": [
+				{
+					"name": "array_dep"
+				},
+				{
+					"name": "array_ind"
+				}
+			]
+		},
+		"SEARCH": {
+			"description": "Questa funzione trova una stringa di testo in un'altra stringa di testo e restituisce l'indice della posizione iniziale del testo trovato.",
+			"parameters": [
+				{
+					"name": "trova_testo"
+				},
+				{
+					"name": "entro_testo"
+				},
+				{
+					"name": "[start_num]"
+				}
+			]
+		},
+		"SECOND": {
+			"description": "Questa funzione restituisce il valore dei secondi (da 0 a 59) per un tempo specificato.",
+			"parameters": [
+				{
+					"name": "volta"
+				}
+			]
+		},
+		"SERIESSUM": {
+			"description": "Questa funzione restituisce la somma di una serie di potenze.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "n"
+				},
+				{
+					"name": "m"
+				},
+				{
+					"name": "coefficienti"
+				}
+			]
+		},
+		"SIGN": {
+			"description": "Questa funzione restituisce il segno di un numero o di un'espressione.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"SIN": {
+			"description": "Questa funzione restituisce il seno dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"SINH": {
+			"description": "Questa funzione restituisce il seno iperbolico del numero specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"SKEW": {
+			"description": "Questa funzione restituisce l'asimmetria di una distribuzione.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"SLN": {
+			"description": "Questa funzione restituisce l'ammortamento a quote costanti di un cespite per un periodo.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "vita"
+				}
+			]
+		},
+		"SLOPE": {
+			"description": "Questa funzione calcola la pendenza di una regressione lineare.",
+			"parameters": [
+				{
+					"name": "array_dep"
+				},
+				{
+					"name": "array_ind"
+				}
+			]
+		},
+		"SMALL": {
+			"description": "Questa funzione restituisce l'ennesimo valore più piccolo in un set di dati, dove n è specificato.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "n"
+				}
+			]
+		},
+		"SQRT": {
+			"description": "Questa funzione restituisce la radice quadrata positiva del numero specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"SQRTPI": {
+			"description": "Questa funzione restituisce la radice quadrata positiva di un multiplo di pi (p).",
+			"parameters": [
+				{
+					"name": "multiplo"
+				}
+			]
+		},
+		"STANDARDIZE": {
+			"description": "Questa funzione restituisce un valore normalizzato da una distribuzione caratterizzata da media e deviazione standard.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"STDEVA": {
+			"description": "Questa funzione restituisce la deviazione standard per un insieme di numeri, testo o valori logici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"STDEVP": {
+			"description": "Questa funzione restituisce la deviazione standard per un'intera popolazione specificata (di valori numerici).",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"STDEVPA": {
+			"description": "Questa funzione restituisce la deviazione standard per un'intera popolazione specificata, inclusi testo o valori logici nonché valori numerici.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"STEYX": {
+			"description": "Questa funzione restituisce l'errore standard del valore y previsto per ogni x. L'errore standard è una misura della quantità di errore nella previsione di y per un valore di x.",
+			"parameters": [
+				{
+					"name": "array_dep"
+				},
+				{
+					"name": "array_ind"
+				}
+			]
+		},
+		"SUBSTITUTE": {
+			"description": "Questa funzione sostituisce una nuova stringa per i caratteri specificati in una stringa esistente.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "vecchio_testo"
+				},
+				{
+					"name": "nuovo_testo"
+				},
+				{
+					"name": "numero_istanza"
+				}
+			]
+		},
+		"SUBTOTAL": {
+			"description": "Questa funzione calcola un subtotale di un elenco di numeri utilizzando una funzione incorporata specificata.",
+			"parameters": [
+				{
+					"name": "funzione_num"
+				},
+				{
+					"name": "rif1"
+				},
+				{
+					"name": "rif2",
+					"repeatable": false
+				}
+			]
+		},
+		"SUM": {
+			"description": "Questa funzione restituisce la somma delle celle o l'intervallo di celle.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"SUMIF": {
+			"description": "Questa funzione aggiunge le celle utilizzando un determinato criterio.",
+			"parameters": [
+				{
+					"name": "allineare"
+				},
+				{
+					"name": "criteri"
+				},
+				{
+					"name": "sum_range"
+				}
+			]
+		},
+		"SUMIFS": {
+			"description": "Questa funzione aggiunge le celle in un intervallo utilizzando più criteri.",
+			"parameters": [
+				{
+					"name": "sum_range"
+				},
+				{
+					"name": "criteri_intervallo1",
+					"repeatable": false
+				},
+				{
+					"name": "criteri1",
+					"repeatable": false
+				}
+			]
+		},
+		"SUMPRODUCT": {
+			"description": "Questa funzione restituisce la somma dei prodotti delle celle. Moltiplica i componenti corrispondenti nelle matrici fornite e restituisce la somma di tali prodotti.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2",
+					"repeatable": false
+				}
+			]
+		},
+		"SUMSQ": {
+			"description": "Questa funzione restituisce la somma dei quadrati degli argomenti.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"SUMX2MY2": {
+			"description": "Questa funzione restituisce la somma della differenza dei quadrati dei valori corrispondenti in due matrici.",
+			"parameters": [
+				{
+					"name": "matrice_x"
+				},
+				{
+					"name": "matrice_y"
+				}
+			]
+		},
+		"SUMX2PY2": {
+			"description": "Questa funzione restituisce la somma della somma dei quadrati dei valori corrispondenti in due matrici.",
+			"parameters": [
+				{
+					"name": "matrice_x"
+				},
+				{
+					"name": "matrice_y"
+				}
+			]
+		},
+		"SUMXMY2": {
+			"description": "Questa funzione restituisce la somma dei quadrati delle differenze dei valori corrispondenti in due matrici.",
+			"parameters": [
+				{
+					"name": "matrice_x"
+				},
+				{
+					"name": "matrice_y"
+				}
+			]
+		},
+		"SYD": {
+			"description": "Questa funzione restituisce l'ammortamento in cifre della somma degli anni di un cespite per un periodo specificato.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "vita"
+				},
+				{
+					"name": "periodo"
+				}
+			]
+		},
+		"T": {
+			"description": "Questa funzione restituisce il testo in una cella specificata.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"TAN": {
+			"description": "Questa funzione restituisce la tangente dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"TANH": {
+			"description": "Questa funzione restituisce la tangente iperbolica del numero specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"TBILLEQ": {
+			"description": "Questa funzione restituisce il rendimento equivalente di un buono del Tesoro (o Buono del Tesoro)",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "sconto"
+				}
+			]
+		},
+		"TBILLPRICE": {
+			"description": "Questa funzione restituisce il prezzo per un valore nominale di $ 100 per un buono del Tesoro (o Buono del Tesoro).",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "sconto"
+				}
+			]
+		},
+		"TBILLYIELD": {
+			"description": "Questa funzione restituisce il rendimento di un buono del Tesoro (o Buono del Tesoro).",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "priceper"
+				}
+			]
+		},
+		"TDIST": {
+			"description": "Questa funzione restituisce la probabilità per la distribuzione t.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà"
+				},
+				{
+					"name": "code"
+				}
+			]
+		},
+		"TEXT": {
+			"description": "Questa funzione formatta un numero e lo converte in testo.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "formato_testo"
+				}
+			]
+		},
+		"TIME": {
+			"description": "Questa funzione restituisce l'oggetto TimeSpan per un tempo specificato.",
+			"parameters": [
+				{
+					"name": "ora"
+				},
+				{
+					"name": "minuto"
+				},
+				{
+					"name": "secondo"
+				}
+			]
+		},
+		"TIMEVALUE": {
+			"description": "Questa funzione restituisce l'oggetto TimeSpan dell'ora rappresentata da una stringa di testo.",
+			"parameters": [
+				{
+					"name": "tempo_testo"
+				}
+			]
+		},
+		"TINV": {
+			"description": "Questa funzione restituisce il valore t della distribuzione t di Student in funzione della probabilità e dei gradi di libertà.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"TODAY": {
+			"description": "Questa funzione restituisce la data e l'ora della data corrente.",
+			"parameters": []
+		},
+		"TRANSPOSE": {
+			"description": "Questa funzione restituisce un intervallo verticale di celle come intervallo orizzontale o un intervallo orizzontale di celle come intervallo verticale.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				}
+			]
+		},
+		"TREND": {
+			"description": "Questa funzione restituisce valori lungo un trend lineare. Questa funzione adatta una linea retta ai valori noti x e y degli array. Trend restituisce i valori y lungo quella linea per l'array di nuovi valori x specificati.",
+			"parameters": [
+				{
+					"name": "si"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "newx"
+				},
+				{
+					"name": "costante"
+				}
+			]
+		},
+		"TRIM": {
+			"description": "Questa funzione rimuove gli spazi extra da una stringa e lascia singoli spazi tra le parole.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"TRIMMEAN": {
+			"description": "Questa funzione restituisce la media di un sottoinsieme di dati esclusi i dati superiore e inferiore.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "per cento"
+				}
+			]
+		},
+		"TRUE": {
+			"description": "Questa funzione restituisce il valore per TRUE logico.",
+			"parameters": []
+		},
+		"TRUNC": {
+			"description": "Questa funzione rimuove la parte frazionaria specificata del numero specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "num_cifre"
+				}
+			]
+		},
+		"TTEST": {
+			"description": "Questa funzione restituisce la probabilità associata a un t-test.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				},
+				{
+					"name": "code"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"TYPE": {
+			"description": "Questa funzione restituisce il tipo di valore.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"UPPER": {
+			"description": "Questa funzione converte il testo in lettere maiuscole.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"VALUE": {
+			"description": "Questa funzione converte una stringa di testo che è un numero in un valore numerico.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"VAR": {
+			"description": "Questa funzione restituisce la varianza basata su un campione di una popolazione, che utilizza solo valori numerici.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"VARA": {
+			"description": "Questa funzione restituisce la varianza in base a un campione di una popolazione, che include valori numerici, logici o di testo.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"VARP": {
+			"description": "Questa funzione restituisce la varianza in base all'intera popolazione, che utilizza solo valori numerici.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"VARPA": {
+			"description": "Questa funzione restituisce la varianza in base all'intera popolazione, che include valori numerici, logici o di testo.",
+			"parameters": [
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "valore2",
+					"repeatable": false
+				}
+			]
+		},
+		"VDB": {
+			"description": "Questa funzione restituisce l'ammortamento di un cespite per qualsiasi periodo specificato utilizzando il metodo del saldo decrescente variabile.",
+			"parameters": [
+				{
+					"name": "costo"
+				},
+				{
+					"name": "salvare"
+				},
+				{
+					"name": "vita"
+				},
+				{
+					"name": "inizio_periodo"
+				},
+				{
+					"name": "fine_periodo"
+				},
+				{
+					"name": "fattore"
+				},
+				{
+					"name": "no_switch"
+				}
+			]
+		},
+		"VLOOKUP": {
+			"description": "Questa funzione cerca un valore nella colonna più a sinistra e restituisce un valore nella stessa riga da una colonna specificata.",
+			"parameters": [
+				{
+					"name": "valore di ricerca"
+				},
+				{
+					"name": "matrice di tabella"
+				},
+				{
+					"name": "col_indice_num"
+				},
+				{
+					"name": "range_lookup"
+				}
+			]
+		},
+		"WEEKDAY": {
+			"description": "Questa funzione restituisce il numero corrispondente al giorno della settimana per una data specificata.",
+			"parameters": [
+				{
+					"name": "Data"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"WEEKNUM": {
+			"description": "Questa funzione restituisce un numero che indica numericamente la settimana dell'anno.",
+			"parameters": [
+				{
+					"name": "Data"
+				},
+				{
+					"name": "weektype"
+				}
+			]
+		},
+		"DATEPART": {
+			"description": "Questa funzione formatta una data e la converte in testo.",
+			"parameters": [
+				{
+					"name": "Data"
+				},
+				{
+					"name": "formato_testo"
+				},
+				{
+					"name": "weektype"
+				}
+			]
+		},
+		"WEIBULL": {
+			"description": "Questa funzione restituisce la distribuzione di Weibull a due parametri, spesso utilizzata nell'analisi dell'affidabilità.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"WORKDAY": {
+			"description": "Questa funzione restituisce il numero di giorni lavorativi prima o dopo la data di inizio.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "giorni"
+				},
+				{
+					"name": "vacanze"
+				}
+			]
+		},
+		"XIRR": {
+			"description": "Questa funzione calcola il tasso di rendimento interno per una pianificazione dei flussi di cassa che potrebbe non essere periodica.",
+			"parameters": [
+				{
+					"name": "i valori"
+				},
+				{
+					"name": "date"
+				},
+				{
+					"name": "indovinare"
+				}
+			]
+		},
+		"XNPV": {
+			"description": "Questa funzione calcola il valore attuale netto per una pianificazione dei flussi di cassa che potrebbe non essere periodica.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "i valori"
+				},
+				{
+					"name": "date"
+				}
+			]
+		},
+		"YEAR": {
+			"description": "Questa funzione restituisce l'anno come numero intero per una data specificata.",
+			"parameters": [
+				{
+					"name": "Data"
+				}
+			]
+		},
+		"YEARFRAC": {
+			"description": "Questa funzione restituisce la frazione dell'anno rappresentata dal numero di giorni interi compresi tra la data di inizio e quella di fine.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"YIELD": {
+			"description": "Questa funzione calcola il rendimento di un titolo che paga interessi periodici.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "frequenza"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"YIELDDISC": {
+			"description": "Questa funzione calcola il rendimento annuo di un titolo scontato.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "redenzione"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"YIELDMAT": {
+			"description": "Questa funzione calcola il rendimento annuo di un titolo che paga interessi alla scadenza.",
+			"parameters": [
+				{
+					"name": "insediamento"
+				},
+				{
+					"name": "scadenza"
+				},
+				{
+					"name": "problema"
+				},
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "prezzo"
+				},
+				{
+					"name": "base"
+				}
+			]
+		},
+		"ZTEST": {
+			"description": "Questa funzione restituisce il valore di significatività di un test z. Il test z genera un punteggio standard per x rispetto all'insieme di dati e restituisce la probabilità a due code per la distribuzione normale.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "sigma"
+				}
+			]
+		},
+		"HBARSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline Hbar",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "combinazione di colori"
+				},
+				{
+					"name": "asseVisibile"
+				},
+				{
+					"name": "barHeight"
+				}
+			]
+		},
+		"VBARSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline Vbar",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "combinazione di colori"
+				},
+				{
+					"name": "asseVisibile"
+				},
+				{
+					"name": "barWidth"
+				}
+			]
+		},
+		"VARISPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline della varianza",
+			"parameters": [
+				{
+					"name": "varianza"
+				},
+				{
+					"name": "riferimento"
+				},
+				{
+					"name": "mini"
+				},
+				{
+					"name": "massimo"
+				},
+				{
+					"name": "marchio"
+				},
+				{
+					"name": "tickunit"
+				},
+				{
+					"name": "leggenda"
+				},
+				{
+					"name": "colorePositivo"
+				},
+				{
+					"name": "coloreNegativo"
+				},
+				{
+					"name": "verticale"
+				}
+			]
+		},
+		"PIESPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline a torta",
+			"parameters": [
+				{
+					"name": "intervallo|percentuale"
+				},
+				{
+					"name": "colore",
+					"repeatable": false
+				}
+			]
+		},
+		"AREASPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline dell'area",
+			"parameters": [
+				{
+					"name": "punti"
+				},
+				{
+					"name": "mini"
+				},
+				{
+					"name": "massimo"
+				},
+				{
+					"name": "Linea 1"
+				},
+				{
+					"name": "linea 2"
+				},
+				{
+					"name": "colorePositivo"
+				},
+				{
+					"name": "coloreNegativo"
+				}
+			]
+		},
+		"SCATTERSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico a dispersione",
+			"parameters": [
+				{
+					"name": "punti1"
+				},
+				{
+					"name": "punti2"
+				},
+				{
+					"name": "minX"
+				},
+				{
+					"name": "maxX"
+				},
+				{
+					"name": "minY"
+				},
+				{
+					"name": "maxY"
+				},
+				{
+					"name": "hLine"
+				},
+				{
+					"name": "vLine"
+				},
+				{
+					"name": "xMinZone"
+				},
+				{
+					"name": "xMaxZone"
+				},
+				{
+					"name": "yMinZone"
+				},
+				{
+					"name": "yMaxZone"
+				},
+				{
+					"name": "tag"
+				},
+				{
+					"name": "drawSymbol"
+				},
+				{
+					"name": "tracciare linee"
+				},
+				{
+					"name": "colore1"
+				},
+				{
+					"name": "colore2"
+				},
+				{
+					"name": "trattino"
+				}
+			]
+		},
+		"LINESPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare una linea sparkline",
+			"parameters": [
+				{
+					"name": "dati"
+				},
+				{
+					"name": "dataOrientamento"
+				},
+				{
+					"name": "dateAxisData"
+				},
+				{
+					"name": "dateAxisOrientation"
+				},
+				{
+					"name": "collocamento"
+				}
+			]
+		},
+		"COLUMNSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline di colonna",
+			"parameters": [
+				{
+					"name": "dati"
+				},
+				{
+					"name": "dataOrientamento"
+				},
+				{
+					"name": "dateAxisData"
+				},
+				{
+					"name": "dateAxisOrientation"
+				},
+				{
+					"name": "collocamento"
+				}
+			]
+		},
+		"WINLOSSSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare una sparkline di vittorie/sconfitte",
+			"parameters": [
+				{
+					"name": "dati"
+				},
+				{
+					"name": "dataOrientamento"
+				},
+				{
+					"name": "dateAxisData"
+				},
+				{
+					"name": "dateAxisOrientation"
+				},
+				{
+					"name": "collocamento"
+				}
+			]
+		},
+		"BULLETSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un punto sparkline",
+			"parameters": [
+				{
+					"name": "misurare"
+				},
+				{
+					"name": "obbiettivo"
+				},
+				{
+					"name": "massimo"
+				},
+				{
+					"name": "Buona"
+				},
+				{
+					"name": "cattivo"
+				},
+				{
+					"name": "previsione"
+				},
+				{
+					"name": "tickunit"
+				},
+				{
+					"name": "combinazione di colori"
+				},
+				{
+					"name": "verticale"
+				},
+				{
+					"name": "misuraColore"
+				},
+				{
+					"name": "targetColor"
+				},
+				{
+					"name": "maxColor"
+				},
+				{
+					"name": "goodColor"
+				},
+				{
+					"name": "badColor"
+				},
+				{
+					"name": "forecastColor"
+				},
+				{
+					"name": "consentireMeasureOverMaxi"
+				},
+				{
+					"name": "barSize"
+				}
+			]
+		},
+		"SPREADSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline diffuso",
+			"parameters": [
+				{
+					"name": "punti"
+				},
+				{
+					"name": "mostraMedia"
+				},
+				{
+					"name": "scaleStart"
+				},
+				{
+					"name": "scalaFine"
+				},
+				{
+					"name": "stile"
+				},
+				{
+					"name": "combinazione di colori"
+				},
+				{
+					"name": "verticale"
+				}
+			]
+		},
+		"STACKEDSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline in pila",
+			"parameters": [
+				{
+					"name": "punti"
+				},
+				{
+					"name": "gamma di colori"
+				},
+				{
+					"name": "labelRange"
+				},
+				{
+					"name": "massimo"
+				},
+				{
+					"name": "targetRed"
+				},
+				{
+					"name": "targetGreen"
+				},
+				{
+					"name": "targetBlue"
+				},
+				{
+					"name": "tragetYellow"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "highlightPosition"
+				},
+				{
+					"name": "verticale"
+				},
+				{
+					"name": "testoOrientamento"
+				},
+				{
+					"name": "dimensione del testo"
+				}
+			]
+		},
+		"BOXPLOTSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico a riquadri sparkline",
+			"parameters": [
+				{
+					"name": "punti"
+				},
+				{
+					"name": "boxPlotClass"
+				},
+				{
+					"name": "mostraMedia"
+				},
+				{
+					"name": "scaleStart"
+				},
+				{
+					"name": "scalaFine"
+				},
+				{
+					"name": "accettabile Inizio"
+				},
+				{
+					"name": "accettabileFine"
+				},
+				{
+					"name": "combinazione di colori"
+				},
+				{
+					"name": "stile"
+				},
+				{
+					"name": "verticale"
+				}
+			]
+		},
+		"CASCADESPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline a cascata",
+			"parameters": [
+				{
+					"name": "pointsRange"
+				},
+				{
+					"name": "puntoIndice"
+				},
+				{
+					"name": "etichetteRange"
+				},
+				{
+					"name": "minimo"
+				},
+				{
+					"name": "massimo"
+				},
+				{
+					"name": "colorePositivo"
+				},
+				{
+					"name": "coloreNegativo"
+				},
+				{
+					"name": "verticale"
+				},
+				{
+					"name": "itemTypeRange"
+				},
+				{
+					"name": "colore Totale"
+				}
+			]
+		},
+		"PARETOSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare una sparkline di Pareto",
+			"parameters": [
+				{
+					"name": "punti"
+				},
+				{
+					"name": "puntoIndice"
+				},
+				{
+					"name": "gamma di colori"
+				},
+				{
+					"name": "obbiettivo"
+				},
+				{
+					"name": "bersaglio2"
+				},
+				{
+					"name": "highlightPosition"
+				},
+				{
+					"name": "etichetta"
+				},
+				{
+					"name": "verticale"
+				},
+				{
+					"name": "targetColor"
+				},
+				{
+					"name": "target2Color"
+				},
+				{
+					"name": "labelColor"
+				},
+				{
+					"name": "barSize"
+				}
+			]
+		},
+		"MONTHSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline del mese",
+			"parameters": [
+				{
+					"name": "anno"
+				},
+				{
+					"name": "mese"
+				},
+				{
+					"name": "intervallo di dati"
+				},
+				{
+					"name": "vuotoColore"
+				},
+				{
+					"name": "startColor"
+				},
+				{
+					"name": "middleColor"
+				},
+				{
+					"name": "endColor"
+				}
+			]
+		},
+		"YEARSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline dell'anno",
+			"parameters": [
+				{
+					"name": "anno"
+				},
+				{
+					"name": "intervallo di dati"
+				},
+				{
+					"name": "vuotoColore"
+				},
+				{
+					"name": "startColor"
+				},
+				{
+					"name": "middleColor"
+				},
+				{
+					"name": "endColor"
+				}
+			]
+		},
+		"GAUGEKPISPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline indicatore KPI",
+			"parameters": [
+				{
+					"name": "targetValue"
+				},
+				{
+					"name": "valore corrente"
+				},
+				{
+					"name": "minValue"
+				},
+				{
+					"name": "maxValue"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "targetValueLabel"
+				},
+				{
+					"name": "etichettaValorecorrente"
+				},
+				{
+					"name": "minValueLabel"
+				},
+				{
+					"name": "maxValueLabel"
+				},
+				{
+					"name": "fontArray"
+				},
+				{
+					"name": "minAngle"
+				},
+				{
+					"name": "maxAngle"
+				},
+				{
+					"name": "raggioRapporto"
+				},
+				{
+					"name": "gaugeType"
+				},
+				{
+					"name": "gamma di colori"
+				},
+				{
+					"name": "..."
+				}
+			]
+		},
+		"HISTOGRAMSPARKLINE": {
+			"description": "Questa funzione restituisce un set di dati utilizzato per rappresentare un grafico sparkline dell'istogramma",
+			"parameters": [
+				{
+					"name": "intervallo di date"
+				},
+				{
+					"name": "continuo"
+				},
+				{
+					"name": "paintLabel"
+				},
+				{
+					"name": "scala"
+				},
+				{
+					"name": "barWidth"
+				},
+				{
+					"name": "barColor"
+				},
+				{
+					"name": "labelFontStyle"
+				},
+				{
+					"name": "labelColor"
+				},
+				{
+					"name": "edgeColor"
+				}
+			]
+		},
+		"CEILING.PRECISE": {
+			"description": "Questa funzione arrotonda un numero all'intero più vicino o al multiplo più vicino di un valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "[significato]"
+				}
+			]
+		},
+		"COVARIANCE.S": {
+			"description": "Questa funzione restituisce la covarianza campionaria, che è la media dei prodotti delle deviazioni per ciascuna coppia di punti dati in due insiemi di numeri.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"FLOOR.PRECISE": {
+			"description": "Questa funzione arrotonda un numero per difetto all'intero più vicino o al multiplo più vicino di un valore specificato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "[significato]"
+				}
+			]
+		},
+		"PERCENTILE.EXC": {
+			"description": "Questa funzione restituisce l'ennesimo percentile di valori in un intervallo.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "K"
+				}
+			]
+		},
+		"QUARTILE.EXC": {
+			"description": "Questa funzione restituisce quale quartile (quale trimestre o 25 percento) di un set di dati è un valore.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "quarto"
+				}
+			]
+		},
+		"RANK.AVG": {
+			"description": "Questa funzione restituisce il rango di un numero in un insieme di numeri. Se alcuni valori hanno lo stesso rango, restituirà il rango medio.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "rif"
+				},
+				{
+					"name": "[ordine]"
+				}
+			]
+		},
+		"MODE.MULT": {
+			"description": "Questa funzione restituisce l'array verticale che si verifica più di frequente o il valore che si verifica più di frequente in un insieme di dati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"STDEV.P": {
+			"description": "Questa funzione restituisce la deviazione standard per un'intera popolazione specificata (di valori numerici).",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"VAR.P": {
+			"description": "Questa funzione restituisce la varianza in base all'intera popolazione, che utilizza solo valori numerici.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"COVARIANCE.P": {
+			"description": "Questa funzione restituisce la covarianza, che è la media dei prodotti delle deviazioni per ciascuna coppia di punti dati in due insiemi di numeri.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"MODE.SNGL": {
+			"description": "Questa funzione restituisce il valore che ricorre più di frequente in un insieme di dati.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"PERCENTILE.INC": {
+			"description": "Questa funzione restituisce l'ennesimo percentile di valori in un intervallo.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "K"
+				}
+			]
+		},
+		"QUARTILE.INC": {
+			"description": "Questa funzione restituisce quale quartile (quale trimestre o 25 percento) di un set di dati è un valore.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "quarto"
+				}
+			]
+		},
+		"RANK.EQ": {
+			"description": "Questa funzione restituisce il rango di un numero in un insieme di numeri. Se dovessi ordinare l'insieme, il rango del numero sarebbe la sua posizione nell'elenco.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "rif"
+				},
+				{
+					"name": "[ordine]"
+				}
+			]
+		},
+		"STDEV": {
+			"description": "Questa funzione restituisce la deviazione standard stimata in base a un campione.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"STDEV.S": {
+			"description": "Questa funzione restituisce la deviazione standard stimata in base a un campione.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"VAR.S": {
+			"description": "Questa funzione restituisce la varianza basata su un campione di una popolazione, che utilizza solo valori numerici.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"BETA.INV": {
+			"description": "Questa funzione calcola l'inverso della funzione di distribuzione cumulativa beta.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "[minore]"
+				},
+				{
+					"name": "[superiore]"
+				}
+			]
+		},
+		"BINOM.DIST": {
+			"description": "Questa funzione calcola la probabilità di distribuzione binomiale del termine individuale.",
+			"parameters": [
+				{
+					"name": "numeri"
+				},
+				{
+					"name": "prove"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"BINOM.INV": {
+			"description": "Questa funzione restituisce il criterio binomiale, il valore più piccolo per il quale la distribuzione cumulativa binomiale è maggiore o uguale a un valore criterio.",
+			"parameters": [
+				{
+					"name": "prove"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "alfa"
+				}
+			]
+		},
+		"CHISQ.DIST.RT": {
+			"description": "Questa funzione calcola la probabilità unidirezionale della distribuzione chi quadrato.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CHISQ.INV.RT": {
+			"description": "Questa funzione calcola l'inverso della probabilità a una coda della distribuzione chi quadrato.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CHISQ.TEST": {
+			"description": "Questa funzione calcola il test di indipendenza dalla distribuzione del chi quadrato.",
+			"parameters": [
+				{
+					"name": "intervallo_effettivo"
+				},
+				{
+					"name": "intervallo_previsto"
+				}
+			]
+		},
+		"CONFIDENCE.NORM": {
+			"description": "Questa funzione restituisce l'intervallo di confidenza per una media della popolazione.",
+			"parameters": [
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "standard_dev"
+				},
+				{
+					"name": "taglia"
+				}
+			]
+		},
+		"EXPON.DIST": {
+			"description": "Questa funzione restituisce la distribuzione esponenziale o la densità di probabilità.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "lambda"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"F.DIST.RT": {
+			"description": "Questa funzione calcola la distribuzione di probabilità F, per visualizzare i gradi di diversità tra due insiemi di dati.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				}
+			]
+		},
+		"F.INV.RT": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione di probabilità F.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				}
+			]
+		},
+		"F.TEST": {
+			"description": "Questa funzione restituisce il risultato di un test F, che restituisce la probabilità unidirezionale che le varianze in due matrici non siano significativamente diverse.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				}
+			]
+		},
+		"GAMMA.DIST": {
+			"description": "Questa funzione restituisce la distribuzione gamma.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"GAMMA.INV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa gamma.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				}
+			]
+		},
+		"LOGNORM.INV": {
+			"description": "Questa funzione restituisce l'inverso della funzione di distribuzione cumulativa lognormale di x, dove LN(x) è normalmente distribuito con la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"NORM.DIST": {
+			"description": "Questa funzione restituisce la distribuzione cumulativa normale per la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"NORM.INV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa normale per la media e la deviazione standard specificate.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "standard_dev"
+				}
+			]
+		},
+		"NORM.S.INV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione cumulativa normale standard. La distribuzione ha media zero e deviazione standard uno.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				}
+			]
+		},
+		"PERCENTRANK.INC": {
+			"description": "Questa funzione restituisce il rango di un valore in un set di dati come percentuale del set di dati.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "n"
+				},
+				{
+					"name": "[significato]"
+				}
+			]
+		},
+		"POISSON.DIST": {
+			"description": "Questa funzione restituisce la distribuzione di Poisson.",
+			"parameters": [
+				{
+					"name": "eventi"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"T.INV.2T": {
+			"description": "Questa funzione restituisce il valore t della distribuzione t di Student in funzione della probabilità e dei gradi di libertà.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"T.TEST": {
+			"description": "Questa funzione restituisce la probabilità associata a un t-test.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "matrice2"
+				},
+				{
+					"name": "code"
+				},
+				{
+					"name": "genere"
+				}
+			]
+		},
+		"WEIBULL.DIST": {
+			"description": "Questa funzione restituisce la distribuzione di Weibull a due parametri, spesso utilizzata nell'analisi dell'affidabilità.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"Z.TEST": {
+			"description": "Questa funzione restituisce il valore di significatività di un test z. Il test z genera un punteggio standard per x rispetto all'insieme di dati e restituisce la probabilità a due code per la distribuzione normale.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "[sigma]"
+				}
+			]
+		},
+		"T.DIST.RT": {
+			"description": "Questa funzione restituisce la distribuzione t della coda di destra.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"T.DIST.2T": {
+			"description": "Questa funzione restituisce la distribuzione t a due code.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"ISO.CEILING": {
+			"description": "Questa funzione restituisce un numero fino all'intero più vicino o al multiplo significativo più vicino, indipendentemente dal segno di significato.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "[significato]"
+				}
+			]
+		},
+		"BETA.DIST": {
+			"description": "Questa funzione restituisce la distribuzione beta.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "beta"
+				},
+				{
+					"name": "cumulativo"
+				},
+				{
+					"name": "minore"
+				},
+				{
+					"name": "superiore"
+				}
+			]
+		},
+		"GAMMALN.PRECISE": {
+			"description": "Questa funzione restituisce il logaritmo naturale della funzione gamma.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"ERF.PRECISE": {
+			"description": "Questa funzione restituisce la funzione di errore.",
+			"parameters": [
+				{
+					"name": "limite inferiore"
+				}
+			]
+		},
+		"ERFC.PRECISE": {
+			"description": "Questa funzione restituisce la funzione ERF complementare.",
+			"parameters": [
+				{
+					"name": "limite inferiore"
+				}
+			]
+		},
+		"PERCENTRANK.EXC": {
+			"description": "Questa funzione restituisce il rango percentuale (0..1, escluso) di un valore in un set di dati.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "X"
+				},
+				{
+					"name": "[significato]"
+				}
+			]
+		},
+		"HYPGEOM.DIST": {
+			"description": "Questa funzione restituisce la distribuzione ipergeometrica.",
+			"parameters": [
+				{
+					"name": "campioni"
+				},
+				{
+					"name": "numero_campione"
+				},
+				{
+					"name": "popolazione_s"
+				},
+				{
+					"name": "numero_pop"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"LOGNORM.DIST": {
+			"description": "Questa funzione restituisce la distribuzione normale logaritmica di x.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "significare"
+				},
+				{
+					"name": "stdev"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"NEGBINOM.DIST": {
+			"description": "Questa funzione restituisce la distribuzione binomiale negativa.",
+			"parameters": [
+				{
+					"name": "numero_f"
+				},
+				{
+					"name": "numeri"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"NORM.S.DIST": {
+			"description": "Questa funzione restituisce la distribuzione normale standard.",
+			"parameters": [
+				{
+					"name": "z.z"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"T.DIST": {
+			"description": "Questa funzione restituisce la distribuzione t.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"F.DIST": {
+			"description": "Questa funzione restituisce la distribuzione di probabilità F.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"CHISQ.DIST": {
+			"description": "Questa funzione restituisce la distribuzione chi quadrato.",
+			"parameters": [
+				{
+					"name": "X"
+				},
+				{
+					"name": "gradi_libertà"
+				},
+				{
+					"name": "cumulativo"
+				}
+			]
+		},
+		"F.INV": {
+			"description": "Questa funzione restituisce l'inverso della distribuzione di probabilità F.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà1"
+				},
+				{
+					"name": "gradi_libertà2"
+				}
+			]
+		},
+		"T.INV": {
+			"description": "Questa funzione restituisce l'inverso della coda di sinistra della distribuzione t.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CHISQ.INV": {
+			"description": "Questa funzione restituisce l'inverso della probabilità della coda di sinistra della distribuzione chi quadrato.",
+			"parameters": [
+				{
+					"name": "probabilità"
+				},
+				{
+					"name": "gradi_libertà"
+				}
+			]
+		},
+		"CONFIDENCE.T": {
+			"description": "Questa funzione restituisce l'intervallo di confidenza per una distribuzione t di Student.",
+			"parameters": [
+				{
+					"name": "alfa"
+				},
+				{
+					"name": "standard_dev"
+				},
+				{
+					"name": "taglia"
+				}
+			]
+		},
+		"NETWORKDAYS.INTL": {
+			"description": "Questa funzione restituisce il numero di giorni lavorativi tra due date utilizzando gli argomenti per indicare i giorni festivi e del fine settimana.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "[fine settimana]"
+				},
+				{
+					"name": "[vacanze]"
+				}
+			]
+		},
+		"WORKDAY.INTL": {
+			"description": "Questa funzione restituisce il numero di serie della data precedente o successiva a un numero di giorni lavorativi con parametri del fine settimana personalizzati. Questi parametri indicano i giorni del fine settimana e i giorni festivi.",
+			"parameters": [
+				{
+					"name": "data d'inizio"
+				},
+				{
+					"name": "giorni"
+				},
+				{
+					"name": "[fine settimana]"
+				},
+				{
+					"name": "[vacanze]"
+				}
+			]
+		},
+		"REFRESH": {
+			"description": "Questa funzione decide come ricalcolare la formula. È possibile utilizzare l'argomento VALUTMoDE per specificare la formula ricalcolare sul valore di riferimento modificato, valutare una volta, ricalcolare o intervallo.",
+			"parameters": [
+				{
+					"name": "formula"
+				},
+				{
+					"name": "valutaModalità"
+				},
+				{
+					"name": "intervallo"
+				}
+			]
+		},
+		"DAYS": {
+			"description": "Questa funzione restituisce il numero di giorni tra due date.",
+			"parameters": [
+				{
+					"name": "data di fine"
+				},
+				{
+					"name": "data d'inizio"
+				}
+			]
+		},
+		"ISOWEEKNUM": {
+			"description": "Questa funzione restituisce il numero della settimana ISO dell'anno per una determinata data.",
+			"parameters": [
+				{
+					"name": "Data"
+				}
+			]
+		},
+		"BITAND": {
+			"description": "Questa funzione restituisce un \"AND\" bit a bit di due numeri.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"BITLSHIFT": {
+			"description": "Questa funzione restituisce un \"OR\" bit a bit di due numeri.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "spostamento_importo"
+				}
+			]
+		},
+		"BITOR": {
+			"description": "Questa funzione restituisce un \"OR\" bit a bit di due numeri.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"BITRSHIFT": {
+			"description": "Questa funzione restituisce un \"OR\" bit a bit di due numeri.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "spostamento_importo"
+				}
+			]
+		},
+		"BITXOR": {
+			"description": "Questa funzione restituisce un \"XOR\" bit a bit di due numeri.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2"
+				}
+			]
+		},
+		"IMCOSH": {
+			"description": "Questa funzione restituisce il coseno iperbolico di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMCOT": {
+			"description": "Questa funzione restituisce la cotangente di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMCSC": {
+			"description": "Questa funzione restituisce la cosecante di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMCSCH": {
+			"description": "Questa funzione restituisce la cosecante iperbolica di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSEC": {
+			"description": "Questa funzione restituisce la secante di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSECH": {
+			"description": "Questa funzione restituisce la secante iperbolica di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMSINH": {
+			"description": "Questa funzione restituisce il seno iperbolico di un numero complesso in formato testo x+yi di x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"IMTAN": {
+			"description": "Questa funzione restituisce la tangente di un numero complesso in formato testo x+yi o x+yj.",
+			"parameters": [
+				{
+					"name": "numerocomplesso"
+				}
+			]
+		},
+		"PDURATION": {
+			"description": "Questa funzione restituisce il numero di periodi richiesti da un investimento per raggiungere un valore specificato.",
+			"parameters": [
+				{
+					"name": "Vota"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				}
+			]
+		},
+		"RRI": {
+			"description": "Questa funzione restituisce un tasso di interesse equivalente per la crescita di un investimento.",
+			"parameters": [
+				{
+					"name": "nper"
+				},
+				{
+					"name": "pval"
+				},
+				{
+					"name": "fval"
+				}
+			]
+		},
+		"ISFORMULA": {
+			"description": "Questa funzione verifica se contiene una formula di una cella di riferimento.",
+			"parameters": [
+				{
+					"name": "cellreference"
+				}
+			]
+		},
+		"IFNA": {
+			"description": "Questa funzione restituisce il valore specificato se la formula restituisce il valore di errore #N/D, altrimenti restituisce il risultato della formula.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "valore_se_na"
+				}
+			]
+		},
+		"IFS": {
+			"description": "Questa funzione verifica se una o più condizioni sono soddisfatte e restituisce un valore che corrisponde alla prima condizione TRUE.",
+			"parameters": [
+				{
+					"name": "test_logico1"
+				},
+				{
+					"name": "valore_se_vero1",
+					"repeatable": false
+				}
+			]
+		},
+		"SWITCH": {
+			"description": "Questa funzione valuta un valore (chiamato espressione) rispetto a un elenco di valori e restituisce il risultato corrispondente al primo valore corrispondente. Se non c'è corrispondenza, può essere restituito un valore predefinito facoltativo.",
+			"parameters": [
+				{
+					"name": "espressione"
+				},
+				{
+					"name": "valore1"
+				},
+				{
+					"name": "risultato1"
+				},
+				{
+					"name": "[default_or_value2]",
+					"repeatable": false
+				},
+				{
+					"name": "[risultato2]",
+					"repeatable": false
+				}
+			]
+		},
+		"XOR": {
+			"description": "Questa funzione restituisce un'esclusiva logica o di tutti gli argomenti.",
+			"parameters": [
+				{
+					"name": "logico",
+					"repeatable": false
+				}
+			]
+		},
+		"AREAS": {
+			"description": "Questa funzione restituisce il numero di aree in un riferimento.",
+			"parameters": [
+				{
+					"name": "riferimento"
+				}
+			]
+		},
+		"FORMULATEXT": {
+			"description": "Questa funzione restituisce una formula come stringa.",
+			"parameters": [
+				{
+					"name": "riferimento"
+				}
+			]
+		},
+		"HYPERLINK": {
+			"description": "Questa funzione crea un collegamento o un salto che apre un documento memorizzato su un server di rete, una intranet o Internet.",
+			"parameters": [
+				{
+					"name": "collegamento_posizione"
+				},
+				{
+					"name": "nome amichevole"
+				}
+			]
+		},
+		"ACOT": {
+			"description": "Questa funzione calcola l'arcotangente inversa di un numero.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ACOTH": {
+			"description": "Questa funzione calcola l'arcotangente iperbolica inversa di un numero.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"ARABIC": {
+			"description": "Questa funzione converte un testo numerico romano in un equivalente numerico arabo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"BASE": {
+			"description": "Questa funzione converte un numero in una rappresentazione testuale con la radice data (base).",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "radice"
+				},
+				{
+					"name": "[min_lunghezza]"
+				}
+			]
+		},
+		"CEILING.MATH": {
+			"description": "Questa funzione arrotonda un numero all'intero più vicino o al multiplo significativo più vicino.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "[significato]"
+				},
+				{
+					"name": "[modalità]"
+				}
+			]
+		},
+		"COMBINA": {
+			"description": "Questa funzione calcola il numero di combinazioni possibili con ripetizioni per un numero specificato di elementi.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "numero_scelto"
+				}
+			]
+		},
+		"COT": {
+			"description": "Questa funzione restituisce la cotangente dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"COTH": {
+			"description": "Questa funzione restituisce la cotangente iperbolica del numero specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"CSC": {
+			"description": "Questa funzione restituisce la cosecante dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"CSCH": {
+			"description": "Questa funzione restituisce la cosecante iperbolica del numero specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"DECIMAL": {
+			"description": "Questa funzione converte una rappresentazione testuale di un numero in una data base in un numero decimale.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "radice"
+				}
+			]
+		},
+		"FLOOR.MATH": {
+			"description": "Questa funzione arrotonda un numero per difetto all'intero più vicino o al multiplo significativo più vicino.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "[significato]"
+				},
+				{
+					"name": "[modalità]"
+				}
+			]
+		},
+		"SEC": {
+			"description": "Questa funzione restituisce la secante dell'angolo specificato.",
+			"parameters": [
+				{
+					"name": "angolo"
+				}
+			]
+		},
+		"SECH": {
+			"description": "Questa funzione restituisce la secante iperbolica del valore specificato.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"BINOM.DIST.RANGE": {
+			"description": "Questa funzione calcola la probabilità di un risultato di prova utilizzando una distribuzione binomiale.",
+			"parameters": [
+				{
+					"name": "prove"
+				},
+				{
+					"name": "probabilità_s"
+				},
+				{
+					"name": "numeri"
+				},
+				{
+					"name": "[numero_s2]"
+				}
+			]
+		},
+		"GAMMA": {
+			"description": "Questa funzione restituisce il valore della funzione gamma.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"MAXIFS": {
+			"description": "Questa funzione restituisce il valore massimo tra le celle specificate da un determinato insieme di condizioni o criteri.",
+			"parameters": [
+				{
+					"name": "max_range"
+				},
+				{
+					"name": "criteri_intervallo",
+					"repeatable": false
+				},
+				{
+					"name": "criteri",
+					"repeatable": false
+				}
+			]
+		},
+		"GAUSS": {
+			"description": "Questa funzione calcola la probabilità che un membro di una popolazione normale standard rientri tra la media e z deviazioni standard dalla media.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"MINIFS": {
+			"description": "Questa funzione restituisce il valore minimo tra le celle specificate da un determinato insieme di condizioni o criteri.",
+			"parameters": [
+				{
+					"name": "min_range"
+				},
+				{
+					"name": "criteri_intervallo",
+					"repeatable": false
+				},
+				{
+					"name": "criteri",
+					"repeatable": false
+				}
+			]
+		},
+		"PERMUTATIONA": {
+			"description": "Questa funzione restituisce il numero di permutazioni per un dato numero di oggetti che possono essere selezionati dagli oggetti totali.",
+			"parameters": [
+				{
+					"name": "numero"
+				},
+				{
+					"name": "numero_scelto"
+				}
+			]
+		},
+		"PHI": {
+			"description": "Questa funzione restituisce il valore della funzione di densità per una distribuzione normale standard.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"SKEW.P": {
+			"description": "Questa funzione restituisce l'asimmetria di una base di distribuzione su una popolazione: una caratterizzazione del grado di asimmetria di una distribuzione attorno alla sua media.",
+			"parameters": [
+				{
+					"name": "numero 1"
+				},
+				{
+					"name": "numero 2",
+					"repeatable": false
+				}
+			]
+		},
+		"BAHTTEXT": {
+			"description": "Questa funzione converte un numero in testo tailandese e aggiunge un suffisso di \"Baht\"",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"CONCAT": {
+			"description": "Questa funzione combina più stringhe di testo o numeri in una stringa di testo, la funzione rimarrà disponibile per compatibilità con la funzione \"CONCATENA\".",
+			"parameters": [
+				{
+					"name": "Testo 1"
+				},
+				{
+					"name": "testo2",
+					"repeatable": false
+				}
+			]
+		},
+		"FINDB": {
+			"description": "Questa funzione trova un valore di testo all'interno di un altro e restituisce la posizione del valore di testo nel testo cercato e conta ogni carattere a doppio byte come 2 quando si imposta DBCS come lingua predefinita.",
+			"parameters": [
+				{
+					"name": "trova_testo"
+				},
+				{
+					"name": "entro_testo"
+				},
+				{
+					"name": "[start_num]"
+				}
+			]
+		},
+		"LEFTB": {
+			"description": "Questa funzione restituisce i caratteri più a sinistra specificati da un valore di testo e in base al numero di byte specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "num_byte"
+				}
+			]
+		},
+		"LENB": {
+			"description": "Questa funzione restituisce la lunghezza del numero di byte in una stringa di testo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"MIDB": {
+			"description": "Questa funzione restituisce il numero richiesto di caratteri da una stringa di testo a partire dalla posizione specificata e in base al numero di byte specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "numero_inizio"
+				},
+				{
+					"name": "num_byte"
+				}
+			]
+		},
+		"REPLACEB": {
+			"description": "Questa funzione sostituisce parte di una stringa di testo con una stringa di testo diversa, in base al numero di byte specificato.",
+			"parameters": [
+				{
+					"name": "vecchio_testo"
+				},
+				{
+					"name": "start_byte"
+				},
+				{
+					"name": "num_byte"
+				},
+				{
+					"name": "nuovo_testo"
+				}
+			]
+		},
+		"RIGHTB": {
+			"description": "Questa funzione restituisce i caratteri più a destra specificati da un valore di testo e in base al numero di byte specificato.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "num_byte"
+				}
+			]
+		},
+		"SEARCHB": {
+			"description": "Questa funzione trova una stringa di testo in un'altra stringa di testo e restituisce l'indice della posizione iniziale del testo trovato e conta ogni carattere a doppio byte come 2 quando si imposta DBCS come lingua predefinita.",
+			"parameters": [
+				{
+					"name": "trova_testo"
+				},
+				{
+					"name": "entro_testo"
+				},
+				{
+					"name": "[start_num]"
+				}
+			]
+		},
+		"TEXTJOIN": {
+			"description": "Questa funzione combina più intervalli e/o stringhe in un unico testo e il testo include un delimitatore specificato tra ciascun valore di testo.",
+			"parameters": [
+				{
+					"name": "delimitatore"
+				},
+				{
+					"name": "ignore_empty"
+				},
+				{
+					"name": "Testo 1"
+				},
+				{
+					"name": "testo2",
+					"repeatable": false
+				}
+			]
+		},
+		"UNICHAR": {
+			"description": "Questa funzione restituisce il carattere Unicode di un dato riferimento numerico.",
+			"parameters": [
+				{
+					"name": "numero"
+				}
+			]
+		},
+		"UNICODE": {
+			"description": "Questa funzione restituisce il numero corrispondente al primo carattere del testo.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"ENCODEURL": {
+			"description": "Questa funzione restituisce una stringa con codifica URL.",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"BC_QRCODE": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un QRCode",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "errorCorrectionLevel"
+				},
+				{
+					"name": "modello"
+				},
+				{
+					"name": "versione"
+				},
+				{
+					"name": "maschera"
+				},
+				{
+					"name": "connessione"
+				},
+				{
+					"name": "connessioneNo"
+				},
+				{
+					"name": "charCode"
+				},
+				{
+					"name": "set di caratteri"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_EAN13": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un EAN13.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "Aggiungi su"
+				},
+				{
+					"name": "addOnLabelPosition"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_EAN8": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un EAN8.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_CODABAR": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un CODABAR.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "checkDigit"
+				},
+				{
+					"name": "nwRapporto"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_CODE39": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un CODE39.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "labelWithStartAndStopCharacter"
+				},
+				{
+					"name": "checkDigit"
+				},
+				{
+					"name": "nwRapporto"
+				},
+				{
+					"name": "fullASCII"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_CODE93": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un CODE93.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "checkDigit"
+				},
+				{
+					"name": "fullASCII"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_CODE128": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un CODE128.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "codeSet"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_GS1_128": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un GS1_128.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_CODE49": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un CODE49.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "showLabel"
+				},
+				{
+					"name": "labelPosition"
+				},
+				{
+					"name": "raggruppamento"
+				},
+				{
+					"name": "gruppoNo"
+				},
+				{
+					"name": "famiglia di font"
+				},
+				{
+					"name": "stile carattere"
+				},
+				{
+					"name": "fontWeight"
+				},
+				{
+					"name": "testoDecorazione"
+				},
+				{
+					"name": "textAlign"
+				},
+				{
+					"name": "dimensione del font"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_PDF417": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un PDF417.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "errorCorrectionLevel"
+				},
+				{
+					"name": "righe"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "compatto"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"BC_DATAMATRIX": {
+			"description": "Questa funzione restituisce un set di dati per rappresentare un DATAMATRIX.",
+			"parameters": [
+				{
+					"name": "valore"
+				},
+				{
+					"name": "colore"
+				},
+				{
+					"name": "colore di sfondo"
+				},
+				{
+					"name": "eccMode"
+				},
+				{
+					"name": "ecc200SimboloDimensione"
+				},
+				{
+					"name": "ecc200EncodingMode"
+				},
+				{
+					"name": "ecc00_140DimensioneSimbolo"
+				},
+				{
+					"name": "strutturatoAppend"
+				},
+				{
+					"name": "strutturaNumero"
+				},
+				{
+					"name": "identificatore di file"
+				},
+				{
+					"name": "quietZoneSinistra"
+				},
+				{
+					"name": "quietZoneDestra"
+				},
+				{
+					"name": "quietZoneTop"
+				},
+				{
+					"name": "quietZoneBottom"
+				}
+			]
+		},
+		"FILTER": {
+			"description": "Questa funzione filtra un intervallo o un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "includere"
+				},
+				{
+					"name": "se_vuoto"
+				}
+			]
+		},
+		"RANDARRAY": {
+			"description": "Questa funzione restituisce un array di numeri casuali.",
+			"parameters": [
+				{
+					"name": "righe"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "min"
+				},
+				{
+					"name": "max"
+				},
+				{
+					"name": "numero intero"
+				}
+			]
+		},
+		"SEQUENCE": {
+			"description": "Questa funzione restituisce una sequenza di numeri.",
+			"parameters": [
+				{
+					"name": "righe"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "inizio"
+				},
+				{
+					"name": "fare un passo"
+				}
+			]
+		},
+		"SINGLE": {
+			"description": "Questa funzione restituisce un singolo valore quando viene fornito un valore, un intervallo o un array.",
+			"parameters": [
+				{
+					"name": "valore"
+				}
+			]
+		},
+		"SORT": {
+			"description": "Questa funzione ordina un intervallo o un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "sort_index"
+				},
+				{
+					"name": "ordinamento"
+				},
+				{
+					"name": "da_col"
+				}
+			]
+		},
+		"SORTBY": {
+			"description": "Questa funzione ordina un intervallo o una matrice in base ai valori in un intervallo o matrice corrispondente.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "per_array1"
+				},
+				{
+					"name": "sort_order1"
+				},
+				{
+					"name": "by_array2",
+					"repeatable": false
+				},
+				{
+					"name": "sort_order2",
+					"repeatable": false
+				}
+			]
+		},
+		"UNIQUE": {
+			"description": "Questa funzione restituisce i valori univoci da un intervallo o da un array.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "da_col"
+				},
+				{
+					"name": "esattamente_una volta"
+				}
+			]
+		},
+		"QUERY": {
+			"description": "Questa funzione restituisce i dati dalle tabelle del gestore dati in un foglio di lavoro.",
+			"parameters": [
+				{
+					"name": "tableAndRows"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "returnOggetto"
+				}
+			]
+		},
+		"LET": {
+			"description": "Questa funzione assegna i risultati del calcolo ai nomi. Utile per memorizzare calcoli e valori intermedi definendo nomi all'interno di una formula. Questi nomi si applicano solo nell'ambito della funzione LET.",
+			"parameters": [
+				{
+					"name": "nome1"
+				},
+				{
+					"name": "nome_valore1"
+				},
+				{
+					"name": "calcolo_o_nome2"
+				},
+				{
+					"name": "[nome_valore2, ..."
+				}
+			]
+		},
+		"IMAGE": {
+			"description": "Questa funzione inserisce un URL o una stringa base64 per mostrare un'immagine nella cella",
+			"parameters": [
+				{
+					"name": "URL"
+				},
+				{
+					"name": "[modalità]"
+				},
+				{
+					"name": "[altezza]"
+				},
+				{
+					"name": "[larghezza]"
+				},
+				{
+					"name": "[clip Y]"
+				},
+				{
+					"name": "[clipX]"
+				},
+				{
+					"name": "[clipHeight]"
+				},
+				{
+					"name": "[clipWidth]"
+				},
+				{
+					"name": "[vAllinea]"
+				},
+				{
+					"name": "[hAllinea]"
+				}
+			]
+		},
+		"GETPIVOTDATA": {
+			"description": "Questa funzione estrae i dati archiviati in una tabella pivot",
+			"parameters": [
+				{
+					"name": "campo dati"
+				},
+				{
+					"name": "tabella pivot"
+				},
+				{
+					"name": "[campo1, elemento1]"
+				},
+				{
+					"name": "..."
+				}
+			]
+		},
+		"WEBSERVICE": {
+			"description": "Questa funzione restituisce i dati da un servizio web",
+			"parameters": [
+				{
+					"name": "URL"
+				}
+			]
+		},
+		"FILTERJSON": {
+			"description": "Questa funzione analizza la stringa json in un valore scalare, un oggetto o un array di oggetti.",
+			"parameters": [
+				{
+					"name": "json_string"
+				}
+			]
+		},
+		"ASC": {
+			"description": "La funzione ASC modifica i caratteri a larghezza intera (a doppio byte) in caratteri a metà larghezza (a un byte), da utilizzare con i set di caratteri a doppio byte (DBCS).",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"DBCS": {
+			"description": "La funzione DBCS converte le lettere a mezza larghezza (a byte singolo) all'interno di una stringa di caratteri in caratteri a larghezza intera (a doppio byte).",
+			"parameters": [
+				{
+					"name": "testo"
+				}
+			]
+		},
+		"LAMBDA": {
+			"description": "Crea un valore di funzione, che può essere chiamato all'interno delle formule.",
+			"parameters": [
+				{
+					"name": "parametro_o_calcolo"
+				},
+				{
+					"name": "[parametro_o_calcolo]",
+					"repeatable": false
+				}
+			]
+		},
+		"MAP": {
+			"description": "Restituisce un array formato mappando ogni valore nell'array a un nuovo valore applicando un LAMBDA per creare un nuovo valore.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "lambda_o_array",
+					"repeatable": false
+				}
+			]
+		},
+		"REDUCE": {
+			"description": "Riduce una matrice a un valore accumulato applicando un LAMBDA a ogni valore e restituendo il valore totale nell'accumulatore.",
+			"parameters": [
+				{
+					"name": "init_value"
+				},
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "funzione"
+				}
+			]
+		},
+		"SCAN": {
+			"description": "Esegue la scansione di un array applicando un LAMBDA a ogni valore e restituisce un array che ha ogni valore intermedio.",
+			"parameters": [
+				{
+					"name": "init_value"
+				},
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "funzione"
+				}
+			]
+		},
+		"MAKEARRAY": {
+			"description": "Restituisce una matrice calcolata di una dimensione di riga e colonna specificata, applicando un LAMBDA.",
+			"parameters": [
+				{
+					"name": "righe"
+				},
+				{
+					"name": "colonne"
+				},
+				{
+					"name": "funzione"
+				}
+			]
+		},
+		"BYCOL": {
+			"description": "Applica un LAMBDA a ciascuna colonna e restituisce un array dei risultati. Ad esempio, se l'array originale è di 3 colonne per 2 righe, l'array restituito è di 3 colonne per 1 riga.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "funzione"
+				}
+			]
+		},
+		"BYROW": {
+			"description": "Applica un LAMBDA a ogni riga e restituisce un array dei risultati. Ad esempio, se l'array originale è di 3 colonne per 2 righe, l'array restituito è di 1 colonna per 2 righe.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "funzione"
+				}
+			]
+		},
+		"ISOMITTED": {
+			"description": "Controlla se manca il valore in un LAMBDA e restituisce VERO o FALSO.",
+			"parameters": [
+				{
+					"name": "discussione"
+				}
+			]
+		},
+		"TEXTBEFORE": {
+			"description": "Restituisce il testo che si trova prima di un determinato carattere o stringa.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "delimitatore"
+				},
+				{
+					"name": "[numero_istanza]"
+				},
+				{
+					"name": "[modalità_partita]"
+				},
+				{
+					"name": "[fine_partita]"
+				},
+				{
+					"name": "[se_non_trovato]"
+				}
+			]
+		},
+		"TEXTAFTER": {
+			"description": "Restituisce il testo che compare dopo un determinato carattere o stringa.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "delimitatore"
+				},
+				{
+					"name": "[numero_istanza]"
+				},
+				{
+					"name": "[modalità_partita]"
+				},
+				{
+					"name": "[fine_partita]"
+				},
+				{
+					"name": "[se_non_trovato]"
+				}
+			]
+		},
+		"TEXTSPLIT": {
+			"description": "Divide le stringhe di testo utilizzando delimitatori di riga e colonna.",
+			"parameters": [
+				{
+					"name": "testo"
+				},
+				{
+					"name": "col_delimiter"
+				},
+				{
+					"name": "[riga_delimitatore]"
+				},
+				{
+					"name": "[ignora_vuoto]"
+				},
+				{
+					"name": "[modalità_partita]"
+				},
+				{
+					"name": "[tampone_con]"
+				}
+			]
+		},
+		"VSTACK": {
+			"description": "Accoda le matrici verticalmente e in sequenza per restituire una matrice più grande.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "[matrice2]",
+					"repeatable": false
+				}
+			]
+		},
+		"HSTACK": {
+			"description": "Accoda gli array orizzontalmente e in sequenza per restituire un array più grande.",
+			"parameters": [
+				{
+					"name": "matrice1"
+				},
+				{
+					"name": "[matrice2]",
+					"repeatable": false
+				}
+			]
+		},
+		"TOROW": {
+			"description": "Restituisce la matrice in una singola riga.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "[ignorare]"
+				},
+				{
+					"name": "[scan_by_column]"
+				}
+			]
+		},
+		"TOCOL": {
+			"description": "Restituisce la matrice in una singola colonna.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "[ignorare]"
+				},
+				{
+					"name": "[scan_by_column]"
+				}
+			]
+		},
+		"WRAPROWS": {
+			"description": "Racchiude la riga o la colonna di valori fornita per righe dopo un numero specificato di elementi per formare una nuova matrice.",
+			"parameters": [
+				{
+					"name": "vettore"
+				},
+				{
+					"name": "wrap_count"
+				},
+				{
+					"name": "[tampone_con]"
+				}
+			]
+		},
+		"WRAPCOLS": {
+			"description": "Racchiude la riga o la colonna di valori fornita per colonne dopo un numero specificato di elementi per formare una nuova matrice.",
+			"parameters": [
+				{
+					"name": "vettore"
+				},
+				{
+					"name": "wrap_count"
+				},
+				{
+					"name": "[tampone_con]"
+				}
+			]
+		},
+		"TAKE": {
+			"description": "Restituisce un numero specificato di righe o colonne contigue dall'inizio o dalla fine di una matrice.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "righe"
+				},
+				{
+					"name": "[colonne]"
+				}
+			]
+		},
+		"DROP": {
+			"description": "Esclude un numero specificato di righe o colonne dall'inizio o dalla fine di una matrice.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "righe"
+				},
+				{
+					"name": "[colonne]"
+				}
+			]
+		},
+		"EXPAND": {
+			"description": "Espande o riempie una matrice alle dimensioni di righe e colonne specificate.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "righe"
+				},
+				{
+					"name": "[colonne]"
+				},
+				{
+					"name": "[tampone_con]"
+				}
+			]
+		},
+		"CHOOSEROWS": {
+			"description": "Restituisce le righe specificate da una matrice.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "numero_riga1"
+				},
+				{
+					"name": "[riga_num2]",
+					"repeatable": false
+				}
+			]
+		},
+		"CHOOSECOLS": {
+			"description": "Restituisce le colonne specificate da una matrice.",
+			"parameters": [
+				{
+					"name": "Vettore"
+				},
+				{
+					"name": "col_num1"
+				},
+				{
+					"name": "[col_num2]",
+					"repeatable": false
+				}
+			]
+		}
+	},
+	"TableFunctions": {
+		"All": {
+			"description": "Restituisce l'intero contenuto della tabella o le colonne della tabella specificate incluse le intestazioni di colonna, i dati e le righe totali.",
+			"name": "#All"
+		},
+		"Data": {
+			"description": "Restituisce le celle di dati della tabella o le colonne della tabella specificate.",
+			"name": "#Data"
+		},
+		"Headers": {
+			"description": "Restituisce le intestazioni delle colonne per la tabella o le colonne della tabella specificate.",
+			"name": "#Headers"
+		},
+		"Totals": {
+			"description": "Restituisce le righe totali per la tabella o le colonne della tabella specificate.",
+			"name": "#Totals"
+		},
+		"thisRow": {
+			"description": "Questa riga.",
+			"name": "#This Row"
+		}
+	}
+}
