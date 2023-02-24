@@ -1131,6 +1131,39 @@ var custom_resource = {
         "TIME_LEVEL_DAYS": "DAYS",
         "PivotTableErrorMessage_ExistTable": "A PivotTable report cannot overlap a table."
     },
+    "TableSheet": {
+        "EXP_TooManyPinRecords": "Only support less than 10 pin records.",
+        "GroupPanelTip": "Drag here to set row groups",
+        "GroupPanelFieldsHeader": "Fields",
+        "GroupPanelGroupsHeader": "Groups",
+        "GroupPanelItemRemove": "Remove",
+        "GroupPanelItemAddCalculation": "Add Summary Field",
+        "GroupPanelDropDownCalcField": "Field",
+        "GroupPanelSummaryLabelFormula": "Formula",
+        "GroupPanelSummaryLabelCaption": "Caption",
+        "GroupPanelSummaryLabelSlice": "Slice",
+        "GroupPanelItemRemoveAll": "Remove All",
+        "GroupPanelAddCalculateColumn": "Add Calculated Column",
+        "StatusBarRowCount": "Row Count",
+        "StatusBarToolTipRowCount": "Count of selected rows",
+        "CrossColumnCrossHeader": "Cross",
+        "CrossColumnDetailFormatter": "Formatter",
+        "CrossColumnDetailName": "Name",
+        "CrossColumnDetailValue": "Value",
+        "CrossColumnDetailValuePlaceHolder": "Drag item here to set value",
+        "CrossColumnDetailOver": "Over",
+        "CrossColumnDetailCaption": "Caption",
+        "CrossColumnDetailValueHeader": "Show Cross Value Header",
+        "CrossColumnDetailFilter": "Filter",
+        "CrossColumnDetailAttributes": "Attributes",
+        "CrossColumnDetailList": "List",
+        "Exp_InvalidOperationInProtectForTableSheet": "The range you're trying to change is locked."
+    },
+    "IO": {
+        "EXP_IO": "File read and write exception.",
+        "EXP_FILE_FORMAT": "Incorrect file format.",
+        "GET_PARTIAL_VALUES_ERROR_MSG": "error file"
+    },
     "Functions": {
         "ABS": {
             "description": "This function calculates the absolute value of the specified value.",
