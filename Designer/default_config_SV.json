@@ -15,6 +15,13 @@
                   "undo",
                   "redo"
                 ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "undoList",
+                  "redoList"
+                ]
               }
             ]
           }
@@ -25,22 +32,30 @@
           "commandGroup": {
             "children": [
               {
-                "commands": [
-                  "paste"
+                "command": "pasteAll",
+                "type": "dropdown",
+                "children": [
+                  "pasteAll",
+                  "pasteFormulas",
+                  "pasteValues",
+                  "pasteFormatting",
+                  "pasteValuesAndFormatting",
+                  "pasteFormulasAndFormatting"
                 ]
               },
               {
                 "direction": "vertical",
                 "commands": [
                   "cut",
-                  "copy"
+                  "copy",
+                  "formatPainter"
                 ]
               }
             ]
           }
         },
         {
-          "label": "Typsnitt",
+          "label": "Teckensnitt",
           "indicator": "indicatorFonts",
           "thumbnailClass": "ribbon-thumbnail-fonts",
           "commandGroup": {
@@ -55,13 +70,34 @@
                 ]
               },
               {
-                "commands": [
+                "children": [
                   "fontWeight",
                   "fontItalic",
                   "fontUnderline",
                   "fontDoubleUnderline",
                   "separator",
-                  "border",
+                  {
+                    "command": "border",
+                    "type": "dropdown",
+                    "children": [
+                      "bottomBorder",
+                      "topBorder",
+                      "leftBorder",
+                      "rightBorder",
+                      "separator",
+                      "noBorder",
+                      "allBorder",
+                      "outsideBorder",
+                      "thickBoxBorder",
+                      "separator",
+                      "bottomDoubleBorder",
+                      "thickBottomBorder",
+                      "topBottomBorder",
+                      "topThickBottomBorder",
+                      "topDoubleBottomBorder",
+                      "moreBorder"
+                    ]
+                  },
                   "separator",
                   "backColor",
                   "foreColor"
@@ -80,12 +116,24 @@
                 "direction": "vertical",
                 "children": [
                   {
-                    "commands": [
+                    "children": [
                       "topAlign",
                       "middleAlign",
                       "bottomAlign",
                       "separator",
-                      "orientationList"
+                      {
+                        "command": "orientationList",
+                        "type": "dropdown",
+                        "children": [
+                          "angleCounterclockwise",
+                          "angleClockwise",
+                          "verticalText",
+                          "rotateTextUp",
+                          "rotateTextDown",
+                          "separator",
+                          "formatCellAlignment"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -112,9 +160,17 @@
                     ]
                   },
                   {
-                    "commands": [
-                      "mergeCenter",
-                      "alignmentMergeList"
+                    "children": [
+                      {
+                        "command": "mergeCenter",
+                        "type": "dropdown",
+                        "children": [
+                          "mergeCenterButton",
+                          "mergeAcross",
+                          "mergeCells",
+                          "unMergeCells"
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -130,8 +186,22 @@
             "direction": "vertical",
             "children": [
               {
-                "commands": [
-                  "ribbonNumberFormat"
+                "command": "ribbonNumberFormat",
+                "type": "dropdown",
+                "children": [
+                  "formatGeneral",
+                  "numberFormat",
+                  "currencyFormat",
+                  "accountingFormat",
+                  "shortDateFormat",
+                  "longDateformat",
+                  "timeFormat",
+                  "percentageFormat",
+                  "fractionFormat",
+                  "scientificFormat",
+                  "textFormat",
+                  "separator",
+                  "formatMore"
                 ]
               },
               {
@@ -147,28 +217,230 @@
           }
         },
         {
-          "label": "Celltyp",
-          "thumbnailClass": "ribbon-thumbnail-celltype",
-          "commandGroup": {
-            "children": [
-              {
-                "commands": [
-                  "cellType",
-                  "cellDropdowns"
-                ]
-              }
-            ]
-          }
-        },
-        {
           "label": "Stilar",
           "thumbnailClass": "ribbon-thumbnail-styles",
           "commandGroup": {
-            "commands": [
-              "conditionFormat",
-              "formatTable2",
-              "cellStyles",
-              "cellStates"
+            "children": [
+              {
+                "command": "conditionFormat",
+                "type": "dropdown",
+                "children": [
+                  {
+                    "command": "highlightCellsRules",
+                    "type": "dropdown",
+                    "children": [
+                      "highlightCellsRulesGreaterThan",
+                      "highlightCellsRulesLessThan",
+                      "highlightCellsRulesBetween",
+                      "highlightCellsRulesEqualTo",
+                      "highlightCellsRulesContains",
+                      "highlightCellsRulesDateOccurring",
+                      "highlightCellsRulesDuplicateValues",
+                      "separator",
+                      "highlightCellsMoreRules"
+                    ]
+                  },
+                  {
+                    "command": "topBottomRules",
+                    "type": "dropdown",
+                    "children": [
+                      "topBottomRulesTop10",
+                      "topBottomRulesBottom10",
+                      "topBottomRulesAboveAverage",
+                      "topBottomRulesBelowAverage",
+                      "separator",
+                      "topBottomRulesMoreRules"
+                    ]
+                  },
+                  "separator",
+                  {
+                    "command": "dataBar",
+                    "type": "dropdown",
+                    "dropdownMaxWidth": 126,
+                    "children": [
+                      {
+                        "command": "gradientFill",
+                        "type": "group",
+                        "children": [
+                          "gradientFillBlueDataBar",
+                          "gradientFillGreenDataBar",
+                          "gradientFillRedDataBar",
+                          "gradientFillOrangeDataBar",
+                          "gradientFillLightBlueDataBar",
+                          "gradientFillPurpleDataBar"
+                        ]
+                      },
+                      {
+                        "command": "solidFill",
+                        "type": "group",
+                        "children": [
+                          "solidFillBlueDataBar",
+                          "solidFillGreenDataBar",
+                          "solidFillRedDataBar",
+                          "solidFillOrangeDataBar",
+                          "solidFillLightBlueDataBar",
+                          "solidFillPurpleDataBar"
+                        ]
+                      },
+                      "separator",
+                      "moreDataBarRules"
+                    ]
+                  },
+                  {
+                    "command": "colorScalesList",
+                    "type": "dropdown",
+                    "dropdownMaxWidth": 170,
+                    "children": [
+                      {
+                        "command": "colorScalesList2",
+                        "type": "group",
+                        "children": [
+                          "colorScaleGyr",
+                          "colorScaleRyg",
+                          "colorScaleGwr",
+                          "colorScaleRwg",
+                          "colorScaleBwr",
+                          "colorScaleRwb",
+                          "colorScaleWr",
+                          "colorScaleRw",
+                          "colorScaleGw",
+                          "colorScaleWg",
+                          "colorScaleGy",
+                          "colorScaleYg"
+                        ]
+                      },
+                      "separator",
+                      "moreColorScaleRules"
+                    ]
+                  },
+                  {
+                    "command": "iconSetList",
+                    "type": "dropdown",
+                    "children": [
+                      {
+                        "command": "directional",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeArrowsColored",
+                          "iconSetThreeArrowsGray",
+                          "iconSet3Triangles",
+                          "iconSetFourArrowsGray",
+                          "iconSetFourArrowsColored",
+                          "iconSetFiveArrowsGray",
+                          "iconSetFiveArrowsColored"
+                        ]
+                      },
+                      {
+                        "command": "shapes",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeTrafficLightsUnRimmed",
+                          "iconSetThreeTrafficLightsRimmed",
+                          "iconSetThreeSigns",
+                          "iconSetFourTrafficLights",
+                          "iconSetFourRedToBlack"
+                        ]
+                      },
+                      {
+                        "command": "indicators",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeSymbolsCircled",
+                          "iconSetThreeSymbolsUnCircled",
+                          "iconSetThreeFlags"
+                        ]
+                      },
+                      {
+                        "command": "ratings",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeStars",
+                          "iconSetFourRatings",
+                          "iconSetFiveQuarters",
+                          "iconSetFiveRatings",
+                          "iconSetFiveBoxes"
+                        ]
+                      },
+                      "separator",
+                      "moreIconSetRules"
+                    ]
+                  },
+                  "separator",
+                  "conditionFormatNewRule",
+                  {
+                    "command": "clearRules",
+                    "type": "dropdown",
+                    "children": [
+                      "clearCellRules",
+                      "clearSheetRules"
+                    ]
+                  },
+                  "conditionFormatManageRule"
+                ]
+              },
+              {
+                "command": "formatTable2",
+                "type": "dropdown",
+                "dropdownMaxWidth": 550,
+                "children": [
+                  "formatTableListContent",
+                  "separator",
+                  "newTableStyle",
+                  "clearTableStyle"
+                ]
+              },
+              {
+                "command": "cellStyles",
+                "type": "dropdown",
+                "dropdownMaxWidth": 634,
+                "children": [
+                  "cellStylesListContent",
+                  "separator",
+                  "newCellStyle",
+                  "separator",
+                  "manageCellState"
+                ]
+              },
+              {
+                "command": "cellEditors",
+                "type": "dropdown",
+                "children": [
+                  {
+                    "command": "cellType",
+                    "type": "dropdown",
+                    "children": [
+                      "ribbonButtonButtonCellType",
+                      "checkboxCellType",
+                      "comboBoxCellType",
+                      "hyperlinkCellType",
+                      "rangeTemplateCellType",
+                      "separator",
+                      "checkboxListCellType",
+                      "radioListCellType",
+                      "buttonListCellType",
+                      "separator",
+                      "clearCellType"
+                    ]
+                  },
+                  {
+                    "command": "cellDropdowns",
+                    "type": "dropdown",
+                    "children": [
+                      "calculatorCellType",
+                      "colorPickerCellType",
+                      "dateTimePickerCellType",
+                      "listCellType",
+                      "monthPickerCellType",
+                      "sliderCellType",
+                      "timePickerCellType",
+                      "workflowList",
+                      "multiColumnPicker",
+                      "separator",
+                      "clearCellDropdown"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         },
@@ -176,10 +448,56 @@
           "label": "Celler",
           "thumbnailClass": "ribbon-thumbnail-cells",
           "commandGroup": {
-            "commands": [
-              "cellsInsert",
-              "cellsDelete",
-              "cellsFormat"
+            "children": [
+              {
+                "command": "cellsInsert",
+                "type": "dropdown",
+                "children": [
+                  "insertCells",
+                  "separator",
+                  "insertSheetRows",
+                  "insertSheetColumns",
+                  "separator",
+                  "insertSheet"
+                ]
+              },
+              {
+                "command": "cellsDelete",
+                "type": "dropdown",
+                "children": [
+                  "deleteCells",
+                  "separator",
+                  "deleteSheetRows",
+                  "deleteSheetColumns",
+                  "separator",
+                  "deleteSheet"
+                ]
+              },
+              {
+                "command": "cellsFormat",
+                "type": "dropdown",
+                "children": [
+                  "cellFormatRowHeight",
+                  "autoFitRowHeight",
+                  "defaultRowHeight",
+                  "separator",
+                  "cellFormatColumnWidth",
+                  "autoFitColumnWidth",
+                  "defaultColumnWidth",
+                  "separator",
+                  "hideRows",
+                  "hideColumns",
+                  "unHideRows",
+                  "unHideColumns",
+                  "separator",
+                  "headers",
+                  "separator",
+                  "cellFormatProtectSheet",
+                  "unProtectSheet",
+                  "lockCells",
+                  "unLockCells"
+                ]
+              }
             ]
           }
         },
@@ -192,50 +510,79 @@
                 "direction": "vertical",
                 "children": [
                   {
-                    "commands": [
+                    "command": "editingAutoSum",
+                    "type": "dropdown",
+                    "children": [
                       "editingAutoSum",
-                      "editingAutoSumList"
+                      "average",
+                      "countNumbers",
+                      "max",
+                      "min"
                     ]
                   },
                   {
-                    "commands": [
-                      "editingFillDown",
-                      "editingFillDownList"
+                    "command": "editingFillDown",
+                    "type": "dropdown",
+                    "children": [
+                      "down",
+                      "right",
+                      "up",
+                      "left",
+                      "series"
                     ]
                   },
                   {
-                    "commands": [
-                      "clear",
-                      "editingClearAllList"
+                    "command": "clear",
+                    "type": "dropdown",
+                    "children": [
+                      "clearAll",
+                      "clearFormat",
+                      "clearContent",
+                      "clearComments"
                     ]
                   }
                 ]
               },
               {
-                "commands": [
-                  "editingSortFilter"
+                "command": "editingSortFilter",
+                "type": "dropdown",
+                "children": [
+                  "sortAZ",
+                  "sortZA",
+                  "customSortEditing",
+                  "setFilter",
+                  "clearFilter",
+                  "reapplyFilter"
                 ]
               },
               {
-                "commands": [
-                  "editingFind"
+                "command": "editingFind",
+                "type": "dropdown",
+                "children": [
+                  "find",
+                  "replace",
+                  "goto",
+                  "gotoSpecial"
                 ]
               }
             ]
           }
         }
-      ]
+      ],
+      "visibleWhen": "!TableSheetActive && !DataManagerActive && !ContainMultipleHeaderCells || IsInTableSheetDesignMode"
     },
     {
       "id": "insert",
       "text": "FÖRA IN",
       "buttonGroups": [
         {
-          "label": "Tabell",
+          "label": "Tabeller",
           "thumbnailClass": "ribbon-thumbnail-table",
           "commandGroup": {
             "commands": [
-              "insertTable"
+              "insertTable",
+              "insertPivotTable",
+              "insertTableSheet"
             ]
           }
         },
@@ -243,78 +590,427 @@
           "label": "Diagram",
           "thumbnailClass": "ribbon-thumbnail-chart",
           "commandGroup": {
-            "commands": [
-              "insertChart"
+            "direction": "horizontal",
+            "children": [
+              "insertChart",
+              {
+                "direction": "vertical",
+                "children": [
+                  {
+                    "direction": "horizontal",
+                    "children": [
+                      {
+                        "command": "columnOrBarChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "columnChartGroup",
+                            "type": "group",
+                            "children": [
+                              "clusteredColumnChart",
+                              "stackedColumnChart",
+                              "stackedColumn100Chart"
+                            ]
+                          },
+                          {
+                            "command": "barChartGroup",
+                            "type": "group",
+                            "children": [
+                              "clusteredBarChart",
+                              "stackedBarChart",
+                              "stackedBar100Chart"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "command": "treeMapOrSunburstChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "treemapChartGroup",
+                            "type": "group",
+                            "children": [
+                              "treemapChart"
+                            ]
+                          },
+                          {
+                            "command": "sunburstChartGroup",
+                            "type": "group",
+                            "children": [
+                              "sunburstChart"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "command": "funnelOrStockChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "funnelChartGroup",
+                            "type": "group",
+                            "children": [
+                              "funnelChart"
+                            ]
+                          },
+                          {
+                            "command": "stockChartGroup",
+                            "type": "group",
+                            "children": [
+                              "stockHLCChart",
+                              "stockOHLCChart",
+                              "stockVHLCChart",
+                              "stockVOHLCChart"
+                            ]
+                          },
+                          {
+                            "command": "radarChartGroup",
+                            "type": "group",
+                            "children": [
+                              "radarChart",
+                              "radarWithMarkersChart",
+                              "filledRadarChart"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "direction": "horizontal",
+                    "children": [
+                      {
+                        "command": "lineOrAreaChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "lineChartGroup",
+                            "type": "group",
+                            "children": [
+                              "lineChart",
+                              "lineStackedChart",
+                              "lineStacked100Chart",
+                              "lineMarkersChart",
+                              "lineMarkersStackedChart",
+                              "lineMarkersStacked100Chart"
+                            ]
+                          },
+                          {
+                            "command": "areaChartGroup",
+                            "type": "group",
+                            "children": [
+                              "areaChart",
+                              "areaStackedChart",
+                              "areaStacked100Chart"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "command": "pieOrDoughnutChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "pieChartGroup",
+                            "type": "group",
+                            "children": [
+                              "pieChart"
+                            ]
+                          },
+                          {
+                            "command": "doughnutChartGroup",
+                            "type": "group",
+                            "children": [
+                              "doughnutChart"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "command": "comboChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "comboChartGroup",
+                            "type": "group",
+                            "children": [
+                              "comboChartColumnAndLine",
+                              "comboChartColumnAndArea",
+                              "comboChartColumnAndLineAxis"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "direction": "horizontal",
+                    "children": [
+                      {
+                        "command": "scatterOrBubbleChartPreview",
+                        "type": "dropdown",
+                        "children": [
+                          {
+                            "command": "scatterChartGroup",
+                            "type": "group",
+                            "children": [
+                              "scatterChart",
+                              "scatterSmoothMarkersChart",
+                              "scatterSmoothChart",
+                              "scatterStraightMarkersChart",
+                              "scatterStraightChart"
+                            ]
+                          },
+                          {
+                            "command": "bubbleChartGroup",
+                            "type": "group",
+                            "children": [
+                              "bubbleChart"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "insertBarCode",
+              {
+                "command": "sparklineGallery",
+                "className": "sparklineGallery-dropdown-container",
+                "type": "dropdown",
+                "children": [
+                  {
+                    "command": "lineSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesLineSparkline",
+                      "sparklinesAreaSparkline"
+                    ]
+                  },
+                  {
+                    "command": "barSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesColumnSparkline",
+                      "sparklinesWinLossSparkline",
+                      "sparklinesStackedSparkline",
+                      "sparklinesCascadeSparkline",
+                      "sparklinesParetoSparkline",
+                      "sparklinesHBarSparkline",
+                      "sparklinesVBarSparkline",
+                      "sparklinesHistogramSparkline"
+                    ]
+                  },
+                  {
+                    "command": "pieSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesPieSparkline"
+                    ]
+                  },
+                  {
+                    "command": "scatterSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesScatterSparkline",
+                      "sparklinesSpreadsSparkline"
+                    ]
+                  },
+                  {
+                    "command": "calendarSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesMonthSparkline",
+                      "sparklinesYearSparkline"
+                    ]
+                  },
+                  {
+                    "command": "otherSparklineGroup",
+                    "type": "group",
+                    "children": [
+                      "sparklinesBoxPlotSparkline",
+                      "sparklinesBulletSparkline",
+                      "sparklinesVarianceSparkline",
+                      "sparklinesRangeBlockSparkline",
+                      "sparklinesGaugeKPISparkline",
+                      "sparklineImageSparkline"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         },
         {
-          "label": "Illustration",
-          "thumbnailClass": "ribbon-button-picture",
+          "label": "Illustrationer",
+          "thumbnailClass": "ribbon-thumbnail-illustration",
           "commandGroup": {
             "commands": [
-              "insertPicture"
+              "insertPicture",
+              "insertShape",
+              "insertCameraShape",
+              "insertFormControlShape"
             ]
           }
         },
         {
-          "label": "Former",
-          "thumbnailClass": "ribbon-thumbnail-shapes",
-          "commandGroup": {
-            "commands": [
-              "insertShape"
-            ]
-          }
-        },
-        {
-          "label": "Streckkod",
-          "thumbnailClass": "ribbon-thumbnail-barcode",
-          "commandGroup": {
-            "commands": [
-              "insertBarCode"
-            ]
-          }
-        },
-        {
-          "label": "Hyperlänk",
-          "thumbnailClass": "ribbon-thumbnail-barcode",
+          "label": "Länkar",
+          "thumbnailClass": "ribbon-thumbnail-hyperlink",
           "commandGroup": {
             "commands": [
               "insertHyperLink"
             ]
           }
+        }
+      ],
+      "visibleWhen": "!IsInTableSheetDesignMode"
+    },
+    {
+      "id": "pageLayout",
+      "text": "SIDLAYOUT",
+      "buttonGroups": [
+        {
+          "label": "Utskriftsformat",
+          "thumbnailClass": "ribbon-thumbnail-page-setup",
+          "indicator": "indicatorPage",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "horizontal",
+                "children": [
+                  {
+                    "command": "margins",
+                    "type": "dropdown",
+                    "children": [
+                      "marginSelector",
+                      "separator",
+                      "customMargins"
+                    ]
+                  },
+                  {
+                    "command": "orientation",
+                    "type": "dropdown",
+                    "children": [
+                      "orientationPortrait",
+                      "orientationLandscape"
+                    ]
+                  },
+                  {
+                    "command": "paperSize",
+                    "type": "dropdown",
+                    "children": [
+                      "paperKindSelector"
+                    ]
+                  },
+                  {
+                    "command": "printArea",
+                    "type": "dropdown",
+                    "children": [
+                      "setPrintArea",
+                      "clearPrintArea"
+                    ]
+                  },
+                  {
+                    "command": "breaks",
+                    "type": "dropdown",
+                    "children": [
+                      "insertPageBreak",
+                      "removePageBreak",
+                      "separator",
+                      "resetAllPageBreaks"
+                    ]
+                  },
+                  "background",
+                  "deleteBackground",
+                  "printTitles"
+                ]
+              }
+            ]
+          }
         },
         {
-          "label": "Sparklines",
-          "thumbnailClass": "ribbon-thumbnail-sparklines",
+          "label": "Skala för att passa",
+          "thumbnailClass": "ribbon-thumbnail-scale-to-fit",
+          "indicator": "indicatorPage",
           "commandGroup": {
-            "commands": [
-              "sparklinesLineSparkline",
-              "sparklinesColumnSparkline",
-              "sparklinesWinLossSparkline",
-              "sparklinesPieSparkline",
-              "sparklinesAreaSparkline",
-              "sparklinesScatterSparkline",
-              "sparklinesSpreadsSparkline",
-              "sparklinesStackedSparkline",
-              "sparklinesBoxPlotSparkline",
-              "sparklinesCascadeSparkline",
-              "sparklinesParetoSparkline",
-              "sparklinesBulletSparkline",
-              "sparklinesHBarSparkline",
-              "sparklinesVBarSparkline",
-              "sparklinesVarianceSparkline",
-              "sparklinesMonthSparkline",
-              "sparklinesYearSparkline",
-              "sparklinesRangeBlockSparkline"
+            "children": [
+              {
+                "direction": "horizontal",
+                "children": [
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "scaleToFitWidthText",
+                      "scaleToFitHeightText",
+                      "scaleToFitScaleText"
+                    ]
+                  },
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "fitPageWidth",
+                      "fitPageTall",
+                      "fitPageScale"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Bladalternativ",
+          "thumbnailClass": "ribbon-thumbnail-sheet-option",
+          "indicator": "indicatorSheet",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "horizontal",
+                "children": [
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "pageLayoutGridlinesText",
+                      "pageLayoutViewGridlines",
+                      "pageLayoutPrintGridlines"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "separator"
+                    ]
+                  },
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "pageLayoutHeadingsText",
+                      "pageLayoutViewHeadings",
+                      "pageLayoutPrintHeadings"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "separator"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "printLineVisible"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         }
-      ]
+      ],
+      "visibleWhen": "AllowPrintCurrentSheet && !IsInTableSheetDesignMode"
     },
     {
       "id": "formulas",
-      "text": "FORMULER",
+      "text": "FORMLER",
       "buttonGroups": [
         {
           "label": "Funktioner",
@@ -329,11 +1025,23 @@
           "label": "Funktionsbibliotek",
           "thumbnailClass": "ribbon-thumbnail-functions",
           "commandGroup": {
-            "commands": [
-              "formulaAutoSum",
+            "children": [
+              {
+                "command": "formulaAutoSum",
+                "type": "dropdown",
+                "children": [
+                  "editingAutoSum",
+                  "average",
+                  "countNumbers",
+                  "max",
+                  "min"
+                ]
+              },
               "formulaFinancial",
               "logicalFormula",
+              "logicalFormulaAllowDynamicArray",
               "formulaText",
+              "formulaTextAllowDynamicArray",
               "formulaDateTime",
               "formulaLookupReference",
               "formulaLookupReferenceAllowDynamicArray",
@@ -354,21 +1062,54 @@
         },
         {
           "label": "Formelrevision",
-          "thumbnailClass": "ribbon-thumbnail-functions",
+          "thumbnailClass": "ribbon-thumbnail-formula-auditing",
           "commandGroup": {
             "commands": [
               "showFormulas"
             ]
           }
         }
-      ]
+      ],
+      "visibleWhen": "!TableSheetActive && !DataManagerActive && !IsInTableSheetDesignMode"
     },
     {
       "id": "data",
       "text": "DATA",
       "buttonGroups": [
         {
-          "label": "Sortera och filtrera",
+          "label": "Databindning",
+          "thumbnailClass": "ribbon-thumbnail-data-sources",
+          "commandGroup": {
+            "children": [
+              {
+                "commands": [
+                  "insertDataManager"
+                ]
+              },
+              {
+                "command": "templateDesignMode",
+                "type": "dropdown",
+                "children": [
+                  "loadSchema",
+                  "saveSchema",
+                  "clearBindingPath",
+                  "autoGenerateLabel"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Frågor & anslutningar",
+          "thumbnailClass": "ribbon-thumbnail-queriedAndConnections",
+          "commandGroup": {
+            "commands": [
+              "editLinks"
+            ]
+          }
+        },
+        {
+          "label": "Sortera & Filtrera",
           "thumbnailClass": "ribbon-thumbnail-sortAndFilter",
           "commandGroup": {
             "children": [
@@ -409,8 +1150,21 @@
             "children": [
               {
                 "commands": [
-                  "dataValidation",
-                  "dataValidationList"
+                  "textToColumn"
+                ]
+              },
+              {
+                "command": "dataValidation",
+                "type": "dropdown",
+                "children": [
+                  "dropdownDataValidation",
+                  "circleInvalidDataCommand",
+                  "clearInvalidCircles"
+                ]
+              },
+              {
+                "commands": [
+                  "removeDuplicates"
                 ]
               }
             ]
@@ -423,14 +1177,26 @@
           "commandGroup": {
             "children": [
               {
-                "commands": [
-                  "group",
-                  "ungroup",
+                "direction": "vertical",
+                "children": [
+                  {
+                    "command": "group",
+                    "type": "dropdown",
+                    "children": [
+                      "innerGroup",
+                      "autoOutline"
+                    ]
+                  },
+                  {
+                    "command": "ungroup",
+                    "type": "dropdown",
+                    "children": [
+                      "innerUngroup",
+                      "clearOutline"
+                    ]
+                  },
                   "subtotal"
                 ]
-              },
-              {
-                "type": "separator"
               },
               {
                 "direction": "vertical",
@@ -441,40 +1207,9 @@
               }
             ]
           }
-        },
-        {
-          "label": "Designläge",
-          "thumbnailClass": "ribbon-thumbnail-designmode",
-          "commandGroup": {
-            "children": [
-              {
-                "commands": [
-                  "templateDesignMode"
-                ]
-              },
-              {
-                "type": "separator"
-              },
-              {
-                "direction": "vertical",
-                "commands": [
-                  "loadSchema",
-                  "saveSchema",
-                  "clearBindingPath"
-                ]
-              },
-              {
-                "type": "separator"
-              },
-              {
-                "commands": [
-                  "autoGenerateLabel"
-                ]
-              }
-            ]
-          }
         }
-      ]
+      ],
+      "visibleWhen": "!IsInTableSheetDesignMode"
     },
     {
       "id": "view",
@@ -527,16 +1262,36 @@
           }
         },
         {
-          "label": "Utsiktsplats",
+          "label": "Viewport",
           "thumbnailClass": "ribbon-thumbnail-viewport",
           "commandGroup": {
-            "commands": [
-              "ViewportFreezePanes",
+            "children": [
+              {
+                "command": "viewportFreezePanes",
+                "type": "dropdown",
+                "children": [
+                  "freezePanes",
+                  "freezeTopRow",
+                  "freezeFirstColumn",
+                  "freezeBottomRow",
+                  "freezeLastColumn"
+                ]
+              },
               "unfreezePanes"
             ]
           }
+        },
+        {
+          "label": "Ruta",
+          "thumbnailClass": "ribbon-thumbnail-chart-alt-text",
+          "commandGroup": {
+            "commands": [
+              "selectionPaneButton"
+            ]
+          }
         }
-      ]
+      ],
+      "visibleWhen": "!TableSheetActive && !DataManagerActive && !IsInTableSheetDesignMode"
     },
     {
       "id": "settings",
@@ -565,7 +1320,7 @@
           }
         },
         {
-          "label": "Arkinställningar",
+          "label": "Bladinställningar",
           "thumbnailClass": "ribbon-thumbnail-sheetsettings",
           "commandGroup": {
             "children": [
@@ -585,11 +1340,12 @@
             ]
           }
         }
-      ]
+      ],
+      "visibleWhen": "!DataManagerActive && !IsInTableSheetDesignMode"
     },
     {
       "id": "tableDesign",
-      "text": "DESIGN",
+      "text": "BORDSDESIGN",
       "buttonGroups": [
         {
           "label": "Egenskaper",
@@ -616,11 +1372,6 @@
                 "commands": [
                   "convertToRange",
                   "tableAllowAutoExpand"
-                ]
-              },
-              {
-                "commands": [
-                  "insertSlicer"
                 ]
               }
             ]
@@ -659,11 +1410,21 @@
           }
         },
         {
-          "label": "Bordstilar",
+          "label": "Bordsstilar",
           "thumbnailClass": "ribbon-thumbnail-tablestyles",
           "commandGroup": {
-            "commands": [
-              "formatTable"
+            "children": [
+              {
+                "command": "formatTable2",
+                "type": "dropdown",
+                "dropdownMaxWidth": 550,
+                "children": [
+                  "formatTableListContent",
+                  "separator",
+                  "newTableStyle",
+                  "clearTableStyle"
+                ]
+              }
             ]
           }
         }
@@ -672,15 +1433,150 @@
     },
     {
       "id": "chartDesign",
-      "text": "DESIGN",
+      "text": "KORTDESIGN",
       "buttonGroups": [
         {
           "label": "Diagramlayouter",
           "thumbnailClass": "ribbon-thumbnail-chartlayouts",
           "commandGroup": {
-            "commands": [
-              "addChartElement",
-              "quickLayout"
+            "children": [
+              {
+                "command": "addChartElement",
+                "type": "dropdown",
+                "children": [
+                  {
+                    "command": "axes",
+                    "type": "dropdown",
+                    "children": [
+                      "axesPrimaryHorizontal",
+                      "axesPrimaryVertical",
+                      "axesSecondaryHorizontal",
+                      "axesSecondaryVertical",
+                      "separator",
+                      "axesMoreAxisOption"
+                    ]
+                  },
+                  {
+                    "command": "axisTitles",
+                    "type": "dropdown",
+                    "children": [
+                      "axisTitlesPrimaryHorizontal",
+                      "axisTitlesPrimaryVertical",
+                      "axisTitlesSecondaryHorizontal",
+                      "axisTitlesSecondaryVertical",
+                      "separator",
+                      "axisTitlesMoreAxisTitlesOption"
+                    ]
+                  },
+                  {
+                    "command": "chartTitle",
+                    "type": "dropdown",
+                    "children": [
+                      "chartTitleNone",
+                      "chartTitleAboveChart",
+                      "separator",
+                      "chartTitleMoreChartTitleOption"
+                    ]
+                  },
+                  {
+                    "command": "errorBars",
+                    "type": "dropdown",
+                    "children": [
+                      "errorBarNone",
+                      "errorBarStandardError",
+                      "errorBarPercentage",
+                      "errorBarStandardDeviation",
+                      "separator",
+                      "errorBarMoreOption"
+                    ]
+                  },
+                  {
+                    "command": "gridLines",
+                    "type": "dropdown",
+                    "children": [
+                      "gridLinesPrimaryMajorHorizontal",
+                      "gridLinesPrimaryMajorVertical",
+                      "gridLinesPrimaryMinorHorizontal",
+                      "gridLinesPrimaryMinorVertical",
+                      "gridLinesSecondaryMajorHorizontal",
+                      "gridLinesSecondaryMajorVertical",
+                      "gridLinesSecondaryMinorHorizontal",
+                      "gridLinesSecondaryMinorVertical",
+                      "separator",
+                      "gridLinesMoreGridLinesOption"
+                    ]
+                  },
+                  {
+                    "command": "dataLabels",
+                    "type": "dropdown",
+                    "children": [
+                      "dataLabelsNone",
+                      "dataLabelsNoneLineGroup",
+                      "dataLabelsNoneScatterGroup",
+                      "dataLabelsNonePieGroup",
+                      "dataLabelsNoneDoughnutGroup",
+                      "dataLabelsNoneSunburstGroup",
+                      "dataLabelNoneTreeMapGroup",
+                      "dataLabelsNoneFunnelGroup",
+                      "dataLabelsCenter",
+                      "dataLabelsCenterLineGroup",
+                      "dataLabelsCenterScatterGroup",
+                      "dataLabelsCenterPieGroup",
+                      "dataLabelsCenterSunburstGroup",
+                      "dataLabelsCenterFunnelGroup",
+                      "dataLabelsInsideEnd",
+                      "dataLabelsInsideEndPieGroup",
+                      "dataLabelsOutsideEnd",
+                      "dataLabelsOutsideEndPieGroup",
+                      "dataLabelsBestFitPieGroup",
+                      "dataLabelShow",
+                      "dataLabelsShowPieGroup",
+                      "dataLabelsShowDoughnutGroup",
+                      "dataLabelsShowTreeMapGroup",
+                      "dataLabelsAboveLineGroup",
+                      "dataLabelsAboveScatterGroup",
+                      "dataLabelsBelowLineGroup",
+                      "dataLabelsBelowScatterGroup",
+                      "separator",
+                      "dataLabelsMoreDataLabelsOption"
+                    ]
+                  },
+                  {
+                    "command": "legend",
+                    "type": "dropdown",
+                    "children": [
+                      "legendNone",
+                      "legendRight",
+                      "legendTop",
+                      "legendLeft",
+                      "legendBottom",
+                      "separator",
+                      "legendMoreLegendOption"
+                    ]
+                  },
+                  {
+                    "command": "trendline",
+                    "type": "dropdown",
+                    "children": [
+                      "trendlineNone",
+                      "trendlineLinear",
+                      "trendlineExponential",
+                      "trendlineLinearForecast",
+                      "trendlineMovingAverage",
+                      "separator",
+                      "trendlineMoreOption"
+                    ]
+                  }
+                ]
+              },
+              {
+                "command": "quickLayout",
+                "type": "dropdown",
+                "dropdownMaxWidth": 190,
+                "children": [
+                  "quickLayoutListContent"
+                ]
+              }
             ]
           }
         },
@@ -730,13 +1626,22 @@
               "chartAltText"
             ]
           }
+        },
+        {
+          "label": "Formatfönstret",
+          "thumbnailClass": "ribbon-thumbnail-formatPane",
+          "commandGroup": {
+            "commands": [
+              "FormatPane"
+            ]
+          }
         }
       ],
       "visibleWhen": "singleChartSelected"
     },
     {
       "id": "pictureDesign",
-      "text": "DESIGN",
+      "text": "BILDFORMAT",
       "buttonGroups": [
         {
           "label": "Tillgänglighet",
@@ -752,10 +1657,10 @@
     },
     {
       "id": "shapeDesign",
-      "text": "DESIGN",
+      "text": "SHAPE FORMAT",
       "buttonGroups": [
         {
-          "label": "Sätt in form",
+          "label": "Infoga former",
           "thumbnailClass": "ribbon-thumbnail-shapeinsertshape",
           "commandGroup": {
             "commands": [
@@ -786,8 +1691,15 @@
           "label": "Rotera",
           "thumbnailClass": "ribbon-thumbnail-shaperotate",
           "commandGroup": {
-            "commands": [
-              "shapeRotate"
+            "children": [
+              {
+                "command": "shapeRotate",
+                "type": "dropdown",
+                "children": [
+                  "shapeRightRotate90",
+                  "shapeLeftRotate"
+                ]
+              }
             ]
           }
         },
@@ -795,8 +1707,42 @@
           "label": "Grupp",
           "thumbnailClass": "ribbon-thumbnail-shapegroup",
           "commandGroup": {
-            "commands": [
-              "shapeCommandGroup"
+            "children": [
+              {
+                "command": "shapeCommandGroup",
+                "type": "dropdown",
+                "children": [
+                  "shapeGroup",
+                  "shapeUnGroup"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Justera",
+          "thumbnailClass": "ribbon-thumbnail-shapealign",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "shapeCommandAlign",
+                "type": "dropdown",
+                "children": [
+                  "shapeAlignLeft",
+                  "shapeAlignCenter",
+                  "shapeAlignRight",
+                  "separator",
+                  "shapeAlignTop",
+                  "shapeAlignMiddle",
+                  "shapeAlignBottom",
+                  "separator",
+                  "shapeHorizontalDistribute",
+                  "shapeShapeVerticalDistribute",
+                  "separator",
+                  "shapeSnapToGrid",
+                  "shapeSnapToShape"
+                ]
+              }
             ]
           }
         },
@@ -811,17 +1757,166 @@
               "shapeSizeWidth"
             ]
           }
+        },
+        {
+          "label": "Urvalsruta",
+          "thumbnailClass": "ribbon-thumbnail-selection-panel",
+          "commandGroup": {
+            "commands": [
+              "selectionPaneButton"
+            ]
+          }
+        },
+        {
+          "label": "Formatfönstret",
+          "thumbnailClass": "ribbon-thumbnail-formatPane",
+          "commandGroup": {
+            "commands": [
+              "FormatPane"
+            ]
+          }
         }
       ],
-      "visibleWhen": "ShapeSelected && !IsProtected || ShapeSelected && AllowEditObject"
+      "visibleWhen": "!DataManagerActive && PureShapeAndFormControlSelected && !IsProtected || PureShapeAndFormControlSelected && AllowEditObject"
+    },
+    {
+      "id": "pictureShapeDesign",
+      "text": "BILDFORMAT",
+      "buttonGroups": [
+        {
+          "label": "Justera",
+          "thumbnailClass": "ribbon-thumbnail-picture-adjust",
+          "commandGroup": {
+            "commands": [
+              "changePictureCorrections",
+              "changePictureColor",
+              "changePictureTransparency",
+              "changePicture",
+              "resetPicture"
+            ]
+          }
+        },
+        {
+          "label": "Tillgänglighet",
+          "thumbnailClass": "ribbon-thumbnail-chart-alt-text",
+          "commandGroup": {
+            "commands": [
+              "shapeAltText"
+            ]
+          }
+        },
+        {
+          "label": "Rotera",
+          "thumbnailClass": "ribbon-thumbnail-shaperotate",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "shapeRotate",
+                "type": "dropdown",
+                "children": [
+                  "shapeRightRotate90",
+                  "shapeLeftRotate"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Grupp",
+          "thumbnailClass": "ribbon-thumbnail-shapegroup",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "shapeCommandGroup",
+                "type": "dropdown",
+                "children": [
+                  "shapeGroup",
+                  "shapeUnGroup"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Justera",
+          "thumbnailClass": "ribbon-thumbnail-shapealign",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "shapeCommandAlign",
+                "type": "dropdown",
+                "children": [
+                  "shapeAlignLeft",
+                  "shapeAlignCenter",
+                  "shapeAlignRight",
+                  "separator",
+                  "shapeAlignTop",
+                  "shapeAlignMiddle",
+                  "shapeAlignBottom",
+                  "separator",
+                  "shapeHorizontalDistribute",
+                  "shapeShapeVerticalDistribute",
+                  "separator",
+                  "shapeSnapToGrid",
+                  "shapeSnapToShape"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Beskära",
+          "thumbnailClass": "ribbon-thumbnail-picture-shape-crop",
+          "commandGroup": {
+            "commands": [
+              "pictureShapeCrop"
+            ]
+          }
+        },
+        {
+          "class": "gc-ribbon-panelgroup-shapeSize",
+          "label": "Storlek",
+          "thumbnailClass": "ribbon-thumbnail-shapesize",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "commands": [
+                  "shapeSizeHeight",
+                  "shapeSizeWidth"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Urvalsruta",
+          "thumbnailClass": "ribbon-thumbnail-chart-alt-text",
+          "commandGroup": {
+            "commands": [
+              "selectionPaneButton"
+            ]
+          }
+        },
+        {
+          "label": "Formatfönstret",
+          "thumbnailClass": "ribbon-thumbnail-formatPane",
+          "commandGroup": {
+            "commands": [
+              "FormatPane"
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "!DataManagerActive && PictureShapeSelected && !IsProtected || PictureShapeSelected && AllowEditObject"
     },
     {
       "id": "slicerDesign",
-      "text": "ALTERNATIV",
+      "text": "SKIVARE",
       "buttonGroups": [
         {
           "class": "slicer_panel",
-          "label": "Skivare",
+          "label": "Skivmaskin",
           "thumbnailClass": "ribbon-thumbnail-properties",
           "commandGroup": {
             "children": [
@@ -832,29 +1927,45 @@
                   "captionName",
                   "slicerSetting"
                 ]
+              },
+              {
+                "commands": [
+                  "separator"
+                ]
+              },
+              {
+                "commands": [
+                  "slicerReportConnections"
+                ]
               }
             ]
           }
         },
         {
-          "label": "Skivstilar",
+          "label": "Slicer stilar",
           "thumbnailClass": "ribbon-thumbnail-tablestyles",
           "commandGroup": {
-            "commands": [
-              "slicerFormat"
+            "children": [
+              {
+                "command": "slicerFormat",
+                "type": "dropdown",
+                "children": [
+                  "slicerStyleListContent",
+                  "newSlicerStyle"
+                ]
+              }
             ]
           }
         },
         {
           "class": "slicer_buttons",
           "label": "Knappar",
-          "thumbnailClass": "ribbon-thumbnail-properties",
+          "thumbnailClass": "ribbon-thumbnail-slice-buttons",
           "commandGroup": {
             "direction": "vertical",
             "commands": [
               "columnCount",
-              "itemHeight",
-              "itemWidth"
+              "itemHeight"
             ]
           }
         },
@@ -874,8 +1985,95 @@
       "visibleWhen": "SlicerSelected && !IsProtected || SlicerSelected && AllowEditObject"
     },
     {
+      "id": "timelineDesign",
+      "text": "TIDSLINJE",
+      "buttonGroups": [
+        {
+          "class": "timeline_panel",
+          "label": "Tidslinje",
+          "thumbnailClass": "ribbon-thumbnail-properties",
+          "commandGroup": {
+            "children": [
+              {
+                "commands": [
+                  "timelineCaptionName"
+                ]
+              },
+              {
+                "commands": [
+                  "separator"
+                ]
+              },
+              {
+                "commands": [
+                  "slicerReportConnections"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tidslinjestilar",
+          "thumbnailClass": "ribbon-thumbnail-tablestyles",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "slicerFormat",
+                "type": "dropdown",
+                "children": [
+                  "timelineStyleListContent",
+                  "newTimelineStyle"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "class": "timeline_size",
+          "label": "Storlek",
+          "thumbnailClass": "ribbon-thumbnail-sliceSize",
+          "commandGroup": {
+            "direction": "vertical",
+            "commands": [
+              "slicerHeight",
+              "slicerWidth"
+            ]
+          }
+        },
+        {
+          "class": "timeline_show",
+          "label": "Show",
+          "thumbnailClass": "ribbon-thumbnail-slicerShow",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "commands": [
+                  "timelineShowHeader",
+                  "timelineShowSelectionLabel"
+                ]
+              },
+              {
+                "commands": [
+                  "separator"
+                ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "timelineShowScrollbar",
+                  "timelineShowTimeLevel"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "TimelineSelected && !IsProtected || TimelineSelected && AllowEditObject"
+    },
+    {
       "id": "formulaSparkLineDesign",
-      "text": "DESIGN",
+      "text": "SPARKLINE",
       "buttonGroups": [
         {
           "label": "Argument",
@@ -891,7 +2089,7 @@
     },
     {
       "id": "sparkLineDesign",
-      "text": "DESIGN",
+      "text": "SPARKLINE",
       "buttonGroups": [
         {
           "label": "Typ",
@@ -905,7 +2103,7 @@
           }
         },
         {
-          "label": "Visa",
+          "label": "Show",
           "thumbnailClass": "ribbon-thumbnail-sparkline-show",
           "commandGroup": {
             "children": [
@@ -969,9 +2167,11 @@
                     ]
                   },
                   {
-                    "commands": [
-                      "clearSparkline",
-                      "clearSparklineDropdown"
+                    "command": "clearSparkline",
+                    "type": "dropdown",
+                    "children": [
+                      "clearSelectedSparkline",
+                      "clearSelectedSparklineGroups"
                     ]
                   }
                 ]
@@ -984,7 +2184,7 @@
     },
     {
       "id": "barcodeDesignId",
-      "text": "DESIGN",
+      "text": "STRECKKODSDESIGN",
       "buttonGroups": [
         {
           "label": "Argument",
@@ -997,6 +2197,674 @@
         }
       ],
       "visibleWhen": "BarCodeSelected"
+    },
+    {
+      "id": "pivotTableAnalyze",
+      "text": "PIVOTTEBAR ANALYS",
+      "buttonGroups": [
+        {
+          "label": "Pivottabell",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "children": [
+                  {
+                    "commands": [
+                      "pivotTableName"
+                    ]
+                  },
+                  {
+                    "children": [
+                      "pivotTableOptions",
+                      {
+                        "command": "pivotTableOptionsList",
+                        "type": "dropdown",
+                        "children": [
+                          "pivotTableOptionsSub",
+                          "pivotTableShowReportFilterPages"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Aktivt fält",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-active-field",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "children": [
+                  {
+                    "commands": [
+                      "pivotTableActiveField"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "pivotTableFieldSetting"
+                    ]
+                  }
+                ]
+              },
+              {
+                "direction": "vertical",
+                "children": [
+                  {
+                    "commands": [
+                      "pivotTableExpandField"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "pivotTableCollapseField"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Filtrera",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-group",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "commands": [
+                      "pivotFilterConnections"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Grupp",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-group",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "children": [
+                  {
+                    "commands": [
+                      "pivotTableGroupSelection"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "pivotTableUnGroup"
+                    ]
+                  },
+                  {
+                    "commands": [
+                      "pivotTableGroupField"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Data",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-data",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  "pivotRibbonRefresh"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Handlingar",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-actions",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "command": "pivotTableClearList",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableClearAll",
+                      "pivotTableClearFilters"
+                    ]
+                  },
+                  "pivotTableMove"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Beräkningar",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-calculations",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "command": "pivotTableFieldsItemsSets",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableCalculatedField",
+                      "PivotTableCalculatedItem",
+                      "PivotTableSolveOrder",
+                      "pivotTableListFormulas"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Show",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-show",
+          "commandGroup": {
+            "children": [
+              {
+                "commands": [
+                  "pivotTableFieldList",
+                  "pivotTableButtons",
+                  "pivotTableShowHeaders"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "PivotTableSelected"
+    },
+    {
+      "id": "pivotTableDesign",
+      "text": "DESIGN",
+      "buttonGroups": [
+        {
+          "label": "Layout",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-layout",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "command": "pivotTableSubtotals",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableSubtotalsNotShow",
+                      "pivotTableSubtotalsAtBottom",
+                      "pivotTableSubtotalsAtTop"
+                    ]
+                  },
+                  {
+                    "command": "pivotTableGrandTotals",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableGrandTotalsOffRowColumn",
+                      "pivotTableGrandTotalsOnRowColumn",
+                      "pivotTableGrandTotalsOnRowOnly",
+                      "pivotTableGrandTotalsOnColumnOnly"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "separator"
+              },
+              {
+                "children": [
+                  {
+                    "command": "pivotTableReportLayout",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableReportLayoutShowInCompact",
+                      "pivotTableReportLayoutShowInOutline",
+                      "pivotTableReportLayoutShowInTabular",
+                      "separator",
+                      "pivotTableReportLayoutRepeatAllItemLabels",
+                      "pivotTableReportLayoutNotRepeatAllItemLabels"
+                    ]
+                  },
+                  {
+                    "command": "pivotTableBlankRows",
+                    "type": "dropdown",
+                    "children": [
+                      "pivotTableInsertBlankRows",
+                      "pivotTableRemoveBlankRows"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Alternativ för pivottabellstil",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-options",
+          "commandGroup": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "pivotTableRowHeaders",
+                      "pivotTableColumnHeaders"
+                    ]
+                  },
+                  {
+                    "direction": "vertical",
+                    "commands": [
+                      "pivotTableBandedRows",
+                      "pivotTableBandedColumns"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Pivottabellstilar",
+          "thumbnailClass": "ribbon-thumbnail-pivot-table-styles",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "pivotTableStyle",
+                "type": "dropdown",
+                "dropdownMaxWidth": 550,
+                "children": [
+                  "pivotTableStyleListContent",
+                  "separator",
+                  "newPivotTableStyle",
+                  "clearPivotTableStyle"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "PivotTableSelected"
+    },
+    {
+      "id": "tableSheetDesign",
+      "text": "BORDBLAD DESIGN",
+      "buttonGroups": [
+        {
+          "label": "Radhöjd",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-row-height",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "commands": [
+                  "setTableSheetRowHeight",
+                  "setTableSheetHeaderRowHeight",
+                  "setTableSheetStackRowHeight"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "alternativ",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-options",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "commands": [
+                  "allowAddNew",
+                  "alternatingRowStyle"
+                ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "alternatingFillRowStep",
+                  "alternatingBlankRowStep"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tema",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-theme",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "formatTableSheet",
+                "type": "dropdown",
+                "dropdownMaxWidth": 550,
+                "children": [
+                  "formatTableSheetListContent"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Statens regler",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-state-rules",
+          "commandGroup": {
+            "commands": [
+              "stateRules"
+            ]
+          }
+        },
+        {
+          "label": "Radåtgärd",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-row-actions",
+          "commandGroup": {
+            "commands": [
+              "toggleTableSheetRowAction"
+            ]
+          }
+        },
+        {
+          "label": "Omgång",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-batch",
+          "commandGroup": {
+            "commands": [
+              "submitTableSheetChanges",
+              "cancelTableSheetChanges"
+            ]
+          }
+        },
+        {
+          "label": "Menyalternativ Synlighet",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-menuitem-visibility",
+          "commandGroup": {
+            "commands": [
+              "setTableSheetMenuItemVisibility"
+            ]
+          }
+        },
+        {
+          "label": "Panel",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-panel",
+          "commandGroup": {
+            "commands": [
+              "toggleTableSheetPanel"
+            ]
+          }
+        },
+        {
+          "label": "Designläge",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-panel",
+          "commandGroup": {
+            "commands": [
+              "toggleTableSheetDesignMode"
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "TableSheetActive || IsInTableSheetDesignMode"
+    },
+    {
+      "id": "tableSheetColumnSetting",
+      "text": "KOLUMNINSTÄLLNING",
+      "buttonGroups": [
+        {
+          "label": "alternativ",
+          "thumbnailClass": "ribbon-button-sheetgeneral",
+          "commandGroup": {
+            "children": [
+              {
+                "direction": "vertical",
+                "commands": [
+                  "setTableSheetColumnValue",
+                  "setTableSheetColumnCaption"
+                ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "setTableSheetColumnWidth",
+                  "setTableSheetColumnDefaultValue"
+                ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "setTableSheetColumnIsPrimaryKey",
+                  "setTableSheetColumnRequired",
+                  "setTableSheetColumnReadonly"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Data typ",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-column-data-type",
+          "commandGroup": {
+            "direction": "vertical",
+            "children": [
+              {
+                "commands": [
+                  "setTableSheetColumnDataType"
+                ]
+              },
+              {
+                "commands": [
+                  "setTableSheetColumnDataTypeString",
+                  "setTableSheetColumnDataTypeNumber",
+                  "setTableSheetColumnDataTypeBoolean",
+                  "setTableSheetColumnDataTypeDate"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Stil",
+          "thumbnailClass": "ribbon-thumbnail-table-sheet-column-style",
+          "commandGroup": {
+            "children": [
+              {
+                "commands": [
+                  "setTableSheetColumnStyle"
+                ]
+              },
+              {
+                "command": "conditionFormat",
+                "type": "dropdown",
+                "children": [
+                  {
+                    "command": "highlightCellsRules",
+                    "type": "dropdown",
+                    "children": [
+                      "highlightCellsRulesGreaterThan",
+                      "highlightCellsRulesLessThan",
+                      "highlightCellsRulesBetween",
+                      "highlightCellsRulesEqualTo",
+                      "highlightCellsRulesContains",
+                      "highlightCellsRulesDateOccurring",
+                      "highlightCellsRulesDuplicateValues",
+                      "separator",
+                      "highlightCellsMoreRules"
+                    ]
+                  },
+                  {
+                    "command": "topBottomRules",
+                    "type": "dropdown",
+                    "children": [
+                      "topBottomRulesTop10",
+                      "topBottomRulesBottom10",
+                      "topBottomRulesAboveAverage",
+                      "topBottomRulesBelowAverage",
+                      "separator",
+                      "topBottomRulesMoreRules"
+                    ]
+                  },
+                  "separator",
+                  {
+                    "command": "dataBar",
+                    "type": "dropdown",
+                    "dropdownMaxWidth": 126,
+                    "children": [
+                      {
+                        "command": "gradientFill",
+                        "type": "group",
+                        "children": [
+                          "gradientFillBlueDataBar",
+                          "gradientFillGreenDataBar",
+                          "gradientFillRedDataBar",
+                          "gradientFillOrangeDataBar",
+                          "gradientFillLightBlueDataBar",
+                          "gradientFillPurpleDataBar"
+                        ]
+                      },
+                      {
+                        "command": "solidFill",
+                        "type": "group",
+                        "children": [
+                          "solidFillBlueDataBar",
+                          "solidFillGreenDataBar",
+                          "solidFillRedDataBar",
+                          "solidFillOrangeDataBar",
+                          "solidFillLightBlueDataBar",
+                          "solidFillPurpleDataBar"
+                        ]
+                      },
+                      "separator",
+                      "moreDataBarRules"
+                    ]
+                  },
+                  {
+                    "command": "colorScalesList",
+                    "type": "dropdown",
+                    "dropdownMaxWidth": 170,
+                    "children": [
+                      {
+                        "command": "colorScalesList2",
+                        "type": "group",
+                        "children": [
+                          "colorScaleGyr",
+                          "colorScaleRyg",
+                          "colorScaleGwr",
+                          "colorScaleRwg",
+                          "colorScaleBwr",
+                          "colorScaleRwb",
+                          "colorScaleWr",
+                          "colorScaleRw",
+                          "colorScaleGw",
+                          "colorScaleWg",
+                          "colorScaleGy",
+                          "colorScaleYg"
+                        ]
+                      },
+                      "separator",
+                      "moreColorScaleRules"
+                    ]
+                  },
+                  {
+                    "command": "iconSetList",
+                    "type": "dropdown",
+                    "children": [
+                      {
+                        "command": "directional",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeArrowsColored",
+                          "iconSetThreeArrowsGray",
+                          "iconSet3Triangles",
+                          "iconSetFourArrowsGray",
+                          "iconSetFourArrowsColored",
+                          "iconSetFiveArrowsGray",
+                          "iconSetFiveArrowsColored"
+                        ]
+                      },
+                      {
+                        "command": "shapes",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeTrafficLightsUnRimmed",
+                          "iconSetThreeTrafficLightsRimmed",
+                          "iconSetThreeSigns",
+                          "iconSetFourTrafficLights",
+                          "iconSetFourRedToBlack"
+                        ]
+                      },
+                      {
+                        "command": "indicators",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeSymbolsCircled",
+                          "iconSetThreeSymbolsUnCircled",
+                          "iconSetThreeFlags"
+                        ]
+                      },
+                      {
+                        "command": "ratings",
+                        "type": "group",
+                        "children": [
+                          "iconSetThreeStars",
+                          "iconSetFourRatings",
+                          "iconSetFiveQuarters",
+                          "iconSetFiveRatings",
+                          "iconSetFiveBoxes"
+                        ]
+                      },
+                      "separator",
+                      "moreIconSetRules"
+                    ]
+                  },
+                  "separator",
+                  "conditionFormatNewRule",
+                  "clearTableSheetColumnConditionalFormat",
+                  "tablesheetConditionFormatManageRule"
+                ]
+              },
+              {
+                "commands": [
+                  "setTableSheetColumnHeaderStyle"
+                ]
+              },
+              {
+                "direction": "vertical",
+                "commands": [
+                  "setTableSheetColumnHeaderFit",
+                  "setTableSheetColumnHeaderFitLabel"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Datavalidering",
+          "thumbnailClass": "ribbon-button-datavalidation",
+          "commandGroup": {
+            "children": [
+              {
+                "command": "setTableSheetColumnDataValidation",
+                "type": "dropdown",
+                "children": [
+                  "circleInvalidDataCommand",
+                  "clearInvalidCircles"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": "TableSheetColumnSelected"
     }
   ],
   "contextMenu": [
@@ -1009,11 +2877,11 @@
     "designerPasteFormatting",
     "pasteValuesFormatting",
     "pasteFormulaFormatting",
+    "gc.spread.contextMenu.pasteValues",
     "floatingObjectCut",
     "floatingObjectCopy",
     "contextMenuCutShapes",
     "contextMenuCopyShapes",
-    "PasteShapes",
     "separator",
     "resetChartColor",
     "changeChartTypeDialog",
@@ -1040,6 +2908,8 @@
     "separator",
     "gc.spread.contextMenu.insertSheet",
     "gc.spread.contextMenu.deleteSheet",
+    "sheetTabMoveOrCopy",
+    "gc.spread.contextMenu.changeSheetTabPosition",
     "unprotectSheet",
     "protectSheet",
     "separator",
@@ -1079,11 +2949,9 @@
     "separator",
     "showTabColor",
     "gc.spread.contextMenu.hideSheet",
-    "gc.spread.contextMenu.unhideSheet",
+    "contextMenuUnhideSheet",
     "sheetTag",
     "separator",
-    "gc.spread.contextMenu.cut",
-    "gc.spread.contextMenu.copy",
     "slicerPasteOptions",
     "gc.spread.contextMenu.pasteAll",
     "gc.spread.contextMenu.slicerSortAscend",
@@ -1093,8 +2961,55 @@
     "contextMenuSlicerSetting",
     "separator",
     "groupShape",
+    "ctxCropPicture",
     "formatShapes",
-    "designerMoreFunctions"
+    "designerMoreFunctions",
+    "shapeLink",
+    "editShapeHyperlink",
+    "openShapeHyperlink",
+    "removeShapeHyperlink",
+    "editShapeText",
+    "pivotSort",
+    "pivotTableAutoFitColumn",
+    "pivotTableContextMenuRefresh",
+    "removeField",
+    "removePivotGrandTotal",
+    "updatePivotValueFieldCmd",
+    "pivotTableShowValueAs",
+    "pivotTableFilter",
+    "pivotExpandOrCollapse",
+    "openPivotGroupDialog",
+    "pivotTableContextMenuUnGroup",
+    "pivotShowDetails",
+    "openValueFieldSettingDialogCmd",
+    "pivotTableContextMenuOptions",
+    "showFieldList",
+    "hideFieldList",
+    "gc.spread.contextMenu.pinRows",
+    "gc.spread.contextMenu.pinColumns",
+    "separator",
+    "gc.spread.contextMenu.promote",
+    "gc.spread.contextMenu.demote",
+    "separator",
+    "gc.spread.contextMenu.addAfter",
+    "gc.spread.contextMenu.addBefore",
+    "gc.spread.contextMenu.addAbove",
+    "gc.spread.contextMenu.addBelow",
+    "separator",
+    "gc.spread.contextMenu.moveUp",
+    "gc.spread.contextMenu.moveDown",
+    "separator",
+    "gc.spread.contextMenu.expandAllLevels",
+    "gc.spread.contextMenu.collapseAllLevels",
+    "gc.spread.contextMenu.expandLevel1",
+    "gc.spread.contextMenu.expandLevel2",
+    "gc.spread.contextMenu.expandLevel3",
+    "gc.spread.contextMenu.expandLevel4",
+    "gc.spread.contextMenu.expandLevel5",
+    "gc.spread.contextMenu.expandLevel6",
+    "gc.spread.contextMenu.expandLevel7",
+    "gc.spread.contextMenu.expandLevel8",
+    "gc.spread.contextMenu.expandLevel9"
   ],
   "fileMenu": "fileMenuButton",
   "sidePanels": [
@@ -1217,6 +3132,36 @@
       "width": "315px",
       "command": "shapeAltTextPanel",
       "uiTemplate": "altTextTemplate",
+      "showCloseButton": true
+    },
+    {
+      "position": "right",
+      "width": "315px",
+      "command": "pivotTablePanel",
+      "uiTemplate": "pivotTablePanelTemplate",
+      "classList": [
+        "gc-designer-pivot-table-panel"
+      ],
+      "showCloseButton": true
+    },
+    {
+      "position": "right",
+      "width": "315px",
+      "command": "tableSheetPanel",
+      "uiTemplate": "tableSheetPanelTemplate",
+      "classList": [
+        "gc-designer-table-sheet-panel"
+      ],
+      "showCloseButton": true
+    },
+    {
+      "position": "right",
+      "width": "315px",
+      "command": "selectionPane",
+      "uiTemplate": "selectionPane",
+      "classList": [
+        "gc-designer-selection-pane"
+      ],
       "showCloseButton": true
     }
   ]
